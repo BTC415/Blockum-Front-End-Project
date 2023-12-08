@@ -116,7 +116,7 @@ function index() {
             Become a Member
           </button>
         </div>
-        <div style={{ width: '50%' }}>hi</div>
+        <div style={{ width: '50%' }}></div>
       </main>
     </div>
   );

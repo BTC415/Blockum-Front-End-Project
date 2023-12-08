@@ -19,7 +19,7 @@ import store from '../src/redux/store';
 
 import { Web3Provider } from '../src/contexts/web3Context';
 
-axios.defaults.baseURL = 'http://localhost:5000/api';
+axios.defaults.baseURL = 'https://blockum.onrender.com';
 
 function MyApp({ Component, pageProps }) {
   // const [doc, setDoc] = useState();
