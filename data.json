@@ -1,0 +1,4255 @@
+{
+  "common": {
+    "trendingMenus": {
+      "name": "Daily Trending Menus",
+      "data": [
+        {
+          "title": "Chicken curry special with cucumber",
+          "order": 89,
+          "img": "/images/menu/Untitled-1.jpg"
+        },
+        {
+          "title": "Italiano Pizza With Garlic",
+          "order": 89,
+          "img": "/images/menu/Untitled-2.jpg"
+        },
+        {
+          "title": "Watermelon juice with ice",
+          "order": 89,
+          "img": "/images/menu/Untitled-3.jpg"
+        },
+        {
+          "title": "Tuna Soup spinach with himalaya salt",
+          "order": 89,
+          "img": "/images/menu/Untitled-4.jpg"
+        },
+        {
+          "title": "Medium Spicy Spagethi Italiano",
+          "order": 89,
+          "img": "/images/menu/Untitled-5.jpg"
+        }
+      ]
+    }
+  },
+  "dashboard": {
+    "indexPage": {
+      "charts": {
+        "dailyTargetChart": {
+          "data": [70],
+          "name": "Daily Target Income",
+          "subHeading": "Lorem ipsum dolor sit",
+          "value": 749.56,
+          "heightValue": "1,000",
+          "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do"
+        },
+        "widget1": {
+          "value": "892",
+          "name": "Orders",
+          "overview": "+2.7",
+          "data": [500, 500, 400, 400, 600, 600, 300, 300, 500, 500, 700, 700]
+        },
+        "widget2": {
+          "name": "Customers",
+          "value": "9,334 ",
+          "overview": -0.5,
+          "data": [500, 500, 300, 300, 600, 600, 400, 400, 200, 200, 500, 500]
+        },
+        "widget3": {
+          "name": "Menu",
+          "value": "524",
+          "data": [300, 300, 400, 400, 200, 200, 400, 400, 500, 500, 700, 700]
+        },
+        "customerMap": {
+          "name": "Customer Map",
+          "subHeading": "Lorem ipsum dolor sit amet, consectetur",
+          "data": {
+            "monthly": [
+              {
+                "name": "Income",
+                "data": [80, 24, 80, 90, 80, 70, 20, 85, 80, 45, 25, 65]
+              },
+              {
+                "name": "Expense",
+                "data": [40, 60, 20, 60, 60, 20, 60, 25, 40, 65, 15, 40]
+              },
+              {
+                "name": "Others",
+                "data": [20, 17, 5, 20, 20, 10, 15, 10, 15, 20, 60, 15]
+              }
+            ],
+            "weekly": [
+              {
+                "name": "Income",
+                "data": [80, 24, 80, 90, 80, 70, 20, 85, 80, 45, 25, 65]
+              },
+              {
+                "name": "Expense",
+                "data": [40, 60, 20, 60, 60, 20, 60, 25, 40, 65, 15, 40]
+              },
+              {
+                "name": "Others",
+                "data": [20, 17, 5, 20, 20, 10, 15, 10, 15, 20, 60, 15]
+              }
+            ],
+            "today": [
+              {
+                "name": "Income",
+                "data": [80, 24, 80, 90, 80, 70, 20, 85, 80, 45, 25, 65]
+              },
+              {
+                "name": "Expense",
+                "data": [40, 60, 20, 60, 60, 20, 60, 25, 40, 65, 15, 40]
+              },
+              {
+                "name": "Others",
+                "data": [20, 17, 5, 20, 20, 10, 15, 10, 15, 20, 60, 15]
+              }
+            ]
+          }
+        }
+      },
+      "recentOrderRequest": {
+        "name": "Recent Order Request",
+        "subHeading": "Lorem ipsum dolor",
+        "data": [
+          {
+            "title": "Sweet Cheezy Pizza for Kids Meal (Small Size)",
+            "price": 7.4,
+            "location": "South Corner st41256 london",
+            "numberOfOrder": 3,
+            "serialNumber": "0010235",
+            "author": "Peter Parkur",
+            "status": "PENDING",
+            "statusColor": "warning",
+            "img": "/images/card/Untitled-1.jpg"
+          },
+          {
+            "title": "Tuna soup spinach with himalaya salt",
+            "price": 7.4,
+            "location": "South Corner St.41256 London",
+            "numberOfOrder": 3,
+            "author": "Jimmy Kueai",
+            "status": "PENDING",
+            "statusColor": "warning",
+            "serialNumber": "0010235",
+            "img": "/images/card/Untitled-2.jpg"
+          },
+          {
+            "title": "Extreme Deluxe Pizza Mozarella with Garlic",
+            "price": 8.2,
+            "location": "Blue Ocean St.41551 London",
+            "numberOfOrder": 1,
+            "author": "Cindy Alexa",
+            "status": "DELIVERED",
+            "statusColor": "success",
+            "serialNumber": "0010235",
+            "img": "/images/card/Untitled-3.jpg"
+          },
+          {
+            "title": "Mozarella Pizza With Random Topping",
+            "price": 7.4,
+            "location": "Blue Ocean St.41551 London",
+            "numberOfOrder": 1,
+            "author": "Cindy Alexa",
+            "status": "CANCELED",
+            "statusColor": "light",
+            "serialNumber": "0010235",
+            "img": "/images/card/Untitled-1.jpg"
+          },
+          {
+            "title": "Sweet Cheezy Pizza for Kids Meal (Small Size)",
+            "price": 7.4,
+            "location": "South Corner st41256 london",
+            "numberOfOrder": 3,
+            "serialNumber": "0010235",
+            "author": "Peter Parkur",
+            "status": "PENDING",
+            "statusColor": "warning",
+            "img": "/images/card/Untitled-1.jpg"
+          },
+          {
+            "title": "Tuna soup spinach with himalaya salt",
+            "price": 7.4,
+            "location": "South Corner St.41256 London",
+            "numberOfOrder": 3,
+            "author": "Jimmy Kueai",
+            "status": "PENDING",
+            "statusColor": "warning",
+            "serialNumber": "0010235",
+            "img": "/images/card/Untitled-2.jpg"
+          },
+          {
+            "title": "Extreme Deluxe Pizza Mozarella with Garlic",
+            "price": 8.2,
+            "location": "Blue Ocean St.41551 London",
+            "numberOfOrder": 1,
+            "author": "Cindy Alexa",
+            "status": "DELIVERED",
+            "statusColor": "success",
+            "serialNumber": "0010235",
+            "img": "/images/card/Untitled-3.jpg"
+          },
+          {
+            "title": "Mozarella Pizza With Random Topping",
+            "price": 7.4,
+            "location": "Blue Ocean St.41551 London",
+            "numberOfOrder": 1,
+            "author": "Cindy Alexa",
+            "status": "CANCELED",
+            "statusColor": "light",
+            "serialNumber": "0010235",
+            "img": "/images/card/Untitled-1.jpg"
+          },
+          {
+            "title": "Sweet Cheezy Pizza for Kids Meal (Small Size)",
+            "price": 7.4,
+            "location": "South Corner st41256 london",
+            "numberOfOrder": 3,
+            "serialNumber": "0010235",
+            "author": "Peter Parkur",
+            "status": "PENDING",
+            "statusColor": "warning",
+            "img": "/images/card/Untitled-1.jpg"
+          },
+          {
+            "title": "Tuna soup spinach with himalaya salt",
+            "price": 7.4,
+            "location": "South Corner St.41256 London",
+            "numberOfOrder": 3,
+            "author": "Jimmy Kueai",
+            "status": "PENDING",
+            "statusColor": "warning",
+            "serialNumber": "0010235",
+            "img": "/images/card/Untitled-2.jpg"
+          },
+          {
+            "title": "Extreme Deluxe Pizza Mozarella with Garlic",
+            "price": 8.2,
+            "location": "Blue Ocean St.41551 London",
+            "numberOfOrder": 1,
+            "author": "Cindy Alexa",
+            "status": "DELIVERED",
+            "statusColor": "success",
+            "serialNumber": "0010235",
+            "img": "/images/card/Untitled-3.jpg"
+          },
+          {
+            "title": "Mozarella Pizza With Random Topping",
+            "price": 7.4,
+            "location": "Blue Ocean St.41551 London",
+            "numberOfOrder": 1,
+            "author": "Cindy Alexa",
+            "status": "CANCELED",
+            "statusColor": "light",
+            "serialNumber": "0010235",
+            "img": "/images/card/Untitled-1.jpg"
+          },
+          {
+            "title": "Sweet Cheezy Pizza for Kids Meal (Small Size)",
+            "price": 7.4,
+            "location": "South Corner st41256 london",
+            "numberOfOrder": 3,
+            "serialNumber": "0010235",
+            "author": "Peter Parkur",
+            "status": "PENDING",
+            "statusColor": "warning",
+            "img": "/images/card/Untitled-1.jpg"
+          },
+          {
+            "title": "Tuna soup spinach with himalaya salt",
+            "price": 7.4,
+            "location": "South Corner St.41256 London",
+            "numberOfOrder": 3,
+            "author": "Jimmy Kueai",
+            "status": "PENDING",
+            "statusColor": "warning",
+            "serialNumber": "0010235",
+            "img": "/images/card/Untitled-2.jpg"
+          },
+          {
+            "title": "Extreme Deluxe Pizza Mozarella with Garlic",
+            "price": 8.2,
+            "location": "Blue Ocean St.41551 London",
+            "numberOfOrder": 1,
+            "author": "Cindy Alexa",
+            "status": "DELIVERED",
+            "statusColor": "success",
+            "serialNumber": "0010235",
+            "img": "/images/card/Untitled-3.jpg"
+          },
+          {
+            "title": "Mozarella Pizza With Random Topping",
+            "price": 7.4,
+            "location": "Blue Ocean St.41551 London",
+            "numberOfOrder": 1,
+            "author": "Cindy Alexa",
+            "status": "CANCELED",
+            "statusColor": "light",
+            "serialNumber": "0010235",
+            "img": "/images/card/Untitled-1.jpg"
+          },
+          {
+            "title": "Sweet Cheezy Pizza for Kids Meal (Small Size)",
+            "price": 7.4,
+            "location": "South Corner st41256 london",
+            "numberOfOrder": 3,
+            "serialNumber": "0010235",
+            "author": "Peter Parkur",
+            "status": "PENDING",
+            "statusColor": "warning",
+            "img": "/images/card/Untitled-1.jpg"
+          },
+          {
+            "title": "Tuna soup spinach with himalaya salt",
+            "price": 7.4,
+            "location": "South Corner St.41256 London",
+            "numberOfOrder": 3,
+            "author": "Jimmy Kueai",
+            "status": "PENDING",
+            "statusColor": "warning",
+            "serialNumber": "0010235",
+            "img": "/images/card/Untitled-2.jpg"
+          },
+          {
+            "title": "Extreme Deluxe Pizza Mozarella with Garlic",
+            "price": 8.2,
+            "location": "Blue Ocean St.41551 London",
+            "numberOfOrder": 1,
+            "author": "Cindy Alexa",
+            "status": "DELIVERED",
+            "statusColor": "success",
+            "serialNumber": "0010235",
+            "img": "/images/card/Untitled-3.jpg"
+          },
+          {
+            "title": "Mozarella Pizza With Random Topping",
+            "price": 7.4,
+            "location": "Blue Ocean St.41551 London",
+            "numberOfOrder": 1,
+            "author": "Cindy Alexa",
+            "status": "CANCELED",
+            "statusColor": "light",
+            "serialNumber": "0010235",
+            "img": "/images/card/Untitled-1.jpg"
+          },
+          {
+            "title": "Sweet Cheezy Pizza for Kids Meal (Small Size)",
+            "price": 7.4,
+            "location": "South Corner st41256 london",
+            "numberOfOrder": 3,
+            "serialNumber": "0010235",
+            "author": "Peter Parkur",
+            "status": "PENDING",
+            "statusColor": "warning",
+            "img": "/images/card/Untitled-1.jpg"
+          },
+          {
+            "title": "Tuna soup spinach with himalaya salt",
+            "price": 7.4,
+            "location": "South Corner St.41256 London",
+            "numberOfOrder": 3,
+            "author": "Jimmy Kueai",
+            "status": "PENDING",
+            "statusColor": "warning",
+            "serialNumber": "0010235",
+            "img": "/images/card/Untitled-2.jpg"
+          },
+          {
+            "title": "Extreme Deluxe Pizza Mozarella with Garlic",
+            "price": 8.2,
+            "location": "Blue Ocean St.41551 London",
+            "numberOfOrder": 1,
+            "author": "Cindy Alexa",
+            "status": "DELIVERED",
+            "statusColor": "success",
+            "serialNumber": "0010235",
+            "img": "/images/card/Untitled-3.jpg"
+          },
+          {
+            "title": "Mozarella Pizza With Random Topping",
+            "price": 7.4,
+            "location": "Blue Ocean St.41551 London",
+            "numberOfOrder": 1,
+            "author": "Cindy Alexa",
+            "status": "CANCELED",
+            "statusColor": "light",
+            "serialNumber": "0010235",
+            "img": "/images/card/Untitled-1.jpg"
+          }
+        ]
+      },
+      "trendingMenus": {
+        "name": "Daily Trending Menus",
+        "subHeading": "Lorem ipsum dolor",
+        "data": [
+          {
+            "title": "Chicken curry special with cucumber",
+            "order": 89,
+            "img": "/images/menu/Untitled-1.jpg",
+            "price": 5.6
+          },
+          {
+            "title": "Italiano Pizza With Garlic",
+            "order": 89,
+            "img": "/images/menu/Untitled-2.jpg",
+            "price": 5.6
+          },
+          {
+            "title": "Watermelon juice with ice",
+            "order": 89,
+            "img": "/images/menu/Untitled-3.jpg",
+            "price": 5.6
+          },
+          {
+            "title": "Tuna Soup spinach with himalaya salt",
+            "order": 89,
+            "img": "/images/menu/Untitled-4.jpg",
+            "price": 5.6
+          },
+          {
+            "title": "Medium Spicy Spagethi Italiano",
+            "order": 89,
+            "img": "/images/menu/Untitled-5.jpg",
+            "price": 5.6
+          }
+        ]
+      }
+    },
+    "orderListPage": {
+      "name": "Oder List",
+      "data": [
+        {
+          "orderId": "5552311",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "Olivia Shine\t",
+          "location": "35 Station Road London\t",
+          "amount": "82.46",
+          "status": "PENDING",
+          "statusColor": "warning"
+        },
+        {
+          "orderId": "5552322",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "Samantha Bake\t",
+          "location": "79 The Drive London\t",
+          "amount": "22.18",
+          "status": "PENDING",
+          "statusColor": "warning"
+        },
+        {
+          "orderId": "5552323",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "Veronica",
+          "location": "21 King Street London\t",
+          "amount": "74.92",
+          "status": "DELIVERED",
+          "statusColor": "success"
+        },
+        {
+          "orderId": "5552349",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "Roberto Carlo\t",
+          "location": "544 Manor Road London\t",
+          "amount": "34.41",
+          "status": "DELIVERED",
+          "statusColor": "success"
+        },
+        {
+          "orderId": "5552351",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "James WItcwicky\t",
+          "location": "Corner Street 5th London\t",
+          "amount": "164.52",
+          "status": "CANCELED",
+          "statusColor": "light"
+        },
+        {
+          "orderId": "5552311",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "Olivia Shine\t",
+          "location": "35 Station Road London\t",
+          "amount": "82.46",
+          "status": "PENDING",
+          "statusColor": "warning"
+        },
+        {
+          "orderId": "5552322",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "Samantha Bake\t",
+          "location": "79 The Drive London\t",
+          "amount": "22.18",
+          "status": "PENDING",
+          "statusColor": "warning"
+        },
+        {
+          "orderId": "5552323",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "Veronica",
+          "location": "21 King Street London\t",
+          "amount": "74.92",
+          "status": "DELIVERED",
+          "statusColor": "success"
+        },
+        {
+          "orderId": "5552349",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "Roberto Carlo\t",
+          "location": "544 Manor Road London\t",
+          "amount": "34.41",
+          "status": "DELIVERED",
+          "statusColor": "success"
+        },
+        {
+          "orderId": "5552351",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "James WItcwicky\t",
+          "location": "Corner Street 5th London\t",
+          "amount": "164.52",
+          "status": "CANCELED",
+          "statusColor": "light"
+        }
+      ]
+    },
+    "orderDetail": {
+      "id": "INV-0012456",
+      "profile": {
+        "customar": {
+          "name": "Soleh Anderson",
+          "img": "/images/profile/Untitled-2.jpg",
+          "phn": "+51 5125 626 77",
+          "location": "Long Horn St. Avenue 351636 London",
+          "orderNote": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's."
+        },
+        "delivery": {
+          "name": "Soleh Anderson",
+          "joinDate": "June 20, 2012",
+          "phn": "",
+          "location": ""
+        }
+      },
+      "customarFvt": [
+        {
+          "name": "Food",
+          "value": 66,
+          "menus": 45,
+          "color": "rgb(255, 201, 12,1)"
+        },
+        {
+          "name": "Drink",
+          "value": 31,
+          "menus": 21,
+          "color": "rgb(0,164,174,1)"
+        }
+      ],
+      "items": {
+        "name": "Items",
+        "data": [
+          {
+            "title": "Chicken curry special with cucumber",
+            "img": "/images/card/Untitled-6.jpg",
+            "review": 454,
+            "rating": 3,
+            "qty": 1,
+            "course": "main course",
+            "price": "4.12"
+          },
+          {
+            "title": "Watermelon juice with ice",
+            "img": "/images/card/Untitled-4.jpg",
+            "review": 454,
+            "rating": 2,
+            "qty": 3,
+            "course": "main course",
+            "price": "14.99"
+          },
+          {
+            "title": "Italiano pizza with garlic",
+            "img": "/images/card/Untitled-5.jpg",
+            "review": 454,
+            "rating": 3,
+            "qty": 1,
+            "course": "main course",
+            "price": "15.44"
+          }
+        ]
+      },
+      "orderProcess": [
+        {
+          "name": "Order Created",
+          "time": "Thu, 21 Jul 2020, 11:49 AM",
+          "icon": "primary"
+        },
+        {
+          "name": "Payment Success",
+          "time": "Fri, 22 Jul 2020, 10:44 AM",
+          "icon": "primary"
+        },
+        {
+          "name": "On Delivery",
+          "time": "Sat, 23 Jul 2020, 01:24 PM",
+          "icon": "primary"
+        },
+        {
+          "name": "Order Delivered",
+          "time": "Sat, 23 Jul 2020, 01:24 PM",
+          "icon": "success"
+        }
+      ]
+    },
+    "customers": {
+      "name": "Customers",
+      "data": [
+        {
+          "orderId": "5552311",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "Olivia Shine\t",
+          "location": "35 Station Road London\t",
+          "totalSpent": "82.46",
+          "lastOrder": "14.89"
+        },
+        {
+          "orderId": "5552322",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "Samantha Bake\t",
+          "location": "79 The Drive London\t",
+          "totalSpent": "22.18",
+          "lastOrder": "8.13"
+        },
+        {
+          "orderId": "5552323",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "Veronica",
+          "location": "21 King Street London\t",
+          "totalSpent": "74.92",
+          "lastOrder": "21.55"
+        },
+        {
+          "orderId": "5552349",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "Roberto Carlo\t",
+          "location": "544 Manor Road London\t",
+          "totalSpent": "34.41",
+          "lastOrder": "42.85"
+        },
+        {
+          "orderId": "5552351",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "James WItcwicky\t",
+          "location": "Corner Street 5th London\t",
+          "totalSpent": "164.52",
+          "lastOrder": "11.41"
+        },
+        {
+          "orderId": "5552311",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "Olivia Shine\t",
+          "location": "35 Station Road London\t",
+          "totalSpent": "82.46",
+          "lastOrder": "14.89"
+        },
+        {
+          "orderId": "5552322",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "Samantha Bake\t",
+          "location": "79 The Drive London\t",
+          "totalSpent": "22.18",
+          "lastOrder": "8.13"
+        },
+        {
+          "orderId": "5552323",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "Veronica",
+          "location": "21 King Street London\t",
+          "totalSpent": "74.92",
+          "lastOrder": "21.55"
+        },
+        {
+          "orderId": "5552349",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "Roberto Carlo\t",
+          "location": "544 Manor Road London\t",
+          "totalSpent": "34.41",
+          "lastOrder": "42.85"
+        },
+        {
+          "orderId": "5552351",
+          "date": "26 March 2020, 12:42 AM\t",
+          "CustomerName": "James WItcwicky\t",
+          "location": "Corner Street 5th London\t",
+          "totalSpent": "164.52",
+          "lastOrder": "11.41"
+        }
+      ]
+    },
+    "analytics": {
+      "bestseler": {
+        "name": "Best seler menus",
+        "data": [
+          {
+            "img": "/images/card/Untitled-7.jpg",
+            "title": "Medium Spicy Pizza with Kemangi Leaf",
+            "price": "6.53",
+            "likes": "256",
+            "sells": "6,273"
+          },
+          {
+            "img": "/images/card/Untitled-8.jpg",
+            "title": "Medium Spicy Pizza with Kemangi Leaf",
+            "price": "6.53",
+            "likes": "256",
+            "sells": "6,273"
+          },
+          {
+            "img": "/images/card/Untitled-9.jpg",
+            "title": "Medium Spicy Pizza with Kemangi Leaf",
+            "price": "6.53",
+            "likes": "256",
+            "sells": "6,273"
+          },
+          {
+            "img": "/images/card/Untitled-8.jpg",
+            "title": "Medium Spicy Pizza with Kemangi Leaf",
+            "price": "6.53",
+            "likes": "256",
+            "sells": "6,273"
+          },
+          {
+            "img": "/images/card/Untitled-7.jpg",
+            "title": "Medium Spicy Pizza with Kemangi Leaf",
+            "price": "6.53",
+            "likes": "256",
+            "sells": "6,273"
+          },
+          {
+            "img": "/images/card/Untitled-8.jpg",
+            "title": "Medium Spicy Pizza with Kemangi Leaf",
+            "price": "6.53",
+            "likes": "256",
+            "sells": "6,273"
+          },
+          {
+            "img": "/images/card/Untitled-9.jpg",
+            "title": "Medium Spicy Pizza with Kemangi Leaf",
+            "price": "6.53",
+            "likes": "256",
+            "sells": "6,273"
+          },
+          {
+            "img": "/images/card/Untitled-8.jpg",
+            "title": "Medium Spicy Pizza with Kemangi Leaf",
+            "price": "6.53",
+            "likes": "256",
+            "sells": "6,273"
+          },
+          {
+            "img": "/images/card/Untitled-7.jpg",
+            "title": "Medium Spicy Pizza with Kemangi Leaf",
+            "price": "6.53",
+            "likes": "256",
+            "sells": "6,273"
+          },
+          {
+            "img": "/images/card/Untitled-8.jpg",
+            "title": "Medium Spicy Pizza with Kemangi Leaf",
+            "price": "6.53",
+            "likes": "256",
+            "sells": "6,273"
+          },
+          {
+            "img": "/images/card/Untitled-9.jpg",
+            "title": "Medium Spicy Pizza with Kemangi Leaf",
+            "price": "6.53",
+            "likes": "256",
+            "sells": "6,273"
+          },
+          {
+            "img": "/images/card/Untitled-8.jpg",
+            "title": "Medium Spicy Pizza with Kemangi Leaf",
+            "price": "6.53",
+            "likes": "256",
+            "sells": "6,273"
+          },
+          {
+            "img": "/images/card/Untitled-7.jpg",
+            "title": "Medium Spicy Pizza with Kemangi Leaf",
+            "price": "6.53",
+            "likes": "256",
+            "sells": "6,273"
+          },
+          {
+            "img": "/images/card/Untitled-8.jpg",
+            "title": "Medium Spicy Pizza with Kemangi Leaf",
+            "price": "6.53",
+            "likes": "256",
+            "sells": "6,273"
+          },
+          {
+            "img": "/images/card/Untitled-9.jpg",
+            "title": "Medium Spicy Pizza with Kemangi Leaf",
+            "price": "6.53",
+            "likes": "256",
+            "sells": "6,273"
+          },
+          {
+            "img": "/images/card/Untitled-8.jpg",
+            "title": "Medium Spicy Pizza with Kemangi Leaf",
+            "price": "6.53",
+            "likes": "256",
+            "sells": "6,273"
+          }
+        ]
+      },
+      "loyalCustomers": {
+        "name": "Loyal Customers",
+        "data": [
+          {
+            "name": "Alexzander Queqe",
+            "img": "/images/profile/Untitled-10.jpg",
+            "totalOrder": 651
+          },
+          {
+            "name": "Bella Simatupang",
+            "img": "/images/profile/Untitled-11.jpg",
+            "totalOrder": 356
+          },
+          {
+            "name": "Kevin Jamet",
+            "img": "/images/profile/Untitled-13.jpg",
+            "totalOrder": 78
+          },
+          {
+            "name": "Bella Simatupang",
+            "img": "/images/profile/Untitled-11.jpg",
+            "totalOrder": 651
+          },
+          {
+            "name": "Jordi Alaba",
+            "img": "/images/profile/Untitled-12.jpg",
+            "totalOrder": 125
+          }
+        ]
+      },
+      "fvtItem": {
+        "name": "Most Favorites Items",
+        "categories": [
+          {
+            "name": "All Categories",
+            "event": "all_categories"
+          },
+          {
+            "name": "Main Course",
+            "event": "main-course"
+          },
+          {
+            "name": "Pizza",
+            "event": "pizza"
+          },
+          {
+            "name": "Drink",
+            "event": "drink"
+          },
+          {
+            "name": "Dessert",
+            "event": "dessert"
+          },
+          {
+            "name": "More",
+            "event": "more"
+          }
+        ],
+        "data": [
+          {
+            "name": "all_categories",
+            "data": [
+              {
+                "title": "Mozarella Pizza with Random Topping",
+                "totalSells": "2,441",
+                "img": "/images/card/Untitled-10.jpg",
+                "rating": 3,
+                "review": 454,
+                "chartValue": 85,
+                "categories": ["main", "pizza", "drink", "dessert", "more"]
+              },
+              {
+                "title": "Extreme Deluxe Pizza Super With Mozarella",
+                "totalSells": "2,441",
+                "img": "/images/card/Untitled-11.jpg",
+                "rating": 3,
+                "review": 454,
+                "chartValue": 45,
+                "categories": ["pizza", "drink", "dessert"]
+              },
+              {
+                "title": "Watermelon Juice with Ice",
+                "totalSells": "2,441",
+                "img": "/images/card/Untitled-12.jpg",
+                "rating": 2,
+                "review": 454,
+                "chartValue": 75,
+                "categories": ["main", "pizza", "dessert"]
+              },
+              {
+                "title": "Extreme Deluxe Pizza Super With Mozarella",
+                "totalSells": "2,441",
+                "img": "/images/card/Untitled-12.jpg",
+                "rating": 3,
+                "review": 454,
+                "chartValue": 45,
+                "categories": ["main", "pizza"]
+              }
+            ]
+          },
+          {
+            "name": "main-course",
+            "data": [
+              {
+                "title": "Mozarella Pizza with Random Topping",
+                "totalSells": "2,441",
+                "img": "/images/card/Untitled-10.jpg",
+                "rating": 3,
+                "review": 454,
+                "chartValue": 85
+              },
+              {
+                "title": "Extreme Deluxe Pizza Super With Mozarella",
+                "totalSells": "2,441",
+                "img": "/images/card/Untitled-11.jpg",
+                "rating": 3,
+                "review": 454,
+                "chartValue": 45
+              },
+              {
+                "title": "Watermelon Juice with Ice",
+                "totalSells": "2,441",
+                "img": "/images/card/Untitled-12.jpg",
+                "rating": 2,
+                "review": 454,
+                "chartValue": 75
+              }
+            ]
+          },
+          {
+            "name": "pizza",
+            "data": [
+              {
+                "title": "Mozarella Pizza with Random Topping",
+                "totalSells": "2,441",
+                "img": "/images/card/Untitled-10.jpg",
+                "rating": 3,
+                "review": 454,
+                "chartValue": 85,
+                "categories": ["main", "pizza", "drink", "dessert", "more"]
+              },
+              {
+                "title": "Extreme Deluxe Pizza Super With Mozarella",
+                "totalSells": "2,441",
+                "img": "/images/card/Untitled-11.jpg",
+                "rating": 3,
+                "review": 454,
+                "chartValue": 45,
+                "categories": ["pizza", "drink", "dessert"]
+              },
+              {
+                "title": "Watermelon Juice with Ice",
+                "totalSells": "2,441",
+                "img": "/images/card/Untitled-12.jpg",
+                "rating": 2,
+                "review": 454,
+                "chartValue": 75,
+                "categories": ["main", "pizza", "dessert"]
+              },
+              {
+                "title": "Extreme Deluxe Pizza Super With Mozarella",
+                "totalSells": "2,441",
+                "img": "/images/card/Untitled-12.jpg",
+                "rating": 3,
+                "review": 454,
+                "chartValue": 45,
+                "categories": ["main", "pizza"]
+              }
+            ]
+          },
+          {
+            "name": "drink",
+            "data": [
+              {
+                "title": "Mozarella Pizza with Random Topping",
+                "totalSells": "2,441",
+                "img": "/images/card/Untitled-10.jpg",
+                "rating": 3,
+                "review": 454,
+                "chartValue": 85,
+                "categories": ["main", "pizza", "drink", "dessert", "more"]
+              },
+              {
+                "title": "Extreme Deluxe Pizza Super With Mozarella",
+                "totalSells": "2,441",
+                "img": "/images/card/Untitled-11.jpg",
+                "rating": 3,
+                "review": 454,
+                "chartValue": 45,
+                "categories": ["pizza", "drink", "dessert"]
+              }
+            ]
+          },
+          {
+            "name": "dessert",
+            "data": [
+              {
+                "title": "Mozarella Pizza with Random Topping",
+                "totalSells": "2,441",
+                "img": "/images/card/Untitled-10.jpg",
+                "rating": 3,
+                "review": 454,
+                "chartValue": 85,
+                "categories": ["main", "pizza", "drink", "dessert", "more"]
+              },
+              {
+                "title": "Extreme Deluxe Pizza Super With Mozarella",
+                "totalSells": "2,441",
+                "img": "/images/card/Untitled-11.jpg",
+                "rating": 3,
+                "review": 454,
+                "chartValue": 45,
+                "categories": ["pizza", "drink", "dessert"]
+              }
+            ]
+          },
+          {
+            "name": "more",
+            "data": [
+              {
+                "title": "Mozarella Pizza with Random Topping",
+                "totalSells": "2,441",
+                "img": "/images/card/Untitled-10.jpg",
+                "rating": 3,
+                "review": 454,
+                "chartValue": 85,
+                "categories": ["main", "pizza", "drink", "dessert", "more"]
+              }
+            ]
+          }
+        ]
+      },
+      "charts": {
+        "salesSummary": {
+          "name": "Sales Summary",
+          "data": [
+            300, 450, 600, 600, 400, 450, 410, 470, 480, 800, 600, 900, 400
+          ]
+        },
+        "revenue": {
+          "name": "Revenue",
+          "data": [500, 500, 200, 200, 600, 600, 1000, 1000, 300, 300, 500, 500]
+        },
+        "customer": {
+          "name": "Customer Map",
+          "chartData": [
+            {
+              "name": "Income",
+              "data": [80, 24, 80, 90]
+            },
+            {
+              "name": "Expense",
+              "data": [40, 60, 20, 60]
+            },
+            {
+              "name": "Others",
+              "data": [20, 17, 5, 20]
+            }
+          ]
+        }
+      },
+      "trendingMenus": {
+        "name": "Daily Trending Menus",
+        "subHeading": "Lorem ipsum dolor",
+        "data": [
+          {
+            "title": "Chicken curry special with cucumber",
+            "order": 89,
+            "img": "/images/menu/Untitled-1.jpg",
+            "price": 5.6
+          },
+          {
+            "title": "Italiano Pizza With Garlic",
+            "order": 89,
+            "img": "/images/menu/Untitled-2.jpg",
+            "price": 5.6
+          },
+          {
+            "title": "Watermelon juice with ice",
+            "order": 89,
+            "img": "/images/menu/Untitled-3.jpg",
+            "price": 5.6
+          },
+          {
+            "title": "Tuna Soup spinach with himalaya salt",
+            "order": 89,
+            "img": "/images/menu/Untitled-4.jpg",
+            "price": 5.6
+          },
+          {
+            "title": "Medium Spicy Spagethi Italiano",
+            "order": 89,
+            "img": "/images/menu/Untitled-5.jpg",
+            "price": 5.6
+          },
+          {
+            "title": "Chicken curry special with cucumber",
+            "order": 89,
+            "img": "/images/menu/Untitled-1.jpg",
+            "price": 5.6
+          },
+          {
+            "title": "Italiano Pizza With Garlic",
+            "order": 89,
+            "img": "/images/menu/Untitled-2.jpg",
+            "price": 5.6
+          },
+          {
+            "title": "Watermelon juice with ice",
+            "order": 89,
+            "img": "/images/menu/Untitled-3.jpg",
+            "price": 5.6
+          }
+        ]
+      }
+    },
+    "reviews": {
+      "name": "reviews",
+      "data": [
+        {
+          "name": "James Sitepu",
+          "id": "#C01234",
+          "img": "/images/table/Untitled-1.jpg",
+          "time": "26/04/2020, 12:42 AM",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m",
+          "reviews": "4.2",
+          "reating": 3,
+          "status": "published"
+        },
+        {
+          "name": "James Sitepu",
+          "id": "#C01234",
+          "img": "/images/table/Untitled-2.jpg",
+          "time": "26/04/2020, 12:42 AM",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "reviews": "3.0",
+          "reating": 3,
+          "status": "published"
+        },
+        {
+          "name": "James Sitepu",
+          "id": "#C01234",
+          "img": "/images/table/Untitled-3.jpg",
+          "time": "26/04/2020, 12:42 AM",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "reviews": "4.5",
+          "reating": 3,
+          "status": "deleted"
+        },
+        {
+          "name": "James Sitepu",
+          "id": "#C01234",
+          "img": "/images/table/Untitled-4.jpg",
+          "time": "26/04/2020, 12:42 AM",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+          "reviews": "4.5",
+          "reating": 4,
+          "status": "deleted"
+        },
+        {
+          "name": "James Sitepu",
+          "id": "#C01234",
+          "img": "/images/table/Untitled-5.jpg",
+          "time": "26/04/2020, 12:42 AM",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "reviews": "4.2",
+          "reating": 3,
+          "status": "deleted"
+        }
+      ]
+    }
+  },
+  "header": {
+    "notification": [
+      {
+        "text": "Dr sultads Send you Photo",
+        "img": "/images/avatar/1.jpg",
+        "time": "29 July 2020 - 02:26 PM"
+      },
+      {
+        "text": "Resport created successfully",
+        "img": false,
+        "profileText": "KG",
+        "profileColor": "info",
+        "time": "29 July 2020 - 02:26 PM"
+      },
+      {
+        "text": "Reminder : Treatment Time!",
+        "img": false,
+        "profileText": false,
+        "profileIcon": "home",
+        "time": "29 July 2020 - 02:26 PM"
+      },
+      {
+        "text": "Dr sultads Send you Photo",
+        "img": "/images/avatar/1.jpg",
+        "time": "29 July 2020 - 02:26 PM"
+      },
+      {
+        "text": "Resport created successfully",
+        "img": false,
+        "profileText": "KG",
+        "profileColor": "danger",
+        "time": "29 July 2020 - 02:26 PM"
+      }
+    ],
+    "notification2": [
+      {
+        "time": "10",
+        "title": "Youtube, a video-sharing website, goes live",
+        "text": "",
+        "color": "primary",
+        "spacialText": {
+          "text": "$500",
+          "color": "primary"
+        }
+      },
+      {
+        "time": "20",
+        "color": "info",
+        "title": "New order placed",
+        "spacialText": {
+          "text": "#XF-2356.",
+          "color": "info"
+        },
+        "text": "Quisque a consequat ante Sit amet magna at volutapt..."
+      },
+      {
+        "time": "30",
+        "color": "danger",
+        "title": "john just buy your product",
+        "text": "",
+        "spacialText": {
+          "text": "Sell $250.",
+          "color": "warning"
+        }
+      },
+      {
+        "time": "15",
+        "color": "success",
+        "title": "StumbleUpon is acquired by eBay. ",
+        "text": ""
+      },
+      {
+        "time": "10",
+        "title": "Youtube, a video-sharing website, goes live",
+        "text": "",
+        "color": "primary",
+        "spacialText": {
+          "text": "$500",
+          "color": "primary"
+        }
+      },
+      {
+        "time": "20",
+        "color": "info",
+        "title": "New order placed",
+        "spacialText": {
+          "text": "#XF-2356.",
+          "color": "info"
+        },
+        "text": "Quisque a consequat ante Sit amet magna at volutapt..."
+      },
+      {
+        "time": "30",
+        "color": "danger",
+        "title": "john just buy your product",
+        "text": "",
+        "spacialText": {
+          "text": "Sell $250.",
+          "color": "warning"
+        }
+      }
+    ],
+    "chatLists": [
+      {
+        "name": "Archie Parker",
+        "img": "/images/avatar/1.jpg",
+        "active": true,
+        "lastActive": ""
+      },
+      {
+        "name": "Alfie Mason",
+        "img": "/images/avatar/2.jpg",
+        "active": false,
+        "lastActive": "7"
+      },
+      {
+        "name": "AharlieKane",
+        "img": "/images/avatar/3.jpg",
+        "active": true,
+        "lastActive": ""
+      },
+      {
+        "name": "Athan Jacoby",
+        "img": "/images/avatar/4.jpg",
+        "active": false,
+        "lastActive": "30"
+      },
+      {
+        "name": "Bashid Samim",
+        "img": "/images/avatar/5.jpg",
+        "active": false,
+        "lastActive": "50"
+      },
+      {
+        "name": "Breddie Ronan",
+        "img": "/images/avatar/1.jpg",
+        "active": true,
+        "lastActive": ""
+      },
+      {
+        "name": "Ceorge Carson",
+        "img": "/images/avatar/2.jpg",
+        "active": false,
+        "lastActive": "7"
+      },
+      {
+        "name": "Darry Parker",
+        "img": "/images/avatar/3.jpg",
+        "active": true,
+        "lastActive": ""
+      },
+      {
+        "name": "Denry Hunter",
+        "img": "/images/avatar/4.jpg",
+        "active": false,
+        "lastActive": "30"
+      },
+      {
+        "name": "Jack Ronan",
+        "img": "/images/avatar/5.jpg",
+        "active": false,
+        "lastActive": "50"
+      }
+    ],
+    "msgBox": [
+      {
+        "name": "you",
+        "time": "8:40 AM, Today",
+        "img": "/images/avatar/1.jpg",
+        "msg": "Hi, how are you samim?"
+      },
+      {
+        "name": "me",
+        "time": "8:55 AM, Today",
+        "img": "/images/avatar/2.jpg",
+        "msg": "Hi Khalid i am good tnx how about you?"
+      },
+      {
+        "name": "you",
+        "time": "8:40 AM, Today",
+        "img": "/images/avatar/1.jpg",
+        "msg": "I am good too, thank you for your chat template"
+      },
+      {
+        "name": "me",
+        "time": "9:05 AM, Today",
+        "img": "/images/avatar/2.jpg",
+        "msg": "You are welcome"
+      },
+      {
+        "name": "you",
+        "time": "9:07 AM, Today",
+        "img": "/images/avatar/1.jpg",
+        "msg": "I am looking for your next templates"
+      },
+      {
+        "name": "me",
+        "time": "9:10 AM, Today",
+        "img": "/images/avatar/2.jpg",
+        "msg": "Ok, thank you have a good day"
+      },
+      {
+        "name": "you",
+        "time": "9:12 AM, Today",
+        "img": "/images/avatar/1.jpg",
+        "msg": "Bye, see you"
+      },
+      {
+        "name": "you",
+        "time": "8:40 AM, Today",
+        "img": "/images/avatar/1.jpg",
+        "msg": "Hi, how are you samim?"
+      },
+      {
+        "name": "me",
+        "time": "8:55 AM, Today",
+        "img": "/images/avatar/2.jpg",
+        "msg": "Hi Khalid i am good tnx how about you?"
+      },
+      {
+        "name": "you",
+        "time": "9:00 AM, Today",
+        "img": "/images/avatar/1.jpg",
+        "msg": "I am good too, thank you for your chat template"
+      },
+      {
+        "name": "me",
+        "time": "9:05 AM, Today",
+        "img": "/images/avatar/2.jpg",
+        "msg": "You are welcome"
+      },
+      {
+        "name": "you",
+        "time": "9:07 AM, Today",
+        "img": "/images/avatar/1.jpg",
+        "msg": "I am looking for your next templates"
+      },
+      {
+        "name": "me",
+        "time": "9:10 AM, Today",
+        "img": "/images/avatar/2.jpg",
+        "msg": "Ok, thank you have a good day"
+      },
+      {
+        "name": "you",
+        "time": "9:12 AM, Today",
+        "img": "/images/avatar/1.jpg",
+        "msg": "Bye, see you"
+      }
+    ],
+    "searchData": [
+      {
+        "name": "Dashboard",
+        "pathName": "/"
+      },
+      {
+        "name": "Dashboard-dark",
+        "pathName": "/index-dark"
+      },
+      {
+        "name": "Orders-list",
+        "pathName": "/orders-list"
+      },
+      {
+        "name": "Order-detail",
+        "pathName": "/order-detail"
+      },
+      {
+        "name": "Customers",
+        "pathName": "/customer-list"
+      },
+      {
+        "name": "Analytics",
+        "pathName": "/analytics"
+      },
+      {
+        "name": "Reviews",
+        "pathName": "/reviews"
+      },
+      {
+        "name": "Apps > Profile",
+        "pathName": "/apps/profile"
+      },
+      {
+        "name": "Apps > Post-details",
+        "pathName": "/apps/post-details"
+      },
+      {
+        "name": "Apps > Email > Inbox",
+        "pathName": "/apps/email/inbox"
+      },
+      {
+        "name": "Apps > Email > Read",
+        "pathName": "/apps/email/read"
+      },
+      {
+        "name": "Apps > Email > Compose",
+        "pathName": "/apps/email/compose"
+      },
+      {
+        "name": "Apps > Shop > Product-grid",
+        "pathName": "/apps/ecom/product-grid"
+      },
+      {
+        "name": "Apps > Shop > Product-details",
+        "pathName": "/apps/ecom/product-details"
+      },
+      {
+        "name": "Apps > Shop > Product-order",
+        "pathName": "/apps/ecom/product-order"
+      },
+      {
+        "name": "Apps > Shop > Checkout",
+        "pathName": "/apps/ecom/checkout"
+      },
+      {
+        "name": "Apps > Shop > Invoice",
+        "pathName": "/apps/ecom/invoice"
+      },
+      {
+        "name": "Apps > Shop > Customers",
+        "pathName": "/apps/ecom/customers"
+      },
+      {
+        "name": "Charts > Rechart",
+        "pathName": "/chart/rechart"
+      },
+      {
+        "name": "Charts > chartjs",
+        "pathName": "/chart/chartjs"
+      },
+      {
+        "name": "Charts > apexchart",
+        "pathName": "/chart/apexchart"
+      },
+      {
+        "name": "Charts > chartist",
+        "pathName": "/chart/chartist"
+      },
+      {
+        "name": "Charts > sparkline",
+        "pathName": "/chart/sparkline"
+      },
+      {
+        "name": "Bootstarp > accordion",
+        "pathName": "/ui/accordion"
+      },
+      {
+        "name": "Bootstarp > alert",
+        "pathName": "/ui/alert"
+      },
+      {
+        "name": "Bootstarp > badge",
+        "pathName": "/ui/badge"
+      },
+      {
+        "name": "Bootstarp > button",
+        "pathName": "/ui/button"
+      },
+      {
+        "name": "Bootstarp > modal",
+        "pathName": "/ui/modal"
+      },
+      {
+        "name": "Bootstarp > button-group",
+        "pathName": "/ui/button-group"
+      },
+      {
+        "name": "Bootstarp > list-group",
+        "pathName": "/ui/list-group"
+      },
+      {
+        "name": "Bootstarp > media-object",
+        "pathName": "/ui/media-object"
+      },
+      {
+        "name": "Bootstarp > card",
+        "pathName": "/ui/card"
+      },
+      {
+        "name": "Bootstarp > dropdown",
+        "pathName": "/ui/dropdown"
+      },
+      {
+        "name": "Bootstarp > popover",
+        "pathName": "/ui/popover"
+      },
+      {
+        "name": "Bootstarp > progressbar",
+        "pathName": "/ui/progressbar"
+      },
+      {
+        "name": "Bootstarp > tab",
+        "pathName": "/ui/tab"
+      },
+      {
+        "name": "Bootstarp > typography",
+        "pathName": "/ui/typography"
+      },
+      {
+        "name": "Bootstarp > pagination",
+        "pathName": "/ui/pagination"
+      },
+      {
+        "name": "Bootstarp > grid",
+        "pathName": "/ui/grid"
+      },
+      {
+        "name": "plugins > select2",
+        "pathName": "/plugins/select2"
+      },
+      {
+        "name": "plugins > noui-slider",
+        "pathName": "/plugins/noui-slider"
+      },
+      {
+        "name": "plugins > sweetalert",
+        "pathName": "/plugins/sweetalert"
+      },
+      {
+        "name": "plugins > toastr",
+        "pathName": "/plugins/toastr"
+      },
+      {
+        "name": "plugins > jqvmap",
+        "pathName": "/plugins/jqvmap"
+      },
+      {
+        "name": "plugins > lightgallery",
+        "pathName": "/plugins/lightgallery"
+      },
+      {
+        "name": "Widget-basic",
+        "pathName": "/widget-basic"
+      },
+      {
+        "name": "form > element",
+        "pathName": "/form/element"
+      },
+      {
+        "name": "form > wizard",
+        "pathName": "/form/wizard"
+      },
+      {
+        "name": "form > editor",
+        "pathName": "/form/editor"
+      },
+      {
+        "name": "form > pickers",
+        "pathName": "/form/pickers"
+      },
+      {
+        "name": "form > validation",
+        "pathName": "/form/validation"
+      },
+      {
+        "name": "table > bootstrap",
+        "pathName": "/table/bootstrap"
+      },
+      {
+        "name": "table > datatable",
+        "pathName": "/table/datatable"
+      }
+    ],
+    "notes": [
+      {
+        "title": "New order placed by Athan Jacoby",
+        "date": "10 Aug 2020"
+      },
+      {
+        "title": "Youtube, a video-sharing website",
+        "date": "10 Aug 2020"
+      },
+      {
+        "title": "john just buy your product from Athan Jacoby",
+        "date": "10 Aug 2020"
+      },
+      {
+        "title": "Athan Jacoby",
+        "date": "10 Aug 2020"
+      }
+    ]
+  },
+  "apps": {
+    "headerImg": "/images/profile/cover.jpg",
+    "profile": {
+      "img": "/images/profile/profile.png",
+      "email": "info@example.com",
+      "designation": "UX / UI Designer",
+      "name": "Mitchell C. Shay",
+      "availability": "Full Time (Free Lancer)",
+      "age": 27,
+      "location": "Rosemont Avenue Melbourne, Florida",
+      "experience": 7,
+      "aboutMe": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence was created for the bliss of souls like mine.I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. /n A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.",
+      "skills": [
+        "Admin",
+        "Dashboard",
+        "Photoshop",
+        "Bootstrap",
+        "Responsive",
+        "Crypto"
+      ],
+      "language": ["Bangla", " French", "English"],
+      "socileMedia": {
+        "follower": 150,
+        "placeStay": 150,
+        "reviews": 45
+      }
+    },
+    "posts": {
+      "highlights": {
+        "title": "Darwin Creative Agency Theme",
+        "dec": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
+        "img": "/images/profile/1.jpg"
+      },
+      "latest": [
+        {
+          "title": "Collection of textile samples",
+          "dec": "I shared this on my fb wall a few months back, and I thought.",
+          "img": "/images/profile/5.jpg"
+        },
+        {
+          "title": "Collection of textile samples",
+          "dec": "I shared this on my fb wall a few months back, and I thought.",
+          "img": "/images/profile/6.jpg"
+        },
+        {
+          "title": "Collection of textile samples",
+          "dec": "I shared this on my fb wall a few months back, and I thought.",
+          "img": "/images/profile/7.jpg"
+        }
+      ],
+      "data": [
+        {
+          "title": "Collection of textile samples lay spread",
+          "dec": "A wonderful serenity has take possession of my entire soul like these sweet morning of spare which enjoy whole heart.A wonderful serenity has take possession of my entire soul like these sweet morning of spare which enjoy whole heart.",
+          "img": "/images/profile/8.jpg"
+        },
+        {
+          "title": "Collection of textile samples lay spread",
+          "dec": "A wonderful serenity has take possession of my entire soul like these sweet morning of spare which enjoy whole heart.A wonderful serenity has take possession of my entire soul like these sweet morning of spare which enjoy whole heart.",
+          "img": "/images/profile/9.jpg"
+        },
+        {
+          "title": "Collection of textile samples lay spread",
+          "dec": "A wonderful serenity has take possession of my entire soul like these sweet morning of spare which enjoy whole heart.A wonderful serenity has take possession of my entire soul like these sweet morning of spare which enjoy whole heart.",
+          "img": "/images/profile/8.jpg"
+        }
+      ],
+      "single": {
+        "title": "Collection of textile samples lay spread",
+        "author": "Admin",
+        "date": "18 Nov 2020",
+        "comments": 28,
+        "img": "/images/profile/8.jpg",
+        "dec": "A wonderful serenity has take possession of my entire soul like these sweet morning of spare which enjoy whole heart.A wonderful serenity has take possession of my entire soul like these sweet morning of spare which enjoy whole heart. /n  A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame./n  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Has been the industry's standard text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimencenturies./n  A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence was created for the bliss of souls like mine.I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents."
+      }
+    },
+    "interest": [
+      "/images/profile/2.jpg",
+      "/images/profile/3.jpg",
+      "/images/profile/4.jpg",
+      "/images/profile/3.jpg",
+      "/images/profile/4.jpg",
+      "/images/profile/2.jpg"
+    ],
+    "emails": {
+      "emailShortList": [
+        {
+          "title": "Ingredia Nutrisha, A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture",
+          "date": "11:49 am"
+        },
+        {
+          "title": "Almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.",
+          "date": "11:49 am"
+        },
+        {
+          "title": "Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of",
+          "date": "11:49 am"
+        },
+        {
+          "title": "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of",
+          "date": "11:49 am"
+        },
+        {
+          "title": "Ingredia Nutrisha, A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture",
+          "date": "11:49 am"
+        },
+        {
+          "title": "Almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.",
+          "date": "11:49 am"
+        },
+        {
+          "title": "Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of",
+          "date": "11:49 am"
+        },
+        {
+          "title": "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of",
+          "date": "11:49 am"
+        },
+        {
+          "title": "Ingredia Nutrisha, A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture",
+          "date": "11:49 am"
+        },
+        {
+          "title": "Almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.",
+          "date": "11:49 am"
+        },
+        {
+          "title": "Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of",
+          "date": "11:49 am"
+        },
+        {
+          "title": "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of",
+          "date": "11:49 am"
+        }
+      ],
+      "fullEmail": {
+        "time": "07:23 AM",
+        "date": "20 May 2020",
+        "title": "A collection of textile samples lay spread",
+        "form": {
+          "email": "info@example.com",
+          "name": "Mr Smith"
+        },
+        "author": {
+          "name": "Ingredia Nutrisha",
+          "img": "/images/avatar/1.jpg"
+        },
+        "text": "A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture /n Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. /n Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,",
+        "attachments": ["My-Photo.png", "My-File.docx", "My-Resume.pdf"]
+      }
+    },
+    "shop": {
+      "products": [
+        {
+          "name": "Bonorum et Malorum",
+          "img": "/images/product/1.jpg",
+          "price": "761.00",
+          "rating": 3,
+          "reviews": 34,
+          "brand": "Lee",
+          "stock": true,
+          "dec": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.",
+          "tags": ["bags", "clothes", "shoes", "dresses"],
+          "code": "0405689",
+          "relatedImg": {
+            "short": [
+              "/images/tab/1.jpg",
+              "/images/tab/2.jpg",
+              "/images/tab/3.jpg",
+              "/images/tab/4.jpg"
+            ],
+            "full": [
+              "/images/product/1.jpg",
+              "/images/product/2.jpg",
+              "/images/product/3.jpg",
+              "/images/product/4.jpg"
+            ]
+          },
+          "sizes": ["XS", "SM", "MD", "LG", "XL"]
+        },
+        {
+          "name": "Striped Dress",
+          "img": "/images/product/2.jpg",
+          "price": "159.00",
+          "rating": 5,
+          "reviews": 34,
+          "stock": true,
+          "brand": "Lee",
+          "dec": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.",
+          "tags": ["bags", "clothes", "shoes", "dresses"],
+          "code": "0405689",
+          "relatedImg": {
+            "short": [
+              "/images/tab/1.jpg",
+              "/images/tab/2.jpg",
+              "/images/tab/3.jpg",
+              "/images/tab/4.jpg"
+            ],
+            "full": [
+              "/images/product/1.jpg",
+              "/images/product/2.jpg",
+              "/images/product/3.jpg",
+              "/images/product/4.jpg"
+            ]
+          },
+          "sizes": ["XS", "SM", "MD", "LG", "XL"]
+        },
+        {
+          "name": "BBow polka-dot",
+          "img": "/images/product/3.jpg",
+          "price": "357.00",
+          "rating": 5,
+          "reviews": 34,
+          "stock": true,
+          "brand": "Lee",
+          "dec": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.",
+          "tags": ["bags", "clothes", "shoes", "dresses"],
+          "code": "0405689",
+          "relatedImg": {
+            "short": [
+              "/images/tab/1.jpg",
+              "images/tab/2.jpg",
+              "images/tab/3.jpg",
+              "images/tab/4.jpg"
+            ],
+            "full": [
+              "/images/product/1.jpg",
+              "images/product/2.jpg",
+              "images/product/3.jpg",
+              "images/product/4.jpg"
+            ]
+          },
+          "sizes": ["XS", "SM", "MD", "LG", "XL"]
+        },
+        {
+          "name": "Z Product 360",
+          "img": "/images/product/4.jpg",
+          "price": "654.00",
+          "rating": 3,
+          "reviews": 34,
+          "stock": true,
+          "brand": "Lee",
+          "dec": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.",
+          "tags": ["bags", "clothes", "shoes", "dresses"],
+          "code": "0405689",
+          "relatedImg": {
+            "short": [
+              "/images/tab/1.jpg",
+              "images/tab/2.jpg",
+              "images/tab/3.jpg",
+              "images/tab/4.jpg"
+            ],
+            "full": [
+              "/images/product/1.jpg",
+              "images/product/2.jpg",
+              "images/product/3.jpg",
+              "images/product/4.jpg"
+            ]
+          },
+          "sizes": ["XS", "SM", "MD", "LG", "XL"]
+        },
+        {
+          "name": "Chair Grey",
+          "img": "/images/product/5.jpg",
+          "price": "369.00",
+          "rating": 5,
+          "reviews": 34,
+          "stock": true,
+          "brand": "Lee",
+          "dec": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.",
+          "tags": ["bags", "clothes", "shoes", "dresses"],
+          "code": "0405689",
+          "relatedImg": {
+            "short": [
+              "/images/tab/1.jpg",
+              "images/tab/2.jpg",
+              "images/tab/3.jpg",
+              "images/tab/4.jpg"
+            ],
+            "full": [
+              "/images/product/1.jpg",
+              "images/product/2.jpg",
+              "images/product/3.jpg",
+              "images/product/4.jpg"
+            ]
+          },
+          "sizes": ["XS", "SM", "MD", "LG", "XL"]
+        },
+        {
+          "name": "fox sake withe",
+          "img": "/images/product/6.jpg",
+          "price": "245.00",
+          "rating": 5,
+          "reviews": 34,
+          "stock": true,
+          "brand": "Lee",
+          "dec": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.",
+          "tags": ["bags", "clothes", "shoes", "dresses"],
+          "code": "0405689",
+          "relatedImg": {
+            "short": [
+              "/images/tab/1.jpg",
+              "images/tab/2.jpg",
+              "images/tab/3.jpg",
+              "images/tab/4.jpg"
+            ],
+            "full": [
+              "/images/product/1.jpg",
+              "images/product/2.jpg",
+              "images/product/3.jpg",
+              "images/product/4.jpg"
+            ]
+          },
+          "sizes": ["XS", "SM", "MD", "LG", "XL"]
+        },
+        {
+          "name": "Back Bag",
+          "img": "/images/product/7.jpg",
+          "price": "364.00",
+          "rating": 5,
+          "reviews": 34,
+          "stock": true,
+          "brand": "Lee",
+          "dec": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.",
+          "tags": ["bags", "clothes", "shoes", "dresses"],
+          "code": "0405689",
+          "relatedImg": {
+            "short": [
+              "/images/tab/1.jpg",
+              "images/tab/2.jpg",
+              "images/tab/3.jpg",
+              "images/tab/4.jpg"
+            ],
+            "full": [
+              "/images/product/1.jpg",
+              "images/product/2.jpg",
+              "images/product/3.jpg",
+              "images/product/4.jpg"
+            ]
+          },
+          "sizes": ["XS", "SM", "MD", "LG", "XL"]
+        },
+        {
+          "name": "FLARE DRESS",
+          "img": "/images/product/1.jpg",
+          "price": "548.00",
+          "rating": 3,
+          "reviews": 34,
+          "stock": true,
+          "brand": "Lee",
+          "dec": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.",
+          "tags": ["bags", "clothes", "shoes", "dresses"],
+          "code": "0405689",
+          "relatedImg": {
+            "short": [
+              "/images/tab/1.jpg",
+              "images/tab/2.jpg",
+              "images/tab/3.jpg",
+              "images/tab/4.jpg"
+            ],
+            "full": [
+              "/images/product/1.jpg",
+              "images/product/2.jpg",
+              "images/product/3.jpg",
+              "images/product/4.jpg"
+            ]
+          },
+          "sizes": ["XS", "SM", "MD", "LG", "XL"]
+        }
+      ],
+      "orders": [
+        {
+          "id": "181",
+          "customer": {
+            "name": "Ricky Antony",
+            "email": "ricky@example.com"
+          },
+          "shipLocation": "Ricky Antony, 2392 Main Avenue, Penasauka, New Jersey 02149 /n Via Flat Rate",
+          "status": "completed",
+          "price": "99",
+          "date": "20/04/2020"
+        },
+        {
+          "id": "182",
+          "customer": {
+            "name": "Bucky Robert",
+            "email": "kin@example.com"
+          },
+          "shipLocation": "Kin Rossow, 1 Hollywood Blvd,Beverly Hills, California 90210 /n Via Free  Rate",
+          "status": "processing",
+          "price": "120",
+          "date": "20/04/2020"
+        },
+        {
+          "id": "183",
+          "customer": {
+            "name": "Merry Diana",
+            "email": "merry@example.com"
+          },
+          "shipLocation": "Merry Diana, 1 Infinite Loop, Cupertino, California 90210 /n Via Link Road",
+          "status": "hold",
+          "price": "70",
+          "date": "30/04/2020"
+        },
+        {
+          "id": "184",
+          "customer": {
+            "name": "Bucky Robert",
+            "email": "bucky@example.com"
+          },
+          "shipLocation": "Bucky Robert, 1 Infinite Loop, Cupertino, California 90210 /n Via Free Shipping",
+          "status": "pending",
+          "price": "92",
+          "date": "30/04/2020"
+        },
+        {
+          "id": "181",
+          "customer": {
+            "name": "Ricky Antony",
+            "email": "ricky@example.com"
+          },
+          "shipLocation": "Ricky Antony, 2392 Main Avenue, Penasauka, New Jersey 02149 /n Via Flat Rate",
+          "status": "completed",
+          "price": "99",
+          "date": "20/04/2020"
+        },
+        {
+          "id": "182",
+          "customer": {
+            "name": "Bucky Robert",
+            "email": "kin@example.com"
+          },
+          "shipLocation": "Kin Rossow, 1 Hollywood Blvd,Beverly Hills, California 90210 /n Via Free  Rate",
+          "status": "processing",
+          "price": "120",
+          "date": "20/04/2020"
+        },
+        {
+          "id": "183",
+          "customer": {
+            "name": "Merry Diana",
+            "email": "merry@example.com"
+          },
+          "shipLocation": "Merry Diana, 1 Infinite Loop, Cupertino, California 90210 /n Via Link Road",
+          "status": "hold",
+          "price": "70",
+          "date": "30/04/2020"
+        },
+        {
+          "id": "184",
+          "customer": {
+            "name": "Bucky Robert",
+            "email": "bucky@example.com"
+          },
+          "shipLocation": "Bucky Robert, 1 Infinite Loop, Cupertino, California 90210 /n Via Free Shipping",
+          "status": "pending",
+          "price": "92",
+          "date": "30/04/2020"
+        },
+        {
+          "id": "181",
+          "customer": {
+            "name": "Ricky Antony",
+            "email": "ricky@example.com"
+          },
+          "shipLocation": "Ricky Antony, 2392 Main Avenue, Penasauka, New Jersey 02149 /n Via Flat Rate",
+          "status": "completed",
+          "price": "99",
+          "date": "20/04/2020"
+        },
+        {
+          "id": "182",
+          "customer": {
+            "name": "Bucky Robert",
+            "email": "kin@example.com"
+          },
+          "shipLocation": "Kin Rossow, 1 Hollywood Blvd,Beverly Hills, California 90210 /n Via Free  Rate",
+          "status": "processing",
+          "price": "120",
+          "date": "20/04/2020"
+        },
+        {
+          "id": "183",
+          "customer": {
+            "name": "Merry Diana",
+            "email": "merry@example.com"
+          },
+          "shipLocation": "Merry Diana, 1 Infinite Loop, Cupertino, California 90210 /n Via Link Road",
+          "status": "hold",
+          "price": "70",
+          "date": "30/04/2020"
+        },
+        {
+          "id": "184",
+          "customer": {
+            "name": "Bucky Robert",
+            "email": "bucky@example.com"
+          },
+          "shipLocation": "Bucky Robert, 1 Infinite Loop, Cupertino, California 90210 /n Via Free Shipping",
+          "status": "pending",
+          "price": "92",
+          "date": "30/04/2020"
+        }
+      ],
+      "invoice": {
+        "status": "Pending",
+        "date": "01/01/2018",
+        "btcConvert": "6590",
+        "qrCode": "/images/qr.png",
+        "fromname": "Webz Poland",
+        "fromlocation": "Madalinskiego 8 /n 71-101 Szczecin, Poland",
+        "fromemail": "info@webz.com.pl",
+        "fromphn": "+48 444 666 3333",
+        "toname": "Bob Mart",
+        "tolocation": "Attn: Daniel Marek /n 43-190 Mikolow, Poland",
+        "toemail": "marek@daniel.com",
+        "tophn": "+48 123 456 789",
+        "vat": "10",
+        "discount": "20",
+        "items": [
+          {
+            "name": "Origin License",
+            "price": "999",
+            "qty": 1,
+            "dec": "Extended License"
+          },
+          {
+            "name": "Custom Services",
+            "price": "150",
+            "qty": 20,
+            "dec": "Instalation and Customization (cost per hour)"
+          },
+          {
+            "name": "Hosting",
+            "price": "499",
+            "qty": 20,
+            "dec": "1 year subcription"
+          },
+          {
+            "name": "Platinum Support",
+            "price": "3.999",
+            "qty": 20,
+            "dec": "1 year subcription 24/7\t"
+          }
+        ]
+      },
+      "customerList": [
+        {
+          "name": "Ricky Antony",
+          "img": "/images/avatar/5.png",
+          "email": "info@example.com",
+          "phn": "(201) 200-1851",
+          "location": "2392 Main Avenue, Penasauka",
+          "join": "30/03/2018"
+        },
+        {
+          "name": "Emma Watson",
+          "img": "/images/avatar/1.png",
+          "email": "info@example.com",
+          "phn": "(212) 228-8403",
+          "location": "2289 5th Avenue, New York",
+          "join": "11/07/2017"
+        },
+        {
+          "name": "Rowen Atkinson",
+          "img": "/images/avatar/5.png",
+          "email": "info@example.com",
+          "phn": "(201) 200-1851",
+          "location": "112 Bostwick Avenue, Jersey City",
+          "join": "05/04/2016\t"
+        },
+        {
+          "name": "Ricky Antony",
+          "img": "/images/avatar/5.png",
+          "email": "info@example.com",
+          "phn": "(201) 200-1851",
+          "location": "2392 Main Avenue, Penasauka",
+          "join": "30/03/2018"
+        },
+        {
+          "name": "Emma Watson",
+          "img": "/images/avatar/1.png",
+          "email": "info@example.com",
+          "phn": "(212) 228-8403",
+          "location": "2289 5th Avenue, New York",
+          "join": "11/07/2017"
+        },
+        {
+          "name": "Rowen Atkinson",
+          "img": "/images/avatar/5.png",
+          "email": "info@example.com",
+          "phn": "(201) 200-1851",
+          "location": "112 Bostwick Avenue, Jersey City",
+          "join": "05/04/2016\t"
+        },
+        {
+          "name": "Ricky Antony",
+          "img": "/images/avatar/5.png",
+          "email": "info@example.com",
+          "phn": "(201) 200-1851",
+          "location": "2392 Main Avenue, Penasauka",
+          "join": "30/03/2018"
+        },
+        {
+          "name": "Emma Watson",
+          "img": "/images/avatar/1.png",
+          "email": "info@example.com",
+          "phn": "(212) 228-8403",
+          "location": "2289 5th Avenue, New York",
+          "join": "11/07/2017"
+        },
+        {
+          "name": "Rowen Atkinson",
+          "img": "/images/avatar/5.png",
+          "email": "info@example.com",
+          "phn": "(201) 200-1851",
+          "location": "112 Bostwick Avenue, Jersey City",
+          "join": "05/04/2016\t"
+        },
+        {
+          "name": "Ricky Antony",
+          "img": "/images/avatar/5.png",
+          "email": "info@example.com",
+          "phn": "(201) 200-1851",
+          "location": "2392 Main Avenue, Penasauka",
+          "join": "30/03/2018"
+        },
+        {
+          "name": "Emma Watson",
+          "img": "/images/avatar/1.png",
+          "email": "info@example.com",
+          "phn": "(212) 228-8403",
+          "location": "2289 5th Avenue, New York",
+          "join": "11/07/2017"
+        },
+        {
+          "name": "Rowen Atkinson",
+          "img": "/images/avatar/5.png",
+          "email": "info@example.com",
+          "phn": "(201) 200-1851",
+          "location": "112 Bostwick Avenue, Jersey City",
+          "join": "05/04/2016\t"
+        }
+      ]
+    }
+  },
+  "widgetBasic": {
+    "timeline": [
+      {
+        "time": "10",
+        "text": "Youtube, a video-sharing website, goes live ",
+        "specialText": "$500",
+        "specialTextClass": "primary",
+        "badge": "primary",
+        "dec": ""
+      },
+      {
+        "time": "20",
+        "text": "New order placed ",
+        "specialText": "#XF-2356.",
+        "specialTextClass": "info",
+        "badge": "info",
+        "dec": "Quisque a consequat ante Sit amet magna at volutapt..."
+      },
+      {
+        "time": "30",
+        "text": "john just buy your product ",
+        "specialText": "Sell $250",
+        "specialTextClass": "warning",
+        "badge": "danger",
+        "dec": ""
+      },
+      {
+        "time": "15",
+        "text": "StumbleUpon is acquired by eBay. ",
+        "specialText": "",
+        "specialTextClass": "",
+        "badge": "success",
+        "dec": ""
+      },
+      {
+        "time": "20",
+        "text": "Mashable, a news website and blog, goes live.",
+        "specialText": "",
+        "specialTextClass": "",
+        "badge": "warning",
+        "dec": ""
+      },
+      {
+        "time": "20",
+        "text": "Mashable, a news website and blog, goes live.",
+        "specialText": "",
+        "specialTextClass": "",
+        "badge": "dark",
+        "dec": ""
+      }
+    ],
+    "notifications": [
+      {
+        "title": "Dr sultads Send you Photo",
+        "time": "02:26 PM",
+        "date": "29 July 2020 ",
+        "profile": {
+          "img": "/images/avatar/1.jpg",
+          "text": "",
+          "icon": "",
+          "bg": ""
+        },
+        "badge": {
+          "text": "",
+          "class": ""
+        },
+        "variant": "primary"
+      },
+      {
+        "title": "Resport created successfully",
+        "time": "02:26 PM",
+        "date": "29 July 2020 ",
+        "profile": {
+          "img": "",
+          "text": "KG",
+          "icon": "",
+          "bg": "info"
+        },
+        "badge": {
+          "text": "Warning",
+          "class": "warning"
+        },
+        "variant": "info"
+      },
+      {
+        "title": "Reminder : Treatment Time!",
+        "time": "02:26 PM",
+        "date": "29 July 2020 ",
+        "profile": {
+          "img": "",
+          "text": "",
+          "icon": "home",
+          "bg": "success"
+        },
+        "badge": {
+          "text": "",
+          "class": ""
+        },
+        "variant": "success"
+      },
+      {
+        "title": "Dr sultads Send you Photo",
+        "time": "02:26 PM",
+        "date": "29 July 2020 ",
+        "profile": {
+          "img": "/images/avatar/1.jpg",
+          "text": "",
+          "icon": "",
+          "bg": ""
+        },
+        "badge": {
+          "text": "Danger",
+          "class": "danger light"
+        },
+        "variant": "primary"
+      },
+      {
+        "title": "Resport created successfully",
+        "time": "02:26 PM",
+        "date": "29 July 2020 ",
+        "profile": {
+          "img": "",
+          "text": "KG",
+          "icon": "",
+          "bg": "danger"
+        },
+        "badge": {
+          "text": "Success",
+          "class": "success light"
+        },
+        "variant": "danger"
+      },
+      {
+        "title": "Reminder : Treatment Time!",
+        "time": "02:26 PM",
+        "date": "29 July 2020 ",
+        "profile": {
+          "img": "",
+          "text": "",
+          "icon": "home",
+          "bg": "primary"
+        },
+        "badge": {
+          "text": "Success",
+          "class": "success light"
+        },
+        "variant": "primary"
+      }
+    ],
+    "message": [
+      {
+        "name": "Alfie Mason",
+        "text": "I shared this on my fb wall a few months back..",
+        "time": "29 July 2020",
+        "profile": {
+          "img": "/images/avatar/1.jpg",
+          "text": "",
+          "bg": ""
+        },
+        "variant": "primary"
+      },
+      {
+        "name": "Jacob Tucker",
+        "text": "I shared this on my fb wall a few months back..",
+        "time": "29 July 2020",
+        "profile": {
+          "img": "",
+          "text": "KG",
+          "bg": "info"
+        },
+        "variant": "info"
+      },
+      {
+        "name": "Jack Ronan",
+        "text": "I shared this on my fb wall a few months back..",
+        "time": "29 July 2020",
+        "profile": {
+          "img": "/images/avatar/2.jpg",
+          "text": "",
+          "bg": ""
+        },
+        "variant": "success"
+      },
+      {
+        "name": "",
+        "text": "I shared this on my fb wall a few months back..",
+        "time": "29 July 2020",
+        "profile": {
+          "img": "/images/avatar/1.jpg",
+          "text": "",
+          "bg": ""
+        },
+        "variant": "primary"
+      },
+      {
+        "name": "Alfie Mason",
+        "text": "I shared this on my fb wall a few months back..",
+        "time": "29 July 2020",
+        "profile": {
+          "img": "/images/avatar/1.jpg",
+          "text": "",
+          "bg": ""
+        },
+        "variant": "primary"
+      },
+      {
+        "name": "Jacob Tucker",
+        "text": "I shared this on my fb wall a few months back..",
+        "time": "29 July 2020",
+        "profile": {
+          "img": "",
+          "text": "PU",
+          "bg": "danger"
+        },
+        "variant": "danger"
+      },
+      {
+        "name": "Jack Ronan",
+        "text": "I shared this on my fb wall a few months back..",
+        "time": "29 July 2020",
+        "profile": {
+          "img": "/images/avatar/2.jpg",
+          "text": "",
+          "bg": ""
+        },
+        "variant": "success"
+      },
+      {
+        "name": "",
+        "text": "I shared this on my fb wall a few months back..",
+        "time": "29 July 2020",
+        "profile": {
+          "img": "/images/avatar/1.jpg",
+          "text": "",
+          "bg": ""
+        },
+        "variant": "primary"
+      }
+    ],
+    "todo": [
+      {
+        "title": "Get up",
+        "date": "29 July 2020",
+        "time": "02:26 PM",
+        "color": "success"
+      },
+      {
+        "title": "Stand up",
+        "date": "29 July 2020",
+        "time": "02:26 PM",
+        "color": "warning"
+      },
+      {
+        "title": "Don't give up the fight.",
+        "date": "29 July 2020",
+        "time": "02:26 PM",
+        "color": "primary"
+      },
+      {
+        "title": "Do something else",
+        "date": "29 July 2020",
+        "time": "02:26 PM",
+        "color": "info"
+      },
+      {
+        "title": "Get up",
+        "date": "29 July 2020",
+        "time": "02:26 PM",
+        "color": "success"
+      },
+      {
+        "title": "Stand up",
+        "date": "29 July 2020",
+        "time": "02:26 PM",
+        "color": "warning"
+      },
+      {
+        "title": "Don't give up the fight.",
+        "date": "29 July 2020",
+        "time": "02:26 PM",
+        "color": "primary"
+      },
+      {
+        "title": "Do something else",
+        "date": "29 July 2020",
+        "time": "02:26 PM",
+        "color": "info"
+      }
+    ],
+    "fristWidget": [
+      {
+        "name": "PATIENT",
+        "icon": "user",
+        "value": "3280",
+        "overView": "+3.5",
+        "color": "primary"
+      },
+      {
+        "name": "BILLS",
+        "icon": "document",
+        "value": "2570",
+        "overView": "+3.5",
+        "color": "warning"
+      },
+      {
+        "name": "REVENUE",
+        "icon": "dollar",
+        "value": "364.50K",
+        "overView": "+3.5",
+        "color": "danger"
+      },
+      {
+        "name": "PATIENT",
+        "icon": "database",
+        "value": "364.50K",
+        "overView": "+3.5",
+        "color": "success"
+      }
+    ],
+    "secondWidget": [
+      {
+        "name": "APPOINTMENT",
+        "value": "76",
+        "icon": "calendar-1",
+        "color": "danger"
+      },
+      {
+        "name": "EARNING",
+        "value": "$56K",
+        "icon": "diamond",
+        "color": "success"
+      },
+      {
+        "name": "TOTAL PATIENT",
+        "value": "783K",
+        "icon": "heart",
+        "color": "info"
+      },
+      {
+        "name": "CHEF",
+        "value": "$76",
+        "icon": "user-7",
+        "color": "primary"
+      }
+    ],
+    "widgetWithprogress": [
+      {
+        "name": "Total Students",
+        "value": "3280",
+        "increase": "80",
+        "day": "20",
+        "bg": "primary",
+        "icon": "users",
+        "proggressBar": {
+          "value": "80",
+          "color": "primary"
+        }
+      },
+      {
+        "name": "New Students",
+        "value": "245",
+        "increase": "50",
+        "day": "25",
+        "bg": "warning",
+        "icon": "user",
+        "proggressBar": {
+          "value": "50",
+          "color": "warning"
+        }
+      },
+      {
+        "name": "Total Course",
+        "value": "28",
+        "increase": "76",
+        "day": "20",
+        "bg": "secondary",
+        "icon": "graduation-cap",
+        "proggressBar": {
+          "value": "76",
+          "color": "red"
+        }
+      },
+      {
+        "name": "Fees Collection",
+        "value": "25160$",
+        "increase": "30",
+        "day": "30",
+        "bg": "danger",
+        "icon": "dollar",
+        "proggressBar": {
+          "value": "30",
+          "color": "success"
+        }
+      }
+    ],
+    "widgetWithChart": [
+      {
+        "name": "TotalStudent",
+        "title": "Total Students",
+        "chartDate": [37, 17, 44],
+        "bg": "primary",
+        "overView": "422"
+      },
+      {
+        "name": "NewStudent",
+        "title": "New Students",
+        "chartDate": [33, 22, 68, 54, 8, 30, 74, 7, 36, 5, 41, 19, 43],
+        "bg": "warning ",
+        "overView": "357"
+      },
+      {
+        "name": "TotalCourse",
+        "title": "Total Course",
+        "chartDate": [
+          {
+            "name": "Page A",
+            "uv": 3000,
+            "pv": 2400,
+            "amt": 2400
+          },
+          {
+            "name": "Page B",
+            "uv": -3000,
+            "pv": 1398,
+            "amt": 2210
+          },
+          {
+            "name": "Page C",
+            "uv": -2000,
+            "pv": -2500,
+            "amt": 2290
+          },
+          {
+            "name": "Page D",
+            "uv": 2780,
+            "pv": 3908,
+            "amt": 2000
+          },
+          {
+            "name": "Page E",
+            "uv": -1890,
+            "pv": 4800,
+            "amt": 2181
+          },
+          {
+            "name": "Page F",
+            "uv": 2390,
+            "pv": -2400,
+            "amt": 2500
+          },
+          {
+            "name": "Page G",
+            "uv": 3490,
+            "pv": 4300,
+            "amt": 2100
+          }
+        ],
+        "bg": "secondary",
+        "overView": "547"
+      },
+      {
+        "name": "FeeCollection",
+        "title": "Fee Collection",
+        "chartDate": [7, 6, 8, 7, 3, 8, 3, 3, 6, 5, 9, 2, 8],
+        "bg": "danger ",
+        "overView": "3280$"
+      }
+    ],
+    "profile": {
+      "name": "Deangelo Sena",
+      "designation": "Se. Professor",
+      "aboutMe": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "gender": "Male",
+      "education": "PHD",
+      "operation": "120",
+      "age": "24",
+      "img": "/images/profile/profile.png",
+      "bg": "/images/big/img5.jpg",
+      "social": [
+        {
+          "name": "Follower",
+          "value": "150"
+        },
+        {
+          "name": "Place Stay",
+          "value": "140"
+        },
+        {
+          "name": "Reviews",
+          "value": "45"
+        }
+      ],
+      "activity": [
+        {
+          "name": "Projects",
+          "value": "150"
+        },
+        {
+          "name": "Uploads",
+          "value": "140"
+        },
+        {
+          "name": "Tasks",
+          "value": "45"
+        }
+      ],
+      "bolod": {
+        "type": "O+",
+        "data": [
+          {
+            "name": "Allergies",
+            "value": "Penicilin, peanuts"
+          },
+          {
+            "name": "Pressure",
+            "value": "120/100 mmHG"
+          },
+          {
+            "name": "Diseases",
+            "value": "Diabetes"
+          },
+          {
+            "name": "Temperture",
+            "value": "34 Degree"
+          }
+        ]
+      },
+      "checkups": {
+        "name": "Regular Checkups",
+        "data": [
+          {
+            "name": "Dr Theodore Handle",
+            "value": "Dentist"
+          },
+          {
+            "name": "Dr Valentino Morose",
+            "value": "Surgeon"
+          },
+          {
+            "name": "Dr Fleece Marigold",
+            "value": "Clinical"
+          },
+          {
+            "name": "Dr Eric Widget",
+            "value": "Cardiology"
+          }
+        ]
+      }
+    },
+    "visitorActivity": [
+      {
+        "event": "Day",
+        "data": [35, 18, 15, 35, 40, 20, 30, 25, 22, 20, 45, 35]
+      },
+      {
+        "event": "Month",
+        "data": [50, 35, 10, 45, 40, 50, 60, 80, 10, 50, 34, 35]
+      },
+      {
+        "event": "Year",
+        "data": [20, 35, 60, 45, 40, 70, 30, 80, 65, 70, 60, 20]
+      }
+    ],
+    "recentPaymentsQueue": [
+      {
+        "no": "12",
+        "patient": "Mr. Bobby",
+        "drName": "Dr. Jackson",
+        "date": "01 August 2020",
+        "status": {
+          "text": "Checkin",
+          "color": "primary"
+        },
+        "bills": "120"
+      },
+      {
+        "no": "10",
+        "patient": "Mr. Dexter",
+        "drName": "\tDr. Charles",
+        "date": "31 July 2020",
+        "status": {
+          "text": "Panding",
+          "color": "warning"
+        },
+        "bills": "540"
+      },
+      {
+        "no": "03",
+        "patient": "Mr. Nathan",
+        "drName": "Dr. Frederick",
+        "date": "30 July 2020",
+        "status": {
+          "text": "Canceled",
+          "color": "danger"
+        },
+        "bills": "301"
+      },
+      {
+        "no": "05",
+        "patient": "Mr. Aurora",
+        "drName": "Dr. Roman",
+        "date": "29 July 2020",
+        "status": {
+          "text": "Checkin",
+          "color": "success"
+        },
+        "bills": "099"
+      },
+      {
+        "no": "06",
+        "patient": "Mr. Matthew",
+        "drName": "Dr. Samantha",
+        "date": "\t28 July 2020",
+        "status": {
+          "text": "Checkin",
+          "color": "success"
+        },
+        "bills": "520"
+      }
+    ],
+    "activeUser": [
+      {
+        "name": "/bootstrap-themes/",
+        "value": "3"
+      },
+      {
+        "name": "/tags/html5/",
+        "value": "3"
+      },
+      {
+        "name": "/100-best-themes...all-time/",
+        "value": "1"
+      }
+    ],
+    "bloodReatWidget": [
+      {
+        "name": "Blood Pressure",
+        "subTitle": "In the normal",
+        "chart": {
+          "data": [33, 22, 68, 54, 8, 30, 74, 7, 36, 5, 41, 19, 43, 29, 38],
+          "name": "BloodPressure"
+        },
+        "value": {
+          "value": "120/89",
+          "text": "mmHG",
+          "color": "primary"
+        }
+      },
+      {
+        "name": "Heart Rate",
+        "subTitle": "Above the normal",
+        "chart": {
+          "data": [
+            73, 53, 50, 67, 3, 56, 19, 59, 37, 32, 40, 26, 71, 19, 4, 53, 55,
+            31, 37, 67, 10, 21
+          ],
+          "name": "HeartRate"
+        },
+        "value": {
+          "value": "107",
+          "text": "Per Min",
+          "color": "danger"
+        }
+      },
+      {
+        "name": "Glucose Rate",
+        "subTitle": "In the normal",
+        "chart": {
+          "data": [79, 72, 29, 6, 52, 32, 73, 40, 14, 75, 77, 39, 9, 15, 10],
+          "name": "GlucoseRate"
+        },
+        "value": {
+          "value": "97",
+          "text": "mg/dl",
+          "color": "success"
+        }
+      },
+      {
+        "name": "Clolesterol",
+        "subTitle": "In the normal",
+        "chart": {
+          "data": [27, 31, 35, 28, 45, 52, 24, 4, 50, 11, 54, 49, 72, 59, 75],
+          "name": "Clolesterol"
+        },
+        "value": {
+          "value": "124",
+          "text": "mg/dl",
+          "color": "info"
+        }
+      }
+    ],
+    "powerWidget": [
+      {
+        "name": "Power",
+        "overView": "260",
+        "date": "2017.1.20",
+        "overView2": "+12.5(2.8%)",
+        "bg": "primary",
+        "chart": {
+          "name": "PowerBar",
+          "data": [65, 59, 80, 81, 56, 55, 40]
+        }
+      },
+      {
+        "name": "Power",
+        "overView": "260",
+        "date": "2017.1.20",
+        "overView2": "+12.5(2.8%)",
+        "bg": "success",
+        "chart": {
+          "name": "PowerLine",
+          "data": [4, 5, 1.5, 6, 7, 5.5, 5.8, 4.6]
+        }
+      }
+    ],
+    "projectAndEarningWidget": [
+      {
+        "name": "ViewProject",
+        "value": "3650",
+        "subTitle": "VIEWS OF YOUR PROJECT",
+        "chartData": [65, 59, 80, 81, 56, 55, 40, 88, 45, 95, 54, 76]
+      },
+      {
+        "name": "LifeTimeEarning",
+        "value": "74,206 K",
+        "subTitle": "Lifetime earnings",
+        "chartData": [65, 59, 80, 81, 56, 55, 40, 88, 45, 95, 54, 76]
+      }
+    ],
+    "loramWidget": [
+      {
+        "name": "Widget1",
+        "value": "2,250",
+        "title": "Lorem Ipsum",
+        "footer": [
+          {
+            "type": "A",
+            "value": "1230"
+          },
+          {
+            "type": "B",
+            "value": "1230"
+          },
+          {
+            "type": "C",
+            "value": "1230"
+          }
+        ],
+        "chartData": [0, 5, 4, 5, 4, 5, 4, 5, 4]
+      },
+      {
+        "name": "Widget2",
+        "value": "2,250",
+        "title": "Lorem Ipsum",
+        "footer": [
+          {
+            "type": "A",
+            "value": "1230"
+          },
+          {
+            "type": "B",
+            "value": "1230"
+          },
+          {
+            "type": "C",
+            "value": "1230"
+          }
+        ],
+        "chartData": [
+          {
+            "data": [
+              "20",
+              "14",
+              "18",
+              "25",
+              "27",
+              "22",
+              "12",
+              "24",
+              "20",
+              "14",
+              "18",
+              "16"
+            ]
+          },
+          {
+            "data": [
+              "12",
+              "18",
+              "14",
+              "7",
+              "5",
+              "10",
+              "20",
+              "8",
+              "12",
+              "18",
+              "14",
+              "16"
+            ]
+          }
+        ]
+      }
+    ],
+    "analysisWidget": [
+      {
+        "name": "MarketNow",
+        "title": "MARKET NOW",
+        "value": "3454664",
+        "overView": [
+          {
+            "name": "APPL",
+            "value": "+ 82.24 %"
+          },
+          {
+            "name": "FB",
+            "value": "- 12.24 %"
+          },
+          {
+            "name": "GOOG",
+            "value": "+ 42.24 %"
+          }
+        ],
+        "chartData": [
+          {
+            "data": [
+              "20",
+              "14",
+              "18",
+              "25",
+              "27",
+              "22",
+              "12",
+              "24",
+              "20",
+              "14",
+              "18",
+              "16",
+              "34",
+              "32",
+              "43",
+              "36",
+              "56",
+              "12",
+              "23",
+              "34"
+            ]
+          },
+          {
+            "data": [
+              "32",
+              "58",
+              "34",
+              "37",
+              "15",
+              "41",
+              "24",
+              "38",
+              "52",
+              "38",
+              "24",
+              "19",
+              "54",
+              "34",
+              "23",
+              "34",
+              "35",
+              "22",
+              "43",
+              "33"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "SalesAnalysis",
+        "title": "SALES ANALYSIS",
+        "value": "3454664",
+        "overView": [
+          {
+            "name": "Today",
+            "value": "+ 8224"
+          },
+          {
+            "name": "Today",
+            "value": "- 1224"
+          },
+          {
+            "name": "Week",
+            "value": "+ 4224"
+          }
+        ],
+        "chartData": [4, 5, 1.5, 6, 7, 5.5, 5.8, 4.6]
+      }
+    ],
+    "products": [
+      {
+        "data": [
+          {
+            "title": "Dr sultads Send you Photo",
+            "time": "02:26 PM",
+            "date": "29 July 2020 ",
+            "profile": {
+              "img": "/images/avatar/1.jpg",
+              "text": "",
+              "icon": "",
+              "bg": ""
+            },
+            "badge": {
+              "text": "",
+              "class": ""
+            },
+            "variant": "primary"
+          },
+          {
+            "title": "Resport created successfully",
+            "time": "02:26 PM",
+            "date": "29 July 2020 ",
+            "profile": {
+              "img": "",
+              "text": "KG",
+              "icon": "",
+              "bg": "info"
+            },
+            "badge": {
+              "text": "Warning",
+              "class": "warning"
+            },
+            "variant": "info"
+          },
+          {
+            "title": "Reminder : Treatment Time!",
+            "time": "02:26 PM",
+            "date": "29 July 2020 ",
+            "profile": {
+              "img": "",
+              "text": "",
+              "icon": "home",
+              "bg": "success"
+            },
+            "badge": {
+              "text": "",
+              "class": ""
+            },
+            "variant": "success"
+          }
+        ],
+        "chart": {
+          "name": "TopProducts1",
+          "chartData": [
+            20, 10, 18, 15, 32, 18, 15, 22, 8, 6, 12, 13, 10, 18, 14, 24, 16,
+            12, 19, 21, 16, 14, 24, 21, 13, 15, 27, 29, 21, 11, 14, 19, 21, 17
+          ]
+        }
+      },
+      {
+        "data": [
+          {
+            "title": "Dr sultads Send you Photo",
+            "time": "02:26 PM",
+            "date": "29 July 2020 ",
+            "profile": {
+              "img": "/images/avatar/1.jpg",
+              "text": "",
+              "icon": "",
+              "bg": ""
+            },
+            "badge": {
+              "text": "",
+              "class": ""
+            },
+            "variant": "primary"
+          },
+          {
+            "title": "Resport created successfully",
+            "time": "02:26 PM",
+            "date": "29 July 2020 ",
+            "profile": {
+              "img": "/images/avatar/2.jpg",
+              "text": "",
+              "icon": "",
+              "bg": ""
+            },
+            "badge": {
+              "text": "Warning",
+              "class": "warning"
+            },
+            "variant": "info"
+          },
+          {
+            "title": "Reminder : Treatment Time!",
+            "time": "02:26 PM",
+            "date": "29 July 2020 ",
+            "profile": {
+              "img": "/images/avatar/2.jpg",
+              "text": "",
+              "icon": "",
+              "bg": ""
+            },
+            "badge": {
+              "text": "",
+              "class": ""
+            },
+            "variant": "success"
+          }
+        ],
+        "chart": {
+          "name": "TopProducts2",
+          "chartData": [20, 10, 18, 10, 32, 15, 15, 22, 18, 6, 12, 13]
+        }
+      }
+    ],
+    "salesStatus": {
+      "title": "Sales Status",
+      "name": "WeeklySales2",
+      "chartData": [25, 60, 30, 71, 26, 85, 50],
+      "proggressBar": [
+        {
+          "value": "67",
+          "color": "primary"
+        },
+        {
+          "value": "46",
+          "color": "success"
+        },
+        {
+          "value": "50",
+          "color": "info"
+        },
+        {
+          "value": "80",
+          "color": "warning"
+        }
+      ]
+    },
+    "social": [
+      {
+        "name": "facebook",
+        "icon": "facebook",
+        "flw": "119",
+        "friends": "89"
+      },
+      {
+        "name": "linkedin",
+        "icon": "linkedin",
+        "flw": "119",
+        "friends": "89"
+      },
+      {
+        "name": "googleplus",
+        "icon": "google-plus",
+        "flw": "119",
+        "friends": "89"
+      },
+      {
+        "name": "twitter",
+        "icon": "twitter",
+        "flw": "119",
+        "friends": "89"
+      }
+    ],
+    "weeklySales": {
+      "title": "WEEKLY SALES",
+      "value": "14000",
+      "overView": "60",
+      "overViewText": "Higher",
+      "name": "WeeklySales1",
+      "chartData": [0, 18, 14, 24, 16, 30]
+    },
+    "sales": [
+      {
+        "name": "AllSell1",
+        "title": "All Sales",
+        "chartData": [55, 30, 90, 41, 86, 45, 80],
+        "value": "570"
+      },
+      {
+        "name": "AllSell2",
+        "title": "All Sales",
+        "chartData": [25, 60, 30, 71, 26, 85, 50],
+        "value": "570"
+      }
+    ]
+  },
+  "tables": {
+    "dataTable": {
+      "basic": [
+        {
+          "name": "Airi Satou\t",
+          "position": "Accountant",
+          "office": "Tokyo",
+          "age": "33",
+          "date": "2008/11/28",
+          "salary": "162,700"
+        },
+        {
+          "name": "Angelica Ramos\t",
+          "position": "Chief Executive Officer (CEO)\t",
+          "office": "London",
+          "age": "47",
+          "date": "2008/11/28",
+          "salary": "162,700"
+        },
+        {
+          "name": "Ashton Cox\t",
+          "position": "Junior Technical Author\t",
+          "office": "San Francisco\t",
+          "age": "66",
+          "date": "2008/11/28",
+          "salary": "162,700"
+        },
+        {
+          "name": "Bradley Greer\t",
+          "position": "Software Engineer\t",
+          "office": "London",
+          "age": "41",
+          "date": "2008/11/28",
+          "salary": "162,700"
+        },
+        {
+          "name": "Brenden Wagner\t",
+          "position": "Software Engineer\t",
+          "office": "San Francisco",
+          "age": "28",
+          "date": "2008/11/28",
+          "salary": "162,700"
+        },
+        {
+          "name": "Brielle Williamson\t",
+          "position": "Integration Specialist\t",
+          "office": "New York\t",
+          "age": "61",
+          "date": "2008/11/28",
+          "salary": "162,700"
+        },
+        {
+          "name": "Bruno Nash\t",
+          "position": "Software Engineer\t",
+          "office": "London",
+          "age": "38",
+          "date": "2008/11/28",
+          "salary": "162,700"
+        },
+        {
+          "name": "Caesar Vance\t",
+          "position": "Pre-Sales Support\t",
+          "office": "New York\t",
+          "age": "21",
+          "date": "2008/11/28",
+          "salary": "162,700"
+        },
+        {
+          "name": "Cara Stevens\t",
+          "position": "Sales Assistant\t",
+          "office": "New York\t",
+          "age": "46",
+          "date": "2008/11/28",
+          "salary": "162,700"
+        },
+        {
+          "name": "Cedric Kelly\t",
+          "position": "Senior Javascript Developer\t",
+          "office": "Edinburgh",
+          "age": "22",
+          "date": "2008/11/28",
+          "salary": "162,700"
+        }
+      ],
+      "profile": [
+        {
+          "img": "/images/profile/small/pic1.jpg",
+          "name": "Tiger Nixon\t",
+          "department": "Architect",
+          "gender": "Female",
+          "education": "B.A, B.C.A",
+          "mobile": "123 456 7890",
+          "email": "info@example.com",
+          "date": "2011/04/25"
+        },
+        {
+          "img": "/images/profile/small/pic2.jpg",
+          "name": "Garrett Winters\t",
+          "department": "Accountant",
+          "gender": "Male",
+          "education": "B.COM., M.COM.",
+          "mobile": "(123) 456 7890",
+          "email": "info@example.com",
+          "date": "2011/07/25"
+        },
+        {
+          "img": "/images/profile/small/pic3.jpg",
+          "name": "Ashton Cox\t",
+          "department": "Junior Technical\t",
+          "gender": "Female",
+          "education": "B.A, B.C.A",
+          "mobile": "123 456 7890",
+          "email": "info@example.com",
+          "date": "2009/01/12"
+        },
+        {
+          "img": "/images/profile/small/pic4.jpg",
+          "name": "Cedric Kelly\t",
+          "department": "Developer",
+          "gender": "Male",
+          "education": "B.COM., M.COM.",
+          "mobile": "(123) 456 7890",
+          "email": "info@example.com",
+          "date": "2012/03/29"
+        },
+        {
+          "img": "/images/profile/small/pic5.jpg",
+          "name": "Airi Satou\t",
+          "department": "Accountant",
+          "gender": "Female",
+          "education": "B.A, B.C.A",
+          "mobile": "123 456 7890",
+          "email": "info@example.com",
+          "date": "2008/11/28"
+        },
+        {
+          "img": "/images/profile/small/pic6.jpg",
+          "name": "Brielle Williamson",
+          "department": "Specialist\t",
+          "gender": "Male",
+          "education": "B.COM., M.COM.",
+          "mobile": "123 456 7890",
+          "email": "info@example.com",
+          "date": "2012/12/02"
+        },
+        {
+          "img": "/images/profile/small/pic7.jpg",
+          "name": "Herrod Chandler",
+          "department": "Sales Assistant\t",
+          "gender": "Female",
+          "education": "B.A, B.C.A",
+          "mobile": "(123) 456 7890",
+          "email": "info@example.com",
+          "date": "2012/08/06"
+        },
+        {
+          "img": "/images/profile/small/pic8.jpg",
+          "name": "Rhona Davidson",
+          "department": "Integration\t",
+          "gender": "Male",
+          "education": "B.COM., M.COM.",
+          "mobile": "123 456 7890",
+          "email": "info@example.com",
+          "date": "2010/10/14"
+        },
+        {
+          "img": "/images/profile/small/pic9.jpg",
+          "name": "Colleen Hurst",
+          "department": "Javascript Developer",
+          "gender": "Female",
+          "education": "B.A, B.C.A",
+          "mobile": "123 456 7890",
+          "email": "info@example.com",
+          "date": "2009/09/15"
+        },
+        {
+          "img": "/images/profile/small/pic10.jpg",
+          "name": "Sonya Frost",
+          "department": "Software Engineer",
+          "gender": "Male",
+          "education": "B.COM., M.COM.",
+          "mobile": "(123) 456 7890",
+          "email": "info@example.com",
+          "date": "2008/12/13"
+        }
+      ],
+      "fees": [
+        {
+          "roll": "01",
+          "name": "Tiger Nixon",
+          "invoiceNumber": "54605",
+          "feeType": "Library",
+          "paymentType": "Cash",
+          "status": {
+            "text": "Paid",
+            "color": "success"
+          },
+          "date": "2011/04/25",
+          "price": "110"
+        },
+        {
+          "roll": "02",
+          "name": "Garrett Winters",
+          "invoiceNumber": "54687",
+          "feeType": "Library",
+          "paymentType": "Credit Card",
+          "status": {
+            "text": "Panding",
+            "color": "warning"
+          },
+          "date": "2011/04/25",
+          "price": "110"
+        },
+        {
+          "roll": "03",
+          "name": "Ashton Cox",
+          "invoiceNumber": "35672",
+          "feeType": "Tuition",
+          "paymentType": "Cash",
+          "status": {
+            "text": "Paid",
+            "color": "success"
+          },
+          "date": "2011/04/25",
+          "price": "110"
+        },
+        {
+          "roll": "04",
+          "name": "Cedric Kelly",
+          "invoiceNumber": "57984",
+          "feeType": "Annual",
+          "paymentType": "Credit Card",
+          "status": {
+            "text": "Panding",
+            "color": "warning"
+          },
+          "date": "2011/04/25",
+          "price": "110"
+        },
+        {
+          "roll": "05",
+          "name": "Airi Satou",
+          "invoiceNumber": "12453",
+          "feeType": "Library",
+          "paymentType": "Cheque",
+          "status": {
+            "text": "Panding",
+            "color": "warning"
+          },
+          "date": "2011/04/25",
+          "price": "110"
+        },
+        {
+          "roll": "06",
+          "name": "Brielle Williamson",
+          "invoiceNumber": "59723",
+          "feeType": "Library",
+          "paymentType": "Cash",
+          "status": {
+            "text": "Paid",
+            "color": "success"
+          },
+          "date": "2011/04/25",
+          "price": "110"
+        },
+        {
+          "roll": "07",
+          "name": "Herrod Chandler",
+          "invoiceNumber": "98726",
+          "feeType": "Library",
+          "paymentType": "Cash",
+          "status": {
+            "text": "Paid",
+            "color": "success"
+          },
+          "date": "2011/04/25",
+          "price": "110"
+        },
+        {
+          "roll": "08",
+          "name": "Rhona Davidson",
+          "invoiceNumber": "98721",
+          "feeType": "Tuition",
+          "paymentType": "Cash",
+          "status": {
+            "text": "Paid",
+            "color": "success"
+          },
+          "date": "2011/04/25",
+          "price": "110"
+        },
+        {
+          "roll": "09",
+          "name": "Colleen Hurst",
+          "invoiceNumber": "54605",
+          "feeType": "Tuition",
+          "paymentType": "Credit Card",
+          "status": {
+            "text": "Udpaid",
+            "color": "danger"
+          },
+          "date": "2011/04/25",
+          "price": "110"
+        },
+        {
+          "roll": "10",
+          "name": "Sonya Frost",
+          "invoiceNumber": "35672",
+          "feeType": "Library",
+          "paymentType": "Cheque",
+          "status": {
+            "text": "Udpaid",
+            "color": "danger"
+          },
+          "date": "2011/04/25",
+          "price": "110"
+        },
+        {
+          "roll": "11",
+          "name": "Sonya Frost",
+          "invoiceNumber": "98734",
+          "feeType": "Annual",
+          "paymentType": "Cheque",
+          "status": {
+            "text": "Paid",
+            "color": "success"
+          },
+          "date": "2011/04/25",
+          "price": "110"
+        },
+        {
+          "roll": "12",
+          "name": "Sonya Frost",
+          "invoiceNumber": "12453",
+          "feeType": "Tuition",
+          "paymentType": "Credit Card",
+          "status": {
+            "text": "Udpaid",
+            "color": "danger"
+          },
+          "date": "2011/04/25",
+          "price": "110"
+        }
+      ],
+      "patient": [
+        {
+          "id": "P-00001",
+          "date": "26/02/2020, 12:42 AM",
+          "name": "Tiger Nixon",
+          "assgined": "Dr. Cedric",
+          "disease": "Cold & Flu",
+          "status": {
+            "text": "New Patient",
+            "color": "danger"
+          },
+          "roomNo": "AB-001"
+        },
+        {
+          "id": "P-00002",
+          "date": "26/02/2020, 12:42 AM",
+          "name": "Garrett Winters\t",
+          "assgined": "Dr. Cedric",
+          "disease": "Sleep Problem",
+          "status": {
+            "text": "In Treatment",
+            "color": "warning"
+          },
+          "roomNo": "AB-002"
+        },
+        {
+          "id": "P-00003",
+          "date": "26/02/2020, 12:42 AM",
+          "name": "Ashton Cox",
+          "assgined": "Dr. Rhona",
+          "disease": "Cold & Flu",
+          "status": {
+            "text": "Recovered",
+            "color": "success"
+          },
+          "roomNo": "AB-003"
+        },
+        {
+          "id": "P-00004",
+          "date": "26/02/2020, 12:42 AM",
+          "name": "Ashton Cox",
+          "assgined": "Dr. Cedric",
+          "disease": "Cold & Flu",
+          "status": {
+            "text": "In Treatment",
+            "color": "warning"
+          },
+          "roomNo": "AB-004"
+        },
+        {
+          "id": "P-00005",
+          "date": "26/02/2020, 12:42 AM",
+          "name": "Ashton Cox",
+          "assgined": "Dr. Rhona",
+          "disease": "Cold & Flu",
+          "status": {
+            "text": "In Treatment",
+            "color": "warning"
+          },
+          "roomNo": "AB-005"
+        },
+        {
+          "id": "P-00006",
+          "date": "26/02/2020, 12:42 AM",
+          "name": "Ashton Cox",
+          "assgined": "Dr. Rhona",
+          "disease": "Sleep Problem",
+          "status": {
+            "text": "New Patient",
+            "color": "danger"
+          },
+          "roomNo": "AB-006"
+        },
+        {
+          "id": "P-00007",
+          "date": "26/02/2020, 12:42 AM",
+          "name": "Airi Satou",
+          "assgined": "Dr. Garrett",
+          "disease": "Cold & Flu",
+          "status": {
+            "text": "In Treatment",
+            "color": "warning"
+          },
+          "roomNo": "AB-007"
+        },
+        {
+          "id": "P-00008",
+          "date": "26/02/2020, 12:42 AM",
+          "name": "Airi Satou",
+          "assgined": "Dr. Cedric",
+          "disease": "Sleep Problem",
+          "status": {
+            "text": "In Treatment",
+            "color": "warning"
+          },
+          "roomNo": "AB-008"
+        },
+        {
+          "id": "P-00009",
+          "date": "26/02/2020, 12:42 AM",
+          "name": "Airi Satou",
+          "assgined": "Dr. Rhona",
+          "disease": "Cold & Flu",
+          "status": {
+            "text": "New Patient",
+            "color": "danger"
+          },
+          "roomNo": "AB-009"
+        },
+        {
+          "id": "P-00010",
+          "date": "26/02/2020, 12:42 AM",
+          "name": "Airi Satou",
+          "assgined": "Dr. Rhona",
+          "disease": "Sleep Problem",
+          "status": {
+            "text": "New Patient",
+            "color": "danger"
+          },
+          "roomNo": "AB-010"
+        }
+      ]
+    },
+    "bsTable": {
+      "recentPaymentsQueue": [
+        {
+          "id": "01",
+          "name": "Mr. Bobby",
+          "drName": "Dr. Jackson",
+          "date": "01 August 2020",
+          "status": "Successful",
+          "color": "success",
+          "price": "21.56"
+        },
+        {
+          "id": "02",
+          "name": "Mr. Bobby",
+          "drName": "Dr. Jackson",
+          "date": "01 August 2020",
+          "status": "Canceled",
+          "color": "danger",
+          "price": "21.56"
+        },
+        {
+          "id": "03",
+          "name": "Mr. Bobby",
+          "drName": "Dr. Jackson",
+          "date": "01 August 2020",
+          "status": "Pending",
+          "color": "warning",
+          "price": "21.56"
+        }
+      ],
+      "examToppers": [
+        {
+          "roll": "542",
+          "name": "Mr. Bobby",
+          "img": "/images/avatar/1.jpg",
+          "email": "example@example.com",
+          "date": "01 August 2020",
+          "status": "Successful",
+          "color": "success"
+        },
+        {
+          "roll": "542",
+          "name": "Mr. Bobby",
+          "img": "/images/avatar/2.jpg",
+          "email": "example@example.com",
+          "date": "01 August 2020",
+          "status": "Canceled",
+          "color": "danger"
+        },
+        {
+          "roll": "542",
+          "name": "Mr. Bobby",
+          "img": "/images/avatar/3.jpg",
+          "email": "example@example.com",
+          "date": "01 August 2020",
+          "status": "Pending",
+          "color": "warning"
+        }
+      ],
+      "basic": [
+        {
+          "name": "Kolor Tea Shirt For Man",
+          "status": "Sale",
+          "color": "warning",
+          "date": "January 22",
+          "price": "21.56"
+        },
+        {
+          "name": "Kolor Tea Shirt For Women",
+          "status": "Tax",
+          "color": "success",
+          "date": "January 30",
+          "price": "55.32"
+        },
+        {
+          "name": "Blue Backpack For Baby",
+          "status": "Extended",
+          "color": "danger",
+          "date": "January 25",
+          "price": "14.85"
+        }
+      ],
+      "tableStriped": [
+        {
+          "name": "Kolor Tea Shirt For Man",
+          "status": "Sale",
+          "color": "warning",
+          "date": "January 22",
+          "price": "21.56"
+        },
+        {
+          "name": "Kolor Tea Shirt For Women",
+          "status": "Tax",
+          "color": "success light",
+          "date": "January 30",
+          "price": "55.32"
+        },
+        {
+          "name": "Blue Backpack For Baby",
+          "status": "Extended",
+          "color": "danger",
+          "date": "January 25",
+          "price": "14.85"
+        }
+      ],
+      "tableBordered": [
+        {
+          "name": "Kolor Tea Shirt For Man",
+          "status": "Sale",
+          "color": "warning",
+          "date": "January 22",
+          "price": "21.56"
+        },
+        {
+          "name": "Kolor Tea Shirt For Women",
+          "status": "Tax",
+          "color": "success",
+          "date": "January 30",
+          "price": "55.32"
+        },
+        {
+          "name": "Blue Backpack For Baby",
+          "status": "Extended",
+          "color": "danger",
+          "date": "January 25",
+          "price": "14.85"
+        }
+      ],
+      "tableHover": [
+        {
+          "name": "Kolor Tea Shirt For Man",
+          "status": "Sale",
+          "color": "warning light",
+          "date": "January 22",
+          "price": "21.56"
+        },
+        {
+          "name": "Kolor Tea Shirt For Women",
+          "status": "Tax",
+          "color": "success",
+          "date": "January 30",
+          "price": "55.32"
+        },
+        {
+          "name": "Blue Backpack For Baby",
+          "status": "Extended",
+          "color": "danger light",
+          "date": "January 25",
+          "price": "14.85"
+        }
+      ],
+      "hoverTable": [
+        {
+          "name": "Air Conditioner",
+          "value": "70",
+          "progressbar": "rgba(127, 99, 244, .1)",
+          "color": "primary light"
+        },
+        {
+          "name": "Textiles",
+          "value": "70",
+          "progressbar": "rgba(76, 175, 80, .1)",
+          "color": "success"
+        },
+        {
+          "name": "Milk Powder",
+          "value": "70",
+          "progressbar": "rgba(70, 74, 83, .1)",
+          "color": "dark light"
+        },
+        {
+          "name": "Vehicles",
+          "value": "70",
+          "progressbar": "rgba(255, 87, 34, .1)",
+          "color": "danger"
+        },
+        {
+          "name": "Boats",
+          "value": "70",
+          "progressbar": "rgba(255, 193, 7, .1)",
+          "color": "warning"
+        }
+      ],
+      "borderedTable": [
+        {
+          "task": "Air Conditioner",
+          "value": "70",
+          "dadeLine": "Apr 20,2018",
+          "progressbar": "rgba(127, 99, 244, .1)",
+          "color": "primary light"
+        },
+        {
+          "task": "Textiles",
+          "value": "70",
+          "dadeLine": "Apr 20,2018",
+          "progressbar": "rgba(76, 175, 80, .1)",
+          "color": "success"
+        },
+        {
+          "task": "Milk Powder",
+          "value": "70",
+          "dadeLine": "Apr 20,2018",
+          "progressbar": "rgba(70, 74, 83, .1)",
+          "color": "dark light"
+        },
+        {
+          "task": "Vehicles",
+          "value": "70",
+          "dadeLine": "Apr 20,2018",
+          "progressbar": "rgba(255, 87, 34, .1)",
+          "color": "danger"
+        },
+        {
+          "task": "Boats",
+          "value": "70",
+          "dadeLine": "Apr 20,2018",
+          "progressbar": "rgba(255, 193, 7, .1)",
+          "color": "warning"
+        }
+      ],
+      "tableStripped": [
+        {
+          "task": "Air Conditioner",
+          "value": "70",
+          "dadeLine": "Apr 20,2018",
+          "progressbar": "rgba(127, 99, 244, .1)",
+          "color": "primary "
+        },
+        {
+          "task": "Textiles",
+          "value": "70",
+          "dadeLine": "Apr 20,2018",
+          "progressbar": "rgba(76, 175, 80, .1)",
+          "color": "success"
+        },
+        {
+          "task": "Milk Powder",
+          "value": "70",
+          "dadeLine": "Apr 20,2018",
+          "progressbar": "rgba(70, 74, 83, .1)",
+          "color": "dark "
+        },
+        {
+          "task": "Vehicles",
+          "value": "70",
+          "dadeLine": "Apr 20,2018",
+          "progressbar": "rgba(255, 87, 34, .1)",
+          "color": "danger"
+        },
+        {
+          "task": "Boats",
+          "value": "70",
+          "dadeLine": "Apr 20,2018",
+          "progressbar": "rgba(255, 193, 7, .1)",
+          "color": "warning"
+        }
+      ],
+      "responsiveTable": [
+        {
+          "invoice": "26589",
+          "user": "Herman Beck",
+          "date": "Oct 16, 2017",
+          "amount": "45.00",
+          "status": "Paid",
+          "color": "success",
+          "country": "EN"
+        },
+        {
+          "invoice": "58746",
+          "user": "Mary Adams",
+          "date": "Oct 16, 2017",
+          "amount": "45.00",
+          "status": "Shipped",
+          "color": "info light",
+          "country": "CN"
+        },
+        {
+          "invoice": "98458",
+          "user": "Caleb Richards",
+          "date": "Oct 16, 2017",
+          "amount": "45.00",
+          "status": "Shipped",
+          "color": "danger",
+          "country": "AU"
+        },
+        {
+          "invoice": "32658",
+          "user": "June Lane",
+          "date": "Oct 16, 2017",
+          "amount": "45.00",
+          "status": "Paid",
+          "color": "success",
+          "country": "FR"
+        }
+      ],
+      "headingWithBackground": [
+        {
+          "first": "Mark",
+          "last": "Otto",
+          "handel": "@mdo"
+        },
+        {
+          "first": "Jacob",
+          "last": "Thornton",
+          "handel": "@fat"
+        },
+        {
+          "first": "Larry",
+          "last": "the Bird",
+          "handel": "@twitter"
+        }
+      ],
+      "primaryTable": [
+        {
+          "first": "Mark",
+          "last": "Otto",
+          "handel": "@mdo"
+        },
+        {
+          "first": "Jacob",
+          "last": "Thornton",
+          "handel": "@fat"
+        },
+        {
+          "first": "Larry",
+          "last": "the Bird",
+          "handel": "@twitter"
+        }
+      ],
+      "primaryTableHover": [
+        {
+          "first": "Mark",
+          "last": "Otto",
+          "handel": "@mdo"
+        },
+        {
+          "first": "Jacob",
+          "last": "Thornton",
+          "handel": "@fat"
+        },
+        {
+          "first": "Larry",
+          "last": "the Bird",
+          "handel": "@twitter"
+        },
+        {
+          "first": "Larry",
+          "last": "the Bird",
+          "handel": "@twitter"
+        },
+        {
+          "first": "Larry",
+          "last": "the Bird",
+          "handel": "@twitter"
+        },
+        {
+          "first": "Larry",
+          "last": "the Bird",
+          "handel": "@twitter"
+        }
+      ],
+      "contextualTable": [
+        {
+          "heading1": "Column content",
+          "heading2": "Column content",
+          "heading3": "Column content",
+          "color": "active"
+        },
+        {
+          "heading1": "Column content",
+          "heading2": "Column content",
+          "heading3": "Column content",
+          "color": "primary"
+        },
+        {
+          "heading1": "Column content",
+          "heading2": "Column content",
+          "heading3": "Column content",
+          "color": "success"
+        },
+        {
+          "heading1": "Column content",
+          "heading2": "Column content",
+          "heading3": "Column content",
+          "color": "info"
+        },
+        {
+          "heading1": "Column content",
+          "heading2": "Column content",
+          "heading3": "Column content",
+          "color": "warning"
+        },
+        {
+          "heading1": "Column content",
+          "heading2": "Column content",
+          "heading3": "Column content",
+          "color": "danger"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,125 @@
+[data-primary="color_2"] .pickadate--element.pickadate--monthAndYear_year {
+  color: #6610f2;
+}
+
+[data-primary="color_2"] .pickadate--grid_cell__selected > div,
+[data-primary="color_2"] .pickadate--grid_cell__selected:hover > div {
+  background: #6610f2 !important;
+}
+
+[data-primary="color_3"] .pickadate--element.pickadate--monthAndYear_year {
+  color: #ff720d;
+}
+
+[data-primary="color_3"] .pickadate--grid_cell__selected > div,
+[data-primary="color_3"] .pickadate--grid_cell__selected:hover > div {
+  background: #ff720d !important;
+}
+
+[data-primary="color_4"] .pickadate--element.pickadate--monthAndYear_year {
+  color: #e83e8c;
+}
+
+[data-primary="color_4"] .pickadate--grid_cell__selected > div,
+[data-primary="color_4"] .pickadate--grid_cell__selected:hover > div {
+  background: #e83e8c !important;
+}
+
+[data-primary="color_5"] .pickadate--element.pickadate--monthAndYear_year {
+  color: #dc3545;
+}
+
+[data-primary="color_5"] .pickadate--grid_cell__selected > div,
+[data-primary="color_5"] .pickadate--grid_cell__selected:hover > div {
+  background: #dc3545 !important;
+}
+
+[data-primary="color_6"] .pickadate--element.pickadate--monthAndYear_year {
+  color: #fd7e14;
+}
+
+[data-primary="color_6"] .pickadate--grid_cell__selected > div,
+[data-primary="color_6"] .pickadate--grid_cell__selected:hover > div {
+  background: #fd7e14 !important;
+}
+
+[data-primary="color_7"] .pickadate--element.pickadate--monthAndYear_year {
+  color: #ffc107;
+}
+
+[data-primary="color_7"] .pickadate--grid_cell__selected > div,
+[data-primary="color_7"] .pickadate--grid_cell__selected:hover > div {
+  background: #ffc107 !important;
+}
+
+[data-primary="color_8"] .pickadate--element.pickadate--monthAndYear_year {
+  color: #28a745;
+}
+
+[data-primary="color_8"] .pickadate--grid_cell__selected > div,
+[data-primary="color_8"] .pickadate--grid_cell__selected:hover > div {
+  background: #28a745 !important;
+}
+
+[data-primary="color_9"] .pickadate--element.pickadate--monthAndYear_year {
+  color: #20c997;
+}
+
+[data-primary="color_9"] .pickadate--grid_cell__selected > div,
+[data-primary="color_9"] .pickadate--grid_cell__selected:hover > div {
+  background: #20c997 !important;
+}
+
+[data-primary="color_10"] .pickadate--element.pickadate--monthAndYear_year {
+  color: #17a2b8;
+}
+
+[data-primary="color_10"] .pickadate--grid_cell__selected > div,
+[data-primary="color_10"] .pickadate--grid_cell__selected:hover > div {
+  background: #17a2b8 !important;
+}
+
+[data-primary="color_11"] .pickadate--element.pickadate--monthAndYear_year {
+  color: #6c757d;
+}
+
+[data-primary="color_11"] .pickadate--grid_cell__selected > div,
+[data-primary="color_11"] .pickadate--grid_cell__selected:hover > div {
+  background: #6c757d !important;
+}
+
+[data-primary="color_12"] .pickadate--element.pickadate--monthAndYear_year {
+  color: #343a40;
+}
+
+[data-primary="color_12"] .pickadate--grid_cell__selected > div,
+[data-primary="color_12"] .pickadate--grid_cell__selected:hover > div {
+  background: #343a40 !important;
+}
+
+[data-primary="color_13"] .pickadate--element.pickadate--monthAndYear_year {
+  color: #2a2a2a;
+}
+
+[data-primary="color_13"] .pickadate--grid_cell__selected > div,
+[data-primary="color_13"] .pickadate--grid_cell__selected:hover > div {
+  background: #2a2a2a !important;
+}
+
+[data-primary="color_14"] .pickadate--element.pickadate--monthAndYear_year {
+  color: #4885ed;
+}
+
+[data-primary="color_14"] .pickadate--grid_cell__selected > div,
+[data-primary="color_14"] .pickadate--grid_cell__selected:hover > div {
+  background: #4885ed !important;
+}
+
+[data-primary="color_15"] .pickadate--element.pickadate--monthAndYear_year {
+  color: #4cb32b;
+}
+
+[data-primary="color_15"] .pickadate--grid_cell__selected > div,
+[data-primary="color_15"] .pickadate--grid_cell__selected:hover > div {
+  background: #4cb32b !important;
+}
