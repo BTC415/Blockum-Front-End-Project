@@ -121,7 +121,7 @@ export const Web3Provider = ({ children }) => {
           }
           console.log(tempProposals);
           proposals.push(tempProposals);
-          
+
           tempProposalId += 1;
         } catch (err) {
           console.log(err);
@@ -147,7 +147,7 @@ export const Web3Provider = ({ children }) => {
   const addressOfFGOLDistribution =
     '0xdAd37C0FB1A095bc9D237BB4A55F5FD6eab2B54e'.toLocaleLowerCase();
   const addressOfBlockumDAO =
-    '0xF713C86d5e5560D5F69A1B1d1DA3E4d45e9c5F3a'.toLocaleLowerCase();
+    '0x2Cb5a536964663139c3923fddfe57Dcf2BcD4770'.toLocaleLowerCase();
   const addressOfLPToken =
     '0x6007485F7329166d699824765554F4ca5baF5b58'.toLocaleLowerCase();
   const addressOfFGOLToken =
