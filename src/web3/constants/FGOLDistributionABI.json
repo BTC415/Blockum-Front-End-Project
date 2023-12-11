@@ -219,6 +219,15 @@
   },
   {
     "inputs": [
+      { "internalType": "address", "name": "user", "type": "address" }
+    ],
+    "name": "refundProposalFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
       { "internalType": "address", "name": "vaultAddress", "type": "address" }
     ],
     "name": "removeVault",

@@ -145,9 +145,9 @@ export const Web3Provider = ({ children }) => {
   const addressOfBlockumVault =
     '0x696dA2B5968f33F8C60e02F660e84B04709Da30b'.toLocaleLowerCase();
   const addressOfFGOLDistribution =
-    '0xdAd37C0FB1A095bc9D237BB4A55F5FD6eab2B54e'.toLocaleLowerCase();
+    '0x3978dfff811Dc43e250a293f32c51448DDC62584'.toLocaleLowerCase();
   const addressOfBlockumDAO =
-    '0x2Cb5a536964663139c3923fddfe57Dcf2BcD4770'.toLocaleLowerCase();
+    '0xA211B154C1538d4c42D12669b0a694f0ba305017'.toLocaleLowerCase();
   const addressOfLPToken =
     '0x6007485F7329166d699824765554F4ca5baF5b58'.toLocaleLowerCase();
   const addressOfFGOLToken =
