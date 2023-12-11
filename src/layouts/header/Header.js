@@ -55,6 +55,26 @@ const Header = ({ title, getHeaderData, searchData }) => {
   const [withdrawModalShow, setWithdrawModalShow] = useState(false);
   const [distributeModalShow, setDistributeModalShow] = useState(false);
 
+  useEffect(() => {
+    if (window.ethereum) {
+      if (window.ethereum._state.isUnlocked) {
+        setIsConnected(true);
+      } else {
+        setIsConnected(false);
+      }
+    } else {
+      window.alert('Please install MetaMask');
+      window.open('https://metamask.io/download.html', '_self');
+    }
+    getHeaderData();
+  }, []);
+
+  useEffect(() => {
+    if (isConnected) {
+      connectMetaMask();
+    }
+  }, [isConnected]);
+
   function truncateText(walletAddress) {
     if (walletAddress.length > 10) {
       return (
@@ -68,8 +88,10 @@ const Header = ({ title, getHeaderData, searchData }) => {
   }
 
   const handleConnectClick = async () => {
-    await connectMetaMask();
-  }
+    if (!isConnected) {
+      await connectMetaMask();
+    }
+  };
 
   const handleDepositClick = async () => {
     try {
@@ -104,7 +126,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
       });
       setValues({ depositValue: '' });
       setDepositModalShow(false);
-      console.log(tx);
+      // console.log(tx);
     } catch (error) {
       console.log(error);
       toast.error('Deposit failed!', {
@@ -140,7 +162,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
       });
       setValues({ withdrawValue: '' });
       setWithdrawModalShow(false);
-      console.log(tx);
+      // console.log(tx);
     } catch (error) {
       console.log(error);
       toast.error('Withdraw failed!', {
@@ -156,10 +178,10 @@ const Header = ({ title, getHeaderData, searchData }) => {
 
   const handleDistributeClick = async () => {
     try {
-     const distributeValueWei = _web3.utils.toWei(
-       values.distributeValue,
-       'ether'
-     );
+      const distributeValueWei = _web3.utils.toWei(
+        values.distributeValue,
+        'ether'
+      );
       await FGOLTokenContract.methods
         .approve(addressOfFGOLDistribution, distributeValueWei)
         .send({ from: walletAddress });
@@ -190,7 +212,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
       });
       setValues({ distributeValue: '' });
       setDistributeModalShow(false);
-      console.log(tx);
+      // console.log(tx);
     } catch (error) {
       console.log(error);
       toast.error('Distribute failed!', {
@@ -211,21 +233,6 @@ const Header = ({ title, getHeaderData, searchData }) => {
       [name]: value,
     });
   };
-
-  useEffect(() => {
-    if (window.ethereum) {
-      if (window.ethereum._state.isUnlocked) {
-        setIsConnected(true);
-        connectMetaMask();
-      } else {
-        setIsConnected(false);
-      }
-    } else {
-      window.alert('Please install MetaMask');
-      window.open('https://metamask.io/download.html', '_self');
-    }
-    getHeaderData();
-  }, [isConnected]);
 
   return (
     <div className="header">

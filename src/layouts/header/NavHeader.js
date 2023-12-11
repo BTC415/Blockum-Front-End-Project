@@ -11,6 +11,11 @@ const NavHeader = () => {
     <div className="nav-header">
       <Link href="/">
         <a className="brand-logo">
+          {/* <img
+            src={'/images/BlockumDAOLogo.png'}
+            style={{ width: '300px' }}
+            alt=""
+          /> */}
           <svg
             className="logo-abbr"
             width={64}

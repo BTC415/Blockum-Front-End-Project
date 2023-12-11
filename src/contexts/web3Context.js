@@ -24,14 +24,15 @@ export const Web3Provider = ({ children }) => {
   // const [depositHistory, setDepositHistory] = useState([]);
   const [proposals, setProposals] = useState([]);
   const [isMember, setIsMember] = useState(false);
+  const [currentProposalCreationFee, setCurrentProposalCreationFee] =
+    useState();
 
   async function connectMetaMask() {
-    let tempProposalId = 0;
+    let totalNumberOfProposal = 0;
     try {
       await window.ethereum.request({ method: 'eth_requestAccounts' });
 
       const walletAccount = await _web3.eth.getAccounts();
-      console.log(walletAccount[0]);
       await axios.post('/users/connect', { walletAddress: walletAccount[0] });
 
       const tempBlockumVaultContract = new _web3.eth.Contract(
@@ -72,61 +73,37 @@ export const Web3Provider = ({ children }) => {
       const lpTokenEth = _web3.utils.fromWei(tempLpTokenWei, 'ether');
       const fgolTokenEth = _web3.utils.fromWei(tempFGOLTokenWei, 'ether');
 
-      // while (true) {
-      //   try {
-      //     const tempDepositHistory = await tempBlockumVaultContract.methods
-      //       .memberDeposits(walletAccount[0], temp)
-      //       .call();
-      //     if (tempDepositHistory.amount == 0) {
-      //       temp += 1;
-      //       continue;
-      //     }
-      //     depositHistory.push(tempDepositHistory);
-      //     temp += 1;
-      //   } catch (err) {
-      //     console.log(err);
-      //     break;
-      //   }
-      // }
+      totalNumberOfProposal = await tempBlockumDAOContract.methods
+        .getTotalProposals()
+        .call();
 
-      // while (true) {
-      //   try {
-      //     const tempDistributionHistory =
-      //       await tempFGOLDistributionContract.methods
-      //         .memberDeposits(walletAccount[0], temp)
-      //         .call();
-      //     if (tempDistributionHistory.amount == 0) {
-      //       break;
-      //     }
-      //     depositHistory.push(tempDistributionHistory);
-      //     temp += 1;
-      //   } catch (err) {
-      //     console.log(err);
-      //     break;
-      //   }
-      // }
-      // console.log(tempDistributionHistory);
+      const currentProposalCreationFeeWei =
+        await tempFGOLDistributionContract.methods.proposalCreationFee().call();
+      const currentProposalCreationFee = _web3.utils.fromWei(
+        currentProposalCreationFeeWei,
+        'ether'
+      );
 
-      while (true) {
-        try {
-          const tempProposals = await tempBlockumDAOContract.methods
-            .proposalDetails(tempProposalId)
-            .call();
-          if (
-            tempProposals.proposer ==
-            '0x0000000000000000000000000000000000000000'
-          ) {
-            tempProposalId += 1;
-            continue;
-          }
-          console.log(tempProposals);
-          proposals.push(tempProposals);
-
-          tempProposalId += 1;
-        } catch (err) {
-          console.log(err);
-          break;
+      for (let i = 0; i < totalNumberOfProposal; i++) {
+        const tempProposal = await tempBlockumDAOContract.methods
+          .proposalDetails(i)
+          .call();
+        const memberProgressForProposal = await tempBlockumDAOContract.methods
+          .getMemberProgressForProposal(i)
+          .call();
+        const capitalProgressForProposal = await tempBlockumDAOContract.methods
+          .getCapitalProgressForProposal(i)
+          .call();
+        if (
+          tempProposal.proposer == '0x0000000000000000000000000000000000000000'
+        ) {
+          continue;
         }
+        tempProposal.proposalId = i;
+        tempProposal.memberProgressForProposal = memberProgressForProposal;
+        tempProposal.capitalProgressForProposal = capitalProgressForProposal;
+        proposals.push(tempProposal);
+        // console.log(tempProposal);
       }
       setProposals(proposals.reverse());
       setLPTokenContract(tempLPTokenContract);
@@ -137,6 +114,7 @@ export const Web3Provider = ({ children }) => {
       setLPTokenEth(lpTokenEth);
       setFGOLTokenEth(fgolTokenEth);
       setWalletAddress(walletAccount[0]);
+      setCurrentProposalCreationFee(currentProposalCreationFee);
     } catch (err) {
       console.log(err);
     }
@@ -176,6 +154,7 @@ export const Web3Provider = ({ children }) => {
         addressOfBlockumVault,
         addressOfFGOLDistribution,
         BlockumDAOContract,
+        currentProposalCreationFee,
       }}
     >
       {children}

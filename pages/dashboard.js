@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { Dropdown, Nav, Tab } from 'react-bootstrap';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import { connect } from 'react-redux';
-import { Button, Modal } from 'react-bootstrap';
+import { Button, Modal, ProgressBar } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -33,6 +32,9 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
     proposals,
     FGOLDistributionContract,
     BlockumDAOContract,
+    currentProposalCreationFee,
+    FGOLTokenContract,
+    addressOfFGOLDistribution,
   } = useWeb3();
 
   const initialValues = {
@@ -53,31 +55,32 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
     minutes: '',
   };
   const [values, setValues] = useState(initialValues);
+  const [payPerProposalModalShow, setpayPerProposalModalShow] = useState(false);
   const [addNewProposalModalShow, setAddNewProposalModalShow] = useState(false);
   const [addProposalPeriodModalShow, setAddProposalPeriodModalShow] =
     useState(false);
   const [depositHistory, setDepositHistory] = useState([]);
   const [distributionHistory, setDistributionHistory] = useState([]);
+  const [createdProposalId, setCreatedProposalId] = useState();
 
   const timestampToDate = (createdAt) => {
     const timestamp = new Date(createdAt);
     const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
     const formattedDate = timestamp.toLocaleDateString('en-GB', options);
     return formattedDate;
-    // const date = new Date(timestamp * 1000);
-
-    // const day = date.getDate();
-    // const month = date.getMonth() + 1; // Months are 0-indexed
-    // const year = date.getFullYear();
-
-    // const dateString = `${day}/${month}/${year}`;
-    // return dateString;
   };
 
-  // const weiToEth = (wei) => {
-  //   const eth = _web3.utils.fromWei(wei, 'ether');
-  //   return eth;
-  // };
+  function timestampToDateForVotingProposal(timestamp) {
+    const date = new Date(timestamp * 1000);
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+
+    return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+  }
 
   useEffect(() => {
     moodChange();
@@ -104,9 +107,9 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
   }, []);
 
   const convertData = async (data) => {
-    data.map(async (data) => {
-      const temp = await axios.get(`/users/wallet-address/${data.user}`);
-      data.walletAddress = truncateText(temp.data[0].walletAddress);
+    data.map(async (d) => {
+      const temp = await axios.get(`/users/wallet-address/${d.user}`);
+      d.walletAddress = truncateText(temp.data[0].walletAddress);
     });
     return data;
   };
@@ -145,6 +148,49 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
     }
   };
 
+  const handlePayPerProposalClick = async () => {
+    try {
+      const currentProposalCreationFeeWei = await _web3.utils.toWei(
+        currentProposalCreationFee,
+        'ether'
+      );
+      await FGOLTokenContract.methods
+        .approve(addressOfFGOLDistribution, currentProposalCreationFeeWei)
+        .send({ from: walletAddress });
+      toast.success('Approved!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+      const tx = await FGOLDistributionContract.methods
+        .payProposalFee()
+        .send({ from: walletAddress });
+      toast.success('Proposal fee successfully paid!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+      setpayPerProposalModalShow(false);
+      setAddNewProposalModalShow(true);
+    } catch (err) {
+      console.log(err);
+      toast.error('Proposal fee payment failed!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
+  };
+
   const handleSendProposalClick = async () => {
     try {
       const tx = await BlockumDAOContract.methods
@@ -154,7 +200,6 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
           values.presentationLink
         )
         .send({ from: walletAddress });
-      console.log(tx);
       toast.success('Proposal sent successfully!', {
         position: 'top-right',
         autoClose: 5000,
@@ -163,6 +208,12 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
         pauseOnHover: true,
         draggable: true,
       });
+      const eventData = BlockumDAOContract.getPastEvents(
+        'ProposalCreated',
+        function (error, events) {
+          setCreatedProposalId(events[0].returnValues.proposalId);
+        }
+      );
       setValues({ title: '', description: '', presentationLink: '' });
       setAddNewProposalModalShow(false);
       setAddProposalPeriodModalShow(true);
@@ -183,7 +234,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
     try {
       await BlockumDAOContract.methods
         .setVotingParametersForProposal(
-          values.proposalDetailsID,
+          createdProposalId,
           values.days,
           values.hours,
           values.minutes
@@ -214,6 +265,60 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
     }
   };
 
+  const handleVoteYesClick = async (proposalId) => {
+    try {
+      console.log(proposalId);
+      await BlockumDAOContract.methods.vote(proposalId, true).send({
+        from: walletAddress,
+      });
+      toast.success('Vote success!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    } catch (err) {
+      console.log(err);
+      toast.error('Vote failed!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
+  };
+
+  const handleVoteNoClick = async (proposalId) => {
+    try {
+      console.log(proposalId);
+      await BlockumDAOContract.methods.vote(proposalId, false).send({
+        from: walletAddress,
+      });
+      toast.success('Vote success!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    } catch (err) {
+      console.log(err);
+      toast.error('Vote failed!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
+  };
+
   return (
     <div className="row">
       <div className="col-xl-4 col-xxl-5">
@@ -228,7 +333,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                 color: 'white',
               }}
             >
-              <div className="card-header border-0 pb-0">
+              <div className="card-header border-0">
                 <div className="mr-auto">
                   <h3 className="mb-2" style={{ color: 'white' }}>
                     BALANCE: LP{' '}
@@ -240,10 +345,13 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
               </div>
               <div
                 className="card-body text-center"
-                style={{ paddingTop: '10px' }}
+                // style={{ paddingTop: '10px' }}
               >
                 <div className="d-flex justify-content-between align-center items-center">
-                  <p className="fs-30 font-w400" style={{ paddingTop: '0px' }}>
+                  <p
+                    className="fs-30 font-w400"
+                    style={{ paddingTop: '0px', marginBottom: '0px' }}
+                  >
                     TO CLAIM
                   </p>
                   <Button
@@ -307,7 +415,6 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                           {depositHistory.LPTokenAmount != 0 && (
                             <div className="d-flex justify-content-between align-items-center">
                               <h2 className="text-black fs-14 font-w500 mb-0">
-                                {/* {depositHistory.createdAt} */}
                                 {timestampToDate(depositHistory.createdAt)}
                               </h2>
                               <span className="text-black font-w600 pr-3">
@@ -351,8 +458,6 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                               {timestampToDate(distributionHistory.createdAt)}
                             </h2>
                             <h2 className="text-black fs-14 font-w500 mb-0">
-                              {/* {console.log(distributionHistory.walletAddress)} */}
-                              {/* {truncateText(distributionHistory.walletAddress)} */}
                               {distributionHistory.walletAddress}
                             </h2>
                             <span className="text-black font-w600 pr-3">
@@ -377,10 +482,106 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                   className="mr-2"
                   variant="info"
                   style={{ borderRadius: '10px' }}
-                  onClick={() => setAddNewProposalModalShow(true)}
+                  onClick={() => setpayPerProposalModalShow(true)}
                 >
                   + Add New Proposal
                 </Button>
+                <Modal
+                  className="fade bd-example-modal-lg"
+                  show={payPerProposalModalShow}
+                  size="lg"
+                  style={{ backgroundColor: '#4E4FEB', height: '100vh' }}
+                >
+                  <div
+                    style={{
+                      backgroundColor: '#1C1C39',
+                      color: 'white',
+                      height: '100vh',
+                      marginTop: '-3.3vh',
+                      marginBottom: '-3.3vh',
+                    }}
+                  >
+                    <Modal.Header style={{ border: 'none' }}>
+                      <Modal.Title
+                        style={{
+                          color: 'white',
+                          backgroundColor: '#1C1C39',
+                          width: '100%',
+                          alignItems: 'center',
+                          display: 'flex',
+                          justifyContent: 'center',
+                          paddingTop: '100px',
+                        }}
+                      >
+                        <img
+                          src={'/images/BlockumDAOLogo.png'}
+                          style={{ width: '300px' }}
+                          alt=""
+                        />
+                      </Modal.Title>
+                      <Button
+                        onClick={() => setpayPerProposalModalShow(false)}
+                        variant=""
+                        className="close"
+                        style={{ color: 'white', backgroundColor: '#1C1C39' }}
+                      >
+                        <span>&times;</span>
+                      </Button>
+                    </Modal.Header>
+                    <Modal.Body>
+                      <div
+                        style={{
+                          marginTop: '30px',
+                          marginLeft: '70px',
+                          marginRight: '70px',
+                          color: 'white',
+                        }}
+                      >
+                        <h1 style={{ color: 'white' }}>PAY PER PROPOSAL</h1>
+                        <label>Amount</label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          value={currentProposalCreationFee}
+                          disabled
+                          name="payPerProposal"
+                        />
+                      </div>
+                    </Modal.Body>
+                    <Modal.Footer
+                      style={{
+                        border: 'none',
+                        marginLeft: '70px',
+                        marginRight: '70px',
+                        color: 'white',
+                      }}
+                    >
+                      <Button
+                        onClick={() => setpayPerProposalModalShow(false)}
+                        variant="danger light"
+                      >
+                        Cancel
+                      </Button>
+                      <Button
+                        variant="primary"
+                        onClick={handlePayPerProposalClick}
+                      >
+                        <ToastContainer
+                          position="top-right"
+                          autoClose={5000}
+                          hideProgressBar={false}
+                          newestOnTop
+                          closeOnClick
+                          rtl={false}
+                          pauseOnFocusLoss
+                          draggable
+                          pauseOnHover
+                        />
+                        Pay
+                      </Button>
+                    </Modal.Footer>
+                  </div>
+                </Modal>
                 <Modal
                   className="fade bd-example-modal-lg"
                   show={addNewProposalModalShow}
@@ -637,40 +838,94 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                       className="loadmore-content"
                       id="orderRequestContent"
                     >
-                      {proposals &&
-                        proposals.map((d, i) => (
-                          <tr
-                            key={i}
-                            // className={`${i + 1 > numberOfShow && 'd-none'}`}
-                          >
-                            <td>
-                              <div className="media align-items-center">
-                                <div className="media-body">
-                                  <h5 className="mt-0 mb-2">
-                                    <Link href="/apps/ecom/product-detail">
-                                      <a className="text-black">{d.title}</a>
-                                    </Link>
-                                  </h5>
-                                  <p className="mb-0 text-primary">
-                                    {timestampToDate(d.endTime)}
-                                  </p>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                        ))}
+                      {proposals && (
+                        <PerfectScrollbar
+                          className="dz-scroll"
+                          style={{ overflow: 'scroll', height: '575px' }}
+                        >
+                          {proposals &&
+                            proposals.map((d, i) => (
+                              <tr key={i}>
+                                <td>
+                                  <div className="media align-items-center">
+                                    <div className="media-body d-flex align-items-center justify-content-between">
+                                      <div>
+                                        <h5 className="mt-0 mb-2">
+                                          {/* <Link href="/apps/ecom/product-detail">
+                                          <a className="text-black"> */}
+                                          {d.title}
+                                          {/* </a>
+                                        </Link> */}
+                                        </h5>
+                                        <p className="mb-0 text-primary">
+                                          {timestampToDateForVotingProposal(
+                                            d.endTime
+                                          )}
+                                        </p>
+                                      </div>
+                                      <div>
+                                        <label style={{ fontSize: '14px' }}>
+                                          Members Quorum
+                                        </label>
+                                        <ProgressBar
+                                          style={{ width: '100px' }}
+                                          now={d.memberProgressForProposal}
+                                          variant="info"
+                                        />
+                                        <label style={{ fontSize: '14px' }}>
+                                          Capital Quorum
+                                        </label>
+                                        <ProgressBar
+                                          style={{ width: '100px' }}
+                                          now={d.capitalProgressForProposal}
+                                          variant="info"
+                                        />
+                                      </div>
+                                      <div className="align-items-center">
+                                        <Button
+                                          className="mr-2"
+                                          variant="success btn-xs btn-rounded"
+                                          style={{
+                                            width: '70px',
+                                            marginBottom: '5px',
+                                          }}
+                                          onClick={() =>
+                                            handleVoteYesClick(d.proposalId)
+                                          }
+                                        >
+                                          Yes
+                                        </Button>
+                                        <br />
+                                        <Button
+                                          className="mr-2"
+                                          variant="danger btn-xs btn-rounded"
+                                          style={{ width: '70px' }}
+                                          onClick={() =>
+                                            handleVoteNoClick(d.proposalId)
+                                          }
+                                        >
+                                          No
+                                        </Button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            ))}
+                        </PerfectScrollbar>
+                      )}
                     </tbody>
                   </table>
-                  <div className="card-footer border-0 pt-0 text-center">
-                    {/* <a
+                  {/* <div className="card-footer border-0 pt-0 text-center">
+                    <a
                       className="btn btn-outline-primary dz-load-more"
                       id="orderRequest"
                       href="javascript:void(0);"
                       onClick={() => onClick()}
                     >
                       View More {refresh && <i className="fa fa-refresh" />}
-                    </a> */}
-                  </div>
+                    </a>
+                  </div> */}
                 </div>
               </div>
             </div>
