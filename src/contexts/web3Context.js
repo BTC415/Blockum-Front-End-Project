@@ -25,7 +25,8 @@ export const Web3Provider = ({ children }) => {
   const [isMember, setIsMember] = useState(false);
   const [currentProposalCreationFee, setCurrentProposalCreationFee] =
     useState();
-    const [depositHistory, setDepositHistory] = useState([]);
+  const [depositHistory, setDepositHistory] = useState([]);
+  const [lpDepositedTokenEth, setLpDepositedTokenEth] = useState([]);
 
   async function connectMetaMask() {
     let totalNumberOfProposal = 0;
@@ -65,18 +66,21 @@ export const Web3Provider = ({ children }) => {
       } else {
         setIsMember(false);
       }
-      // const tempLpTokenWei = await tempLPTokenContract.methods
-      //   .balanceOf(walletAccount[0])
-      //   .call();
+      const tempLpTokenWei = await tempLPTokenContract.methods
+        .balanceOf(walletAccount[0])
+        .call();
+      const lpTokenEth = _web3.utils.fromWei(tempLpTokenWei, 'ether');
       const tempFGOLTokenWei = await tempFGOLDistributionContract.methods
         .pendingClaims(walletAccount[0])
         .call();
-      // const lpTokenEth = _web3.utils.fromWei(tempLpTokenWei, 'ether');
-      const tempDepositedLpTokenWei = await tempBlockumVaultContract.methods
-      .getMemberBalance(walletAccount[0])
-      .call();
-      const lpTokenEth = _web3.utils.fromWei(tempDepositedLpTokenWei, 'ether');
       const fgolTokenEth = _web3.utils.fromWei(tempFGOLTokenWei, 'ether');
+      const tempDepositedLpTokenWei = await tempBlockumVaultContract.methods
+        .getMemberBalance(walletAccount[0])
+        .call();
+      const lpDepositedTokenEth = _web3.utils.fromWei(
+        tempDepositedLpTokenWei,
+        'ether'
+      );
 
       totalNumberOfProposal = await tempBlockumDAOContract.methods
         .getTotalProposals()
@@ -137,6 +141,7 @@ export const Web3Provider = ({ children }) => {
       setFGOLTokenEth(fgolTokenEth);
       setWalletAddress(walletAccount[0]);
       setCurrentProposalCreationFee(currentProposalCreationFee);
+      setLpDepositedTokenEth(lpDepositedTokenEth);
     } catch (err) {
       console.log(err);
     }
@@ -177,6 +182,7 @@ export const Web3Provider = ({ children }) => {
         addressOfFGOLDistribution,
         BlockumDAOContract,
         currentProposalCreationFee,
+        lpDepositedTokenEth,
       }}
     >
       {children}

@@ -36,6 +36,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
     FGOLTokenContract,
     addressOfFGOLDistribution,
     depositHistory,
+    lpDepositedTokenEth,
   } = useWeb3();
 
   const initialValues = {
@@ -378,7 +379,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
               className="card"
               style={{
                 // backgroundImage: `url('/images/card.jpg')`,
-                backgroundColor: '#4885ED',
+                backgroundColor: '#5271FF',
                 backgroundSize: 'cover',
                 borderRadius: '15px',
                 color: 'white',
@@ -389,7 +390,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                   <h3 className="mb-2" style={{ color: 'white' }}>
                     BALANCE: LP{' '}
                     <span className="fs-30">
-                      {lpTokenEth && Number(lpTokenEth).toFixed(2)}
+                      {lpTokenEth && Number(lpDepositedTokenEth).toFixed(2)}
                     </span>
                   </h3>
                 </div>
@@ -514,7 +515,9 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                               )}
                             </h2>
                             <h2 className="text-black fs-14 font-w500 mb-0">
-                              <a href={`https://goerli.etherscan.io/address/${distributionHistory.walletAddress}`}>
+                              <a
+                                href={`https://goerli.etherscan.io/address/${distributionHistory.walletAddress}`}
+                              >
                                 {distributionHistory.shortWalletAddress}
                               </a>
                             </h2>
@@ -568,7 +571,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                           alignItems: 'center',
                           display: 'flex',
                           justifyContent: 'center',
-                          paddingTop: '100px',
+                          paddingTop: '70px',
                         }}
                       >
                         <img
@@ -589,7 +592,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                     <Modal.Body>
                       <div
                         style={{
-                          marginTop: '30px',
+                          // marginTop: '30px',
                           marginLeft: '70px',
                           marginRight: '70px',
                           color: 'white',
@@ -665,7 +668,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                           alignItems: 'center',
                           display: 'flex',
                           justifyContent: 'center',
-                          paddingTop: '100px',
+                          paddingTop: '70px',
                         }}
                       >
                         <img
@@ -686,7 +689,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                     <Modal.Body>
                       <div
                         style={{
-                          marginTop: '30px',
+                          // marginTop: '30px',
                           marginLeft: '70px',
                           marginRight: '70px',
                           color: 'white',
@@ -779,7 +782,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                           alignItems: 'center',
                           display: 'flex',
                           justifyContent: 'center',
-                          paddingTop: '100px',
+                          paddingTop: '70px',
                         }}
                       >
                         <img
@@ -800,7 +803,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                     <Modal.Body>
                       <div
                         style={{
-                          marginTop: '30px',
+                          // marginTop: '30px',
                           marginLeft: '70px',
                           marginRight: '70px',
                           color: 'white',
@@ -968,6 +971,8 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                                           style={{
                                             width: '70px',
                                             marginBottom: '5px',
+                                            backgroundColor: '#5271FF',
+                                            borderColor: '#5271FF',
                                           }}
                                           onClick={() =>
                                             handleVoteYesClick(d.proposalId)

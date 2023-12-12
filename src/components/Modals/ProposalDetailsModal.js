@@ -16,6 +16,7 @@ function ProposalDetailsModal(props) {
           height: '100vh',
           marginTop: '-3.3vh',
           marginBottom: '-3.3vh',
+          overflow: 'scroll'
         }}
       >
         <Modal.Header style={{ border: 'none' }}>
@@ -27,7 +28,7 @@ function ProposalDetailsModal(props) {
               alignItems: 'center',
               display: 'flex',
               justifyContent: 'center',
-              paddingTop: '100px',
+              paddingTop: '70px',
             }}
           >
             <img
@@ -48,7 +49,7 @@ function ProposalDetailsModal(props) {
         <Modal.Body>
           <div
             style={{
-              marginTop: '30px',
+              // marginTop: '30px',
               marginLeft: '70px',
               marginRight: '70px',
               color: 'white',
@@ -74,11 +75,13 @@ function ProposalDetailsModal(props) {
                   paddingBottom: '5px',
                   marginRight: '30px',
                   marginLeft: '30px',
+                  backgroundColor: '#5271FF',
+                  borderColor: '#5271FF',
                 }}
                 onClick={() => props.handleVoteYesClick(props.data.proposalId)}
                 disabled={props.isLoading}
               >
-                {props.isLoading ? <Spinner animation="border" /> : "Yes"}
+                {props.isLoading ? <Spinner animation="border" /> : 'Yes'}
               </Button>
               <Button
                 className="font-weight-bold"
@@ -90,14 +93,18 @@ function ProposalDetailsModal(props) {
                   paddingBottom: '5px',
                   marginRight: '30px',
                   marginLeft: '30px',
+                  // backgroundColor: '#1C1C39',
+                  // borderColor: '#1C1C39',
                 }}
                 onClick={() => props.handleVoteNoClick(props.data.proposalId)}
                 disabled={props.isLoading}
               >
-                {props.isLoading ? <Spinner animation="border" /> : "No"}
+                {props.isLoading ? <Spinner animation="border" /> : 'No'}
               </Button>
             </div>
-            <p className='d-flex justify-content-end pt-3'>00 days remaining 00h:00m:00</p>
+            <p className="d-flex justify-content-end pt-3">
+              00 days remaining 00h:00m:00
+            </p>
             <div className="d-flex justify-content-between">
               <div>
                 <label style={{ fontSize: '14px' }}>Members Quorum</label>

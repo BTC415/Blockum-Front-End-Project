@@ -31,6 +31,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
     addressOfBlockumVault,
     addressOfFGOLDistribution,
     lpTokenEth,
+    lpDepositedTokenEth,
   } = useWeb3();
 
   const initialValues = {
@@ -523,6 +524,9 @@ const Header = ({ title, getHeaderData, searchData }) => {
                           onChange={handleInputChange}
                           name="withdrawValue"
                         />
+                        <label className="d-flex justify-content-end">
+                          Asset: {lpDepositedTokenEth} LP
+                        </label>
                       </div>
                     </Modal.Body>
                     <Modal.Footer
