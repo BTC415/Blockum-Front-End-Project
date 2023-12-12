@@ -393,7 +393,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                   className="fs-30 font-w600 text-left"
                   style={{ paddingTop: '10px' }}
                 >
-                  FGOL{' '}
+                  FGOL:{' '}
                   <span className="fs-30 font-w400 text-left">
                     {fgolTokenEth && Number(fgolTokenEth).toFixed(2)}
                   </span>

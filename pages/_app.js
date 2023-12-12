@@ -34,13 +34,22 @@ function MyApp({ Component, pageProps }) {
       <Web3Provider>
         <SimpleReactLightbox>
           <Head>
-            <title>Uena - Restaurant Admin Dashboard</title>
+            <title>
+              Blockum DAO &#8211; Blockum DAO: Fostering the Future, Shared
+              Governance, Shared Success!
+            </title>
             <link
               rel="icon"
               type="image/png"
               sizes="16x16"
-              href="/images/favicon.png"
+              href="https://blockumdao.org/wp-content/uploads/2023/05/Fav.png"
             />
+            {/* <link
+              rel="icon"
+              type="image/png"
+              sizes="16x16"
+              href="/images/favicon.png"
+            /> */}
           </Head>
           {pages &&
           (window.location.pathname.includes('pages') ||

@@ -30,6 +30,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
     FGOLDistributionContract,
     addressOfBlockumVault,
     addressOfFGOLDistribution,
+    lpTokenEth,
   } = useWeb3();
 
   const initialValues = {
@@ -383,13 +384,30 @@ const Header = ({ title, getHeaderData, searchData }) => {
                         }}
                       >
                         <h1 style={{ color: 'white' }}>DEPOSIT LP TOKEN</h1>
-                        <label>Amount</label>
+                        <div className="d-flex justify-content-between">
+                          <label>Amount</label>
+                          <Button
+                            variant="success btn-xs btn-rounded"
+                            style={{
+                              width: '70px',
+                              marginBottom: '5px'
+                            }}
+                            onClick={() => setValues({depositValue: lpTokenEth})}
+                          >
+                            Max
+                          </Button>
+                        </div>
                         <input
-                          type="text"
+                          type="number"
                           className="form-control"
                           onChange={handleInputChange}
                           name="depositValue"
+                          value={values.depositValue}
+                          defaultValue={0.000000}
                         />
+                        <label className="d-flex justify-content-end">
+                          Asset: {lpTokenEth} LP
+                        </label>
                       </div>
                     </Modal.Body>
                     <Modal.Footer
@@ -485,7 +503,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
                         <h1 style={{ color: 'white' }}>WITHDRAW LP TOKEN</h1>
                         <label>Amount</label>
                         <input
-                          type="text"
+                          type="number"
                           className="form-control"
                           onChange={handleInputChange}
                           name="withdrawValue"
@@ -587,7 +605,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
                         </h1>
                         <label>Amount</label>
                         <input
-                          type="text"
+                          type="number"
                           className="form-control"
                           onChange={handleInputChange}
                           name="distributeValue"

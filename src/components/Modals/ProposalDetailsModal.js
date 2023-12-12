@@ -97,8 +97,7 @@ function ProposalDetailsModal(props) {
                 No
               </Button>
             </div>
-            <p>00 days remaining 00h:00m:00</p>
-            <br />
+            <p className='d-flex justify-content-end pt-3'>00 days remaining 00h:00m:00</p>
             <div className="d-flex justify-content-between">
               <div>
                 <label style={{ fontSize: '14px' }}>Members Quorum</label>
