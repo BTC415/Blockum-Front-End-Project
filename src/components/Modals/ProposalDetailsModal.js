@@ -1,7 +1,5 @@
 import React from 'react';
-import { Modal, Button, ProgressBar } from 'react-bootstrap';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Modal, Button, ProgressBar, Spinner } from 'react-bootstrap';
 
 function ProposalDetailsModal(props) {
   return (
@@ -78,8 +76,9 @@ function ProposalDetailsModal(props) {
                   marginLeft: '30px',
                 }}
                 onClick={() => props.handleVoteYesClick(props.data.proposalId)}
+                disabled={props.isLoading}
               >
-                Yes
+                {props.isLoading ? <Spinner animation="border" /> : "Yes"}
               </Button>
               <Button
                 className="font-weight-bold"
@@ -93,8 +92,9 @@ function ProposalDetailsModal(props) {
                   marginLeft: '30px',
                 }}
                 onClick={() => props.handleVoteNoClick(props.data.proposalId)}
+                disabled={props.isLoading}
               >
-                No
+                {props.isLoading ? <Spinner animation="border" /> : "No"}
               </Button>
             </div>
             <p className='d-flex justify-content-end pt-3'>00 days remaining 00h:00m:00</p>
@@ -129,16 +129,6 @@ function ProposalDetailsModal(props) {
             </div>
           </div>
         </Modal.Body>
-        {/* <Modal.Footer
-          style={{
-            border: 'none',
-            marginLeft: '70px',
-            marginRight: '70px',
-            color: 'white',
-          }}
-        >
-
-        </Modal.Footer> */}
       </div>
     </Modal>
   );

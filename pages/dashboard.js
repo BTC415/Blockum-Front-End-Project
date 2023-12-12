@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import { connect, useDispatch, useSelector } from 'react-redux';
-import { Button, Modal, ProgressBar } from 'react-bootstrap';
+import { Button, Modal, ProgressBar, Spinner } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -70,6 +70,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
     description: '',
     presentationLink: '',
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const timestampToDate = (createdAt) => {
     const timestamp = new Date(createdAt);
@@ -139,6 +140,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
 
   const handleClaim = async () => {
     try {
+      setIsLoading(true);
       await FGOLDistributionContract.methods.claim().send({
         from: walletAddress,
       });
@@ -150,6 +152,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
         pauseOnHover: true,
         draggable: true,
       });
+      setIsLoading(false);
     } catch (err) {
       console.log(err);
       toast.error('Claim failed!', {
@@ -160,11 +163,13 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
         pauseOnHover: true,
         draggable: true,
       });
+      setIsLoading(false);
     }
   };
 
   const handlePayPerProposalClick = async () => {
     try {
+      setIsLoading(true);
       const currentProposalCreationFeeWei = await _web3.utils.toWei(
         currentProposalCreationFee,
         'ether'
@@ -193,6 +198,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
       });
       setpayPerProposalModalShow(false);
       setAddNewProposalModalShow(true);
+      setIsLoading(false);
     } catch (err) {
       console.log(err);
       toast.error('Proposal fee payment failed!', {
@@ -203,11 +209,13 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
         pauseOnHover: true,
         draggable: true,
       });
+      setIsLoading(false);
     }
   };
 
   const handleSendProposalClick = async () => {
     try {
+      setIsLoading(true);
       const tx = await BlockumDAOContract.methods
         .createProposal(
           values.title,
@@ -232,6 +240,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
       setValues({ title: '', description: '', presentationLink: '' });
       setAddNewProposalModalShow(false);
       setAddProposalPeriodModalShow(true);
+      setIsLoading(false);
     } catch (err) {
       console.log(err);
       toast.error('Proposal submission failed!', {
@@ -242,11 +251,13 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
         pauseOnHover: true,
         draggable: true,
       });
+      setIsLoading(false);
     }
   };
 
   const handleSetProposalPeriod = async () => {
     try {
+      setIsLoading(true);
       await BlockumDAOContract.methods
         .setVotingParametersForProposal(
           createdProposalId,
@@ -267,6 +278,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
       });
       setValues({ title: '', description: '', presentationLink: '' });
       setAddProposalPeriodModalShow(false);
+      setIsLoading(false);
     } catch (err) {
       console.log(err);
       toast.error('Setting proposal period failed!', {
@@ -277,12 +289,13 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
         pauseOnHover: true,
         draggable: true,
       });
+      setIsLoading(false);
     }
   };
 
   const handleVoteYesClick = async (proposalId) => {
     try {
-      console.log(proposalId);
+      setIsLoading(true);
       await BlockumDAOContract.methods.vote(proposalId, true).send({
         from: walletAddress,
       });
@@ -294,6 +307,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
         pauseOnHover: true,
         draggable: true,
       });
+      setIsLoading(false);
     } catch (err) {
       console.log(err);
       toast.error('Vote failed!', {
@@ -304,12 +318,13 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
         pauseOnHover: true,
         draggable: true,
       });
+      setIsLoading(false);
     }
   };
 
   const handleVoteNoClick = async (proposalId) => {
     try {
-      console.log(proposalId);
+      setIsLoading(true);
       await BlockumDAOContract.methods.vote(proposalId, false).send({
         from: walletAddress,
       });
@@ -321,6 +336,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
         pauseOnHover: true,
         draggable: true,
       });
+      setIsLoading(false);
     } catch (err) {
       console.log(err);
       toast.error('Vote failed!', {
@@ -331,6 +347,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
         pauseOnHover: true,
         draggable: true,
       });
+      setIsLoading(false);
     }
   };
 
@@ -374,6 +391,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                     variant="info"
                     style={{ borderRadius: '10px' }}
                     onClick={handleClaim}
+                    disabled={isLoading}
                   >
                     <ToastContainer
                       position="top-right"
@@ -386,7 +404,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                       draggable
                       pauseOnHover
                     />
-                    CLAIM
+                    {isLoading ? <Spinner animation="border" /> : 'CLAIM'}
                   </Button>
                 </div>
                 <p
@@ -580,6 +598,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                       <Button
                         variant="primary"
                         onClick={handlePayPerProposalClick}
+                        disabled={isLoading}
                       >
                         <ToastContainer
                           position="top-right"
@@ -592,7 +611,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                           draggable
                           pauseOnHover
                         />
-                        Pay
+                        {isLoading ? <Spinner animation="border" /> : "Pay"}
                       </Button>
                     </Modal.Footer>
                   </div>
@@ -693,6 +712,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                       <Button
                         variant="primary"
                         onClick={handleSendProposalClick}
+                        disabled={isLoading}
                       >
                         <ToastContainer
                           position="top-right"
@@ -705,7 +725,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                           draggable
                           pauseOnHover
                         />
-                        Send
+                        {isLoading ? <Spinner animation="border" /> : "Send"}
                       </Button>
                     </Modal.Footer>
                   </div>
@@ -818,6 +838,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                       <Button
                         variant="primary"
                         onClick={handleSetProposalPeriod}
+                        disabled={isLoading}
                       >
                         <ToastContainer
                           position="top-right"
@@ -830,7 +851,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                           draggable
                           pauseOnHover
                         />
-                        Send
+                        {isLoading ? <Spinner animation="border" /> : "Send"}
                       </Button>
                     </Modal.Footer>
                   </div>
@@ -854,6 +875,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                     handleVoteNoClick={handleVoteNoClick}
                     handleVoteYesClick={handleVoteYesClick}
                     data={selectedProposalData}
+                    isLoading={isLoading}
                   />
                   <table className="table order-request">
                     <tbody

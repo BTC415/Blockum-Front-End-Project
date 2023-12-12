@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { Dropdown, Modal } from 'react-bootstrap';
+import { Dropdown, Modal, Spinner } from 'react-bootstrap';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import { connect, useDispatch } from 'react-redux';
 import { Button } from 'react-bootstrap';
@@ -58,6 +58,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
   const [depositModalShow, setDepositModalShow] = useState(false);
   const [withdrawModalShow, setWithdrawModalShow] = useState(false);
   const [distributeModalShow, setDistributeModalShow] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (window.ethereum) {
@@ -93,12 +94,15 @@ const Header = ({ title, getHeaderData, searchData }) => {
 
   const handleConnectClick = async () => {
     if (!isConnected) {
+      setIsLoading(true);
       await connectMetaMask();
+      setIsLoading(false);
     }
   };
 
   const handleDepositClick = async () => {
     try {
+      setIsLoading(true);
       const depositValueWei = _web3.utils.toWei(values.depositValue, 'ether');
       await LPTokenContract.methods
         .approve(addressOfBlockumVault, depositValueWei)
@@ -138,6 +142,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
           createdAt: response.data.createdAt,
         },
       });
+      setIsLoading(false);
     } catch (error) {
       console.log(error);
       toast.error('Deposit failed!', {
@@ -148,11 +153,13 @@ const Header = ({ title, getHeaderData, searchData }) => {
         pauseOnHover: true,
         draggable: true,
       });
+      setIsLoading(false);
     }
   };
 
   const handleWithdrawClick = async () => {
     try {
+      setIsLoading(true);
       const withdrawValueWei = _web3.utils.toWei(values.withdrawValue, 'ether');
       const tx = await BlockumVaultContract.methods
         .withdraw(withdrawValueWei)
@@ -173,7 +180,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
       });
       setValues({ withdrawValue: '' });
       setWithdrawModalShow(false);
-      // console.log(tx);
+      setIsLoading(false);
     } catch (error) {
       console.log(error);
       toast.error('Withdraw failed!', {
@@ -189,6 +196,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
 
   const handleDistributeClick = async () => {
     try {
+      setIsLoading(true);
       const distributeValueWei = _web3.utils.toWei(
         values.distributeValue,
         'ether'
@@ -223,7 +231,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
       });
       setValues({ distributeValue: '' });
       setDistributeModalShow(false);
-      // console.log(tx);
+      setIsLoading(false);
     } catch (error) {
       console.log(error);
       toast.error('Distribute failed!', {
@@ -234,6 +242,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
         pauseOnHover: true,
         draggable: true,
       });
+      setIsLoading(false);
     }
   };
 
@@ -390,9 +399,11 @@ const Header = ({ title, getHeaderData, searchData }) => {
                             variant="success btn-xs btn-rounded"
                             style={{
                               width: '70px',
-                              marginBottom: '5px'
+                              marginBottom: '5px',
                             }}
-                            onClick={() => setValues({depositValue: lpTokenEth})}
+                            onClick={() =>
+                              setValues({ depositValue: lpTokenEth })
+                            }
                           >
                             Max
                           </Button>
@@ -403,7 +414,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
                           onChange={handleInputChange}
                           name="depositValue"
                           value={values.depositValue}
-                          defaultValue={0.000000}
+                          defaultValue={0.0}
                         />
                         <label className="d-flex justify-content-end">
                           Asset: {lpTokenEth} LP
@@ -424,7 +435,11 @@ const Header = ({ title, getHeaderData, searchData }) => {
                       >
                         Cancel
                       </Button>
-                      <Button variant="primary" onClick={handleDepositClick}>
+                      <Button
+                        variant="primary"
+                        onClick={handleDepositClick}
+                        disabled={isLoading}
+                      >
                         <ToastContainer
                           position="top-right"
                           autoClose={5000}
@@ -436,7 +451,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
                           draggable
                           pauseOnHover
                         />
-                        Deposit
+                        {isLoading ? <Spinner animation="border" /> : 'Deposit'}
                       </Button>
                     </Modal.Footer>
                   </div>
@@ -524,7 +539,11 @@ const Header = ({ title, getHeaderData, searchData }) => {
                       >
                         Cancel
                       </Button>
-                      <Button variant="primary" onClick={handleWithdrawClick}>
+                      <Button
+                        variant="primary"
+                        onClick={handleWithdrawClick}
+                        disabled={isLoading}
+                      >
                         <ToastContainer
                           position="top-right"
                           autoClose={5000}
@@ -536,7 +555,11 @@ const Header = ({ title, getHeaderData, searchData }) => {
                           draggable
                           pauseOnHover
                         />
-                        Withdraw
+                        {isLoading ? (
+                          <Spinner animation="border" />
+                        ) : (
+                          'Withdraw'
+                        )}
                       </Button>
                     </Modal.Footer>
                   </div>
@@ -626,7 +649,11 @@ const Header = ({ title, getHeaderData, searchData }) => {
                       >
                         Cancel
                       </Button>
-                      <Button variant="primary" onClick={handleDistributeClick}>
+                      <Button
+                        variant="primary"
+                        onClick={handleDistributeClick}
+                        disabled={isLoading}
+                      >
                         <ToastContainer
                           position="top-right"
                           autoClose={5000}
@@ -638,7 +665,11 @@ const Header = ({ title, getHeaderData, searchData }) => {
                           draggable
                           pauseOnHover
                         />
-                        Distribute
+                        {isLoading ? (
+                          <Spinner animation="border" />
+                        ) : (
+                          'Distribute'
+                        )}
                       </Button>
                     </Modal.Footer>
                   </div>
