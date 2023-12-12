@@ -25,9 +25,11 @@ export const Web3Provider = ({ children }) => {
   const [isMember, setIsMember] = useState(false);
   const [currentProposalCreationFee, setCurrentProposalCreationFee] =
     useState();
+    const [depositHistory, setDepositHistory] = useState([]);
 
   async function connectMetaMask() {
     let totalNumberOfProposal = 0;
+    let temp = 0;
     try {
       await window.ethereum.request({ method: 'eth_requestAccounts' });
 
@@ -63,12 +65,17 @@ export const Web3Provider = ({ children }) => {
       } else {
         setIsMember(false);
       }
-      const tempLpTokenWei = await tempLPTokenContract.methods
-        .balanceOf(walletAccount[0])
+      // const tempLpTokenWei = await tempLPTokenContract.methods
+      //   .balanceOf(walletAccount[0])
+      //   .call();
+      const tempFGOLTokenWei = await tempFGOLDistributionContract.methods
+        .pendingClaims(walletAccount[0])
         .call();
-      const tempFGOLTokenWei =
-        await tempFGOLDistributionContract.methods.pendingClaims(walletAccount[0]).call();
-      const lpTokenEth = _web3.utils.fromWei(tempLpTokenWei, 'ether');
+      // const lpTokenEth = _web3.utils.fromWei(tempLpTokenWei, 'ether');
+      const tempDepositedLpTokenWei = await tempBlockumVaultContract.methods
+      .getMemberBalance(walletAccount[0])
+      .call();
+      const lpTokenEth = _web3.utils.fromWei(tempDepositedLpTokenWei, 'ether');
       const fgolTokenEth = _web3.utils.fromWei(tempFGOLTokenWei, 'ether');
 
       totalNumberOfProposal = await tempBlockumDAOContract.methods
@@ -81,6 +88,23 @@ export const Web3Provider = ({ children }) => {
         currentProposalCreationFeeWei,
         'ether'
       );
+
+      while (true) {
+        try {
+          const tempDepositHistory = await tempBlockumVaultContract.methods
+            .memberDeposits(walletAccount[0], temp)
+            .call();
+          if (tempDepositHistory.amount == 0) {
+            temp += 1;
+            continue;
+          }
+          depositHistory.push(tempDepositHistory);
+          temp += 1;
+        } catch (err) {
+          console.log(err);
+          break;
+        }
+      }
 
       for (let i = 0; i < totalNumberOfProposal; i++) {
         const tempProposal = await tempBlockumDAOContract.methods
@@ -101,8 +125,8 @@ export const Web3Provider = ({ children }) => {
         tempProposal.memberProgressForProposal = memberProgressForProposal;
         tempProposal.capitalProgressForProposal = capitalProgressForProposal;
         proposals.push(tempProposal);
-        // console.log(tempProposal);
       }
+      setDepositHistory(depositHistory.reverse());
       setProposals(proposals.reverse());
       setLPTokenContract(tempLPTokenContract);
       setFGOLTokenContract(tempFGOLTokenContract);
@@ -143,7 +167,7 @@ export const Web3Provider = ({ children }) => {
         lpTokenEth,
         fgolTokenEth,
         BlockumVaultContract,
-        // depositHistory,
+        depositHistory,
         proposals,
         isMember,
         FGOLDistributionContract,

@@ -35,6 +35,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
     currentProposalCreationFee,
     FGOLTokenContract,
     addressOfFGOLDistribution,
+    depositHistory,
   } = useWeb3();
 
   const initialValues = {
@@ -72,11 +73,22 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
   });
   const [isLoading, setIsLoading] = useState(false);
 
-  const timestampToDate = (createdAt) => {
+  const timestampToDateForDistribute = (createdAt) => {
     const timestamp = new Date(createdAt);
     const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
     const formattedDate = timestamp.toLocaleDateString('en-GB', options);
     return formattedDate;
+  };
+
+  const timestampToDateForDeposit = (timestamp) => {
+    const date = new Date(timestamp * 1000);
+
+    const day = date.getDate();
+    const month = date.getMonth() + 1; // Months are 0-indexed
+    const year = date.getFullYear();
+
+    const dateString = `${day}/${month}/${year}`;
+    return dateString;
   };
 
   function timestampToDateForVotingProposal(timestamp) {
@@ -91,6 +103,11 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
     return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
   }
 
+  const weiToEth = (wei) => {
+    const eth = _web3.utils.fromWei(wei, 'ether');
+    return eth;
+  };
+
   useEffect(() => {
     moodChange();
 
@@ -100,9 +117,9 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
 
   useEffect(() => {
     async function init() {
-      const tempDepositHistory = await axios.get(
-        '/blockum-vault/deposit-history'
-      );
+      // const tempDepositHistory = await axios.get(
+      //   '/blockum-vault/deposit-history'
+      // );
       const tempDistributionHistory = await axios.get(
         '/fgol-distribution/history'
       );
@@ -112,7 +129,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
       dispatch({
         type: 'INIT_HISTORY',
         payload: {
-          deposits: tempDepositHistory.data.reverse(),
+          deposits: depositHistory,
           distributes: tempDistributionHistory.data.reverse(),
         },
       });
@@ -125,7 +142,8 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
   const convertData = async (data) => {
     data.map(async (d) => {
       const temp = await axios.get(`/users/wallet-address/${d.user}`);
-      d.walletAddress = truncateText(temp.data[0].walletAddress);
+      d.shortWalletAddress = truncateText(temp.data[0].walletAddress);
+      d.walletAddress = temp.data[0].walletAddress;
     });
     return data;
   };
@@ -359,7 +377,8 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
             <div
               className="card"
               style={{
-                backgroundImage: `url('/images/card.jpg')`,
+                // backgroundImage: `url('/images/card.jpg')`,
+                backgroundColor: '#4885ED',
                 backgroundSize: 'cover',
                 borderRadius: '15px',
                 color: 'white',
@@ -445,13 +464,15 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                               : ''
                           }`}
                         >
-                          {depositHistory.LPTokenAmount != 0 && (
+                          {depositHistory.amount != 0 && (
                             <div className="d-flex justify-content-between align-items-center">
                               <h2 className="text-black fs-14 font-w500 mb-0">
-                                {timestampToDate(depositHistory.createdAt)}
+                                {timestampToDateForDeposit(
+                                  depositHistory.depositTime
+                                )}
                               </h2>
                               <span className="text-black font-w600 pr-3">
-                                LP {depositHistory.LPTokenAmount}
+                                LP {weiToEth(depositHistory.amount)}
                               </span>
                             </div>
                           )}
@@ -488,10 +509,14 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                         >
                           <div className="d-flex justify-content-between align-items-center">
                             <h2 className="text-black fs-14 font-w500 mb-0">
-                              {timestampToDate(distributionHistory.createdAt)}
+                              {timestampToDateForDistribute(
+                                distributionHistory.createdAt
+                              )}
                             </h2>
                             <h2 className="text-black fs-14 font-w500 mb-0">
-                              {distributionHistory.walletAddress}
+                              <a href={`https://goerli.etherscan.io/address/${distributionHistory.walletAddress}`}>
+                                {distributionHistory.shortWalletAddress}
+                              </a>
                             </h2>
                             <span className="text-black font-w600 pr-3">
                               FGOL {distributionHistory.FGOLTokenAmount}
@@ -611,7 +636,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                           draggable
                           pauseOnHover
                         />
-                        {isLoading ? <Spinner animation="border" /> : "Pay"}
+                        {isLoading ? <Spinner animation="border" /> : 'Pay'}
                       </Button>
                     </Modal.Footer>
                   </div>
@@ -725,7 +750,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                           draggable
                           pauseOnHover
                         />
-                        {isLoading ? <Spinner animation="border" /> : "Send"}
+                        {isLoading ? <Spinner animation="border" /> : 'Send'}
                       </Button>
                     </Modal.Footer>
                   </div>
@@ -851,7 +876,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                           draggable
                           pauseOnHover
                         />
-                        {isLoading ? <Spinner animation="border" /> : "Send"}
+                        {isLoading ? <Spinner animation="border" /> : 'Send'}
                       </Button>
                     </Modal.Footer>
                   </div>
