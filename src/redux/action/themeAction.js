@@ -55,35 +55,21 @@ export const demoAction = (demoNumber, direction) => (dispatch) => {
         break;
     }
   };
+
   var dezThemeSet1 = {
-    typography: 'poppins',
-    version: 'light',
-    layout: 'horizontal',
-    primary: 'color_14',
-    headerBg: 'color_14',
-    navheaderBg: 'color_14',
-    sidebarBg: 'color_1',
-    sidebarStyle: 'mini',
-    sidebarPosition: 'static',
-    headerPosition: 'static',
-    containerLayout: 'full',
+    typography: "poppins",
+    version: "light",
+    layout: "vertical",
+    primary: "color_1",
+    headerBg: "color_1",
+    navheaderBg: "color_12",
+    sidebarBg: "color_12",
+    sidebarStyle: "full",
+    sidebarPosition: "fixed",
+    headerPosition: "fixed",
+    containerLayout: "full",
     direction: direction,
   };
-
-  // var dezThemeSet1 = {
-  //   typography: "poppins",
-  //   version: "light",
-  //   layout: "vertical",
-  //   primary: "color_1",
-  //   headerBg: "color_1",
-  //   navheaderBg: "color_12",
-  //   sidebarBg: "color_12",
-  //   sidebarStyle: "full",
-  //   sidebarPosition: "fixed",
-  //   headerPosition: "fixed",
-  //   containerLayout: "full",
-  //   direction: direction,
-  // };
 
   var dezThemeSet2 = {
     typography: 'poppins',
