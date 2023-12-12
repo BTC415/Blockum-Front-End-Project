@@ -67,9 +67,11 @@ export const Web3Provider = ({ children }) => {
       const tempLpTokenWei = await tempLPTokenContract.methods
         .balanceOf(walletAccount[0])
         .call();
-      const tempFGOLTokenWei = await tempFGOLTokenContract.methods
-        .balanceOf(walletAccount[0])
-        .call();
+      // const tempFGOLTokenWei = await tempFGOLTokenContract.methods
+      //   .balanceOf(walletAccount[0])
+      //   .call();
+      const tempFGOLTokenWei =
+        await tempFGOLDistributionContract.methods.pendingClaims(walletAccount[0]).call();
       const lpTokenEth = _web3.utils.fromWei(tempLpTokenWei, 'ether');
       const fgolTokenEth = _web3.utils.fromWei(tempFGOLTokenWei, 'ether');
 

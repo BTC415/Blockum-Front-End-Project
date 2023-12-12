@@ -2,14 +2,14 @@ import Link from "next/dist/client/link";
 import { Fragment, useEffect, useState } from "react";
 import { Nav, TabContainer, TabContent, TabPane } from "react-bootstrap";
 import { connect, useSelector } from "react-redux";
-import AppsLayout from "../../src/components/apps/AppsLayout";
-import CameraModal from "../../src/components/apps/modal/CameraModal";
-import LinkModal from "../../src/components/apps/modal/LinkModal";
-import PostModal from "../../src/components/apps/modal/PostModal";
-import ReplayModal from "../../src/components/apps/modal/ReplayModal";
-import PageTitle_ from "../../src/components/PageTitle";
-import { getProfileData } from "../../src/redux/action/apps";
-import { moodChange, pageTitle } from "../../src/redux/action/utils";
+import AppsLayout from "../src/components/apps/AppsLayout";
+import CameraModal from "../src/components/apps/modal/CameraModal";
+import LinkModal from "../src/components/apps/modal/LinkModal";
+import PostModal from "../src/components/apps/modal/PostModal";
+import ReplayModal from "../src/components/apps/modal/ReplayModal";
+import PageTitle_ from "../src/components/PageTitle";
+import { getProfileData } from "../src/redux/action/apps";
+import { moodChange, pageTitle } from "../src/redux/action/utils";
 const Profile = ({
   pageTitle,
   getProfileData,

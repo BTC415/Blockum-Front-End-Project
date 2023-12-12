@@ -1,5 +1,5 @@
-import axios from "axios";
-import moment from "moment";
+import axios from 'axios';
+import moment from 'moment';
 import {
   ADD_NOTE,
   ADD_USER,
@@ -12,7 +12,7 @@ import {
   PAGE_TITLE,
   SEARCH_DATA,
   SEND_MSG,
-} from "./type";
+} from './type';
 
 export const pageTitle = (title) => (dispatch) => {
   dispatch({
@@ -23,80 +23,79 @@ export const pageTitle = (title) => (dispatch) => {
 
 // Resize window
 export const resizeWindow = () => {
-  const body = document.querySelector("body");
+  const body = document.querySelector('body');
   window.innerWidth >= 768 && window.innerWidth < 1024
-    ? body.setAttribute("data-sidebar-style", "mini")
+    ? body.setAttribute('data-sidebar-style', 'mini')
     : window.innerWidth <= 768
-    ? body.setAttribute("data-sidebar-style", "overlay")
-    : body.setAttribute("data-sidebar-style", "full");
+    ? body.setAttribute('data-sidebar-style', 'overlay')
+    : body.setAttribute('data-sidebar-style', 'full');
 };
 
 //  Body attributes
 export const bodyArt = () => {
-  const body = document.querySelector("body");
-  body.setAttribute("data-typography", "poppins");
-  // body.setAttribute("data-theme-version", "light");
-  body.setAttribute("data-layout", "vertical");
-  body.setAttribute("data-nav-headerbg", "color_1");
-  body.setAttribute("data-headerbg", "color_1");
-  body.setAttribute("data-sidebar-style", "full");
-  body.setAttribute("data-sibebarbg", "color_1");
-  body.setAttribute("data-primary", "color_1");
-  body.setAttribute("data-sidebar-position", "fixed");
-  body.setAttribute("data-header-position", "fixed");
-  body.setAttribute("data-container", "wide");
-  body.setAttribute("direction", "ltr");
-  body.setAttribute("data-sidebar-style", "full");
+  const body = document.querySelector('body');
+  body.setAttribute('data-typography', 'poppins');
+  body.setAttribute('data-theme-version', 'light');
+  body.setAttribute('data-layout', 'horizontal');
+  body.setAttribute('data-nav-headerbg', 'color_14');
+  body.setAttribute('data-headerbg', 'color_14');
+  body.setAttribute('data-sidebar-style', 'mini');
+  body.setAttribute('data-sibebarbg', 'color_1');
+  body.setAttribute('data-primary', 'color_14');
+  body.setAttribute('data-sidebar-position', 'static');
+  body.setAttribute('data-header-position', 'static');
+  body.setAttribute('data-container', 'full');
+  body.setAttribute('direction', 'ltr');
 };
 
 // preloader
 export const preloaderAction = () => {
-  window.addEventListener("load", () => {
-    document.querySelector("#main-wrapper").classList.add("show");
-    document.querySelector("#preloader").style.display = "none";
+  window.addEventListener('load', () => {
+    document.querySelector('#main-wrapper').classList.add('show');
+    document.querySelector('#preloader').style.display = 'none';
   });
 };
 
 // dark and light mood
 export const moodChange = () => {
   const path = window.location.pathname;
-  const body = document.querySelector("body");
-  if (path.includes("dark")) {
-    body.setAttribute("data-theme-version", "dark");
+  const body = document.querySelector('body');
+  if (path.includes('dark')) {
+    body.setAttribute('data-theme-version', 'dark');
   } else {
-    body.setAttribute("data-theme-version", "light");
+    body.setAttribute('data-theme-version', 'light');
   }
 };
 
 export const sideBarActive = (doc) => {
-  let active = doc ? document.querySelectorAll(".mm-collapse a") : [];
+  let active = doc ? document.querySelectorAll('.mm-collapse a') : [];
   for (let i = 0; i < active.length; i++) {
     const element = active[i];
     if (element.href) {
       if (element.href !== window.location.href) {
-        element.classList.remove("mm-active");
-        console.log("not match", element.href);
+        element.classList.remove('mm-active');
+        console.log('not match', element.href);
       } else {
-        element.classList.add("mm-active");
-        element.parentElement.classList.add("mm-active");
-        element.parentElement.parentElement.classList.add("mm-show");
+        element.classList.add('mm-active');
+        element.parentElement.classList.add('mm-active');
+        element.parentElement.parentElement.classList.add('mm-show');
         element.parentElement.parentElement.parentElement.classList.add(
-          "mm-active"
+          'mm-active'
         );
         element.parentElement.parentElement.parentElement.parentElement.classList.add(
-          "mm-show"
+          'mm-show'
         );
         element.parentElement.parentElement.parentElement.parentElement.parentElement.classList.add(
-          "mm-active"
+          'mm-active'
         );
 
-        console.log("match", element.href);
+        console.log('match', element.href);
       }
     }
 
-    if (window.location.pathname == "/widget-basic") {
+    if (window.location.pathname == '/widget-basic') {
     } else {
-      document.querySelector("#widget-basic").classList.remove("mm-active");
+      document.querySelector('#widget-basic').classList.remove('mm-active');
     }
   }
 };
@@ -112,7 +111,7 @@ export const chatBox = (value) => (dispatch) => {
 export const getHeaderData = () => async (dispatch) => {
   try {
     const res = await axios.get(
-      "https://api.npoint.io/fbc14eee7441f3b8877b/header/"
+      'https://api.npoint.io/fbc14eee7441f3b8877b/header/'
     );
     dispatch({
       type: CHAT_LISTS,
@@ -136,7 +135,7 @@ export const getHeaderData = () => async (dispatch) => {
 };
 
 export const addNote = (note) => (dispatch) => {
-  const newNote = { title: note, date: moment().format("D MMMM YYYY") };
+  const newNote = { title: note, date: moment().format('D MMMM YYYY') };
   dispatch({
     type: ADD_NOTE,
     payload: newNote,
@@ -159,11 +158,11 @@ export const deleteNote = (id) => (dispatch) => {
 
 export const sentMsg = (msg) => (dispatch) => {
   let time = new Date()
-    .toLocaleDateString([], { hour: "2-digit", minute: "2-digit" })
-    .split(" ")[1];
+    .toLocaleDateString([], { hour: '2-digit', minute: '2-digit' })
+    .split(' ')[1];
   let newMsg = {
-    img: "/images/avatar/2.jpg",
-    name: "me",
+    img: '/images/avatar/2.jpg',
+    name: 'me',
     msg,
     time: `${time}, Today`,
   };

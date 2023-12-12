@@ -12,35 +12,47 @@ import {
   SIDEBAR_STYLE,
   TYPOGRAPHY,
   VERSION,
-} from "../action/type";
+} from '../action/type';
 
 const initialValue = {
-  activeDemo: 1,
+  activeDemo: 6,
   demos: [
-    { id: 1, name: "demo 1", image: "/images/demo/pic1.png" },
-    { id: 2, name: "demo 2", image: "/images/demo/pic2.png" },
-    { id: 3, name: "demo 3", image: "/images/demo/pic3.png" },
-    { id: 4, name: "demo 4", image: "/images/demo/pic4.png" },
-    { id: 5, name: "demo 5", image: "/images/demo/pic5.png" },
-    { id: 6, name: "demo 6", image: "/images/demo/pic6.png" },
-    { id: 7, name: "demo 7", image: "/images/demo/pic7.png" },
-    { id: 8, name: "demo 8", image: "/images/demo/pic8.png" },
-    { id: 9, name: "demo 9", image: "/images/demo/pic9.png" },
-    { id: 10, name: "demo 10", image: "/images/demo/pic10.png" },
-    { id: 11, name: "demo 11", image: "/images/demo/pic11.png" },
+    { id: 1, name: 'demo 1', image: '/images/demo/pic1.png' },
+    { id: 2, name: 'demo 2', image: '/images/demo/pic2.png' },
+    { id: 3, name: 'demo 3', image: '/images/demo/pic3.png' },
+    { id: 4, name: 'demo 4', image: '/images/demo/pic4.png' },
+    { id: 5, name: 'demo 5', image: '/images/demo/pic5.png' },
+    { id: 6, name: 'demo 6', image: '/images/demo/pic6.png' },
+    { id: 7, name: 'demo 7', image: '/images/demo/pic7.png' },
+    { id: 8, name: 'demo 8', image: '/images/demo/pic8.png' },
+    { id: 9, name: 'demo 9', image: '/images/demo/pic9.png' },
+    { id: 10, name: 'demo 10', image: '/images/demo/pic10.png' },
+    { id: 11, name: 'demo 11', image: '/images/demo/pic11.png' },
   ],
-  typography: "poppins",
-  version: "light",
-  layout: "vertical",
-  primary: "color_1",
-  headerBg: "color_1",
-  navheaderBg: "color_12",
-  sidebarBg: "color_12",
-  sidebarStyle: "full",
-  sidebarPosition: "fixed",
-  headerPosition: "fixed",
-  containerLayout: "full",
-  direction: "ltr",
+  typography: 'poppins',
+  version: 'light',
+  layout: 'horizontal',
+  primary: 'color_14',
+  headerBg: 'color_14',
+  navheaderBg: 'color_14',
+  sidebarBg: 'color_1',
+  sidebarStyle: 'mini',
+  sidebarPosition: 'static',
+  headerPosition: 'static',
+  containerLayout: 'full',
+  direction: 'ltr',
+  // typography: "poppins",
+  // version: "light",
+  // layout: "vertical",
+  // primary: "color_1",
+  // headerBg: "color_1",
+  // navheaderBg: "color_12",
+  // sidebarBg: "color_12",
+  // sidebarStyle: "full",
+  // sidebarPosition: "fixed",
+  // headerPosition: "fixed",
+  // containerLayout: "full",
+  // direction: "ltr",
 };
 const demoReducer = (state = initialValue, action) => {
   const { type, payload } = action;
@@ -133,7 +145,6 @@ const demoReducer = (state = initialValue, action) => {
         typography: payload,
       };
 
-   
     default:
       return state;
   }

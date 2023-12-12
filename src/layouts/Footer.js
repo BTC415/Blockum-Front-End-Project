@@ -3,11 +3,16 @@ const Footer = () => {
     <div className="footer">
       <div className="copyright">
         <p>
-          Copyright © Designed &amp; Developed by{" "}
+          Blockum DAO.{' '}
+          <a href="#" target="_blank">
+            www.blockumdao.org
+          </a>{' '}
+          2024
+          {/* Copyright © Designed &amp; Developed by{" "}
           <a href="https://dexignzone.com/" target="_blank">
             DexignZone
           </a>{" "}
-          2021
+          2021 */}
         </p>
       </div>
     </div>

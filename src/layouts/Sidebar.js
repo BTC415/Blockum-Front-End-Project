@@ -22,93 +22,96 @@ const Sidebar = () => {
       // "customer-list",
       // "analytics",
       // "reviews",
-    ],
-    app = [
-      'apps/profile',
-      'apps/post-details',
-      'apps/email/compose',
-      'apps/email/inbox',
-      'apps/email/read',
-      'apps/ecom/product/grid',
-      'apps/ecom/product/list',
-      'apps/ecom/product/order',
-      'apps/ecom/checkout',
-      'apps/ecom/invoice',
-      'apps/ecom/customers',
-      'apps/ecom/product/detail',
-    ],
-    email = ['apps/email/compose', 'apps/email/inbox', 'apps/email/read'],
-    shop = [
-      'apps/ecom/product/grid',
-      'apps/ecom/product/list',
-      'apps/ecom/product/list',
-      'apps/ecom/product/order',
-      'apps/ecom/checkout',
-      'apps/ecom/invoice',
-      'apps/ecom/customers',
-      'apps/ecom/product/detail',
-    ],
-    charts = [
-      'chart/rechart',
-      'chart/apex',
-      'chart/chartjs',
-      'chart/chartist',
-      'chart/sparkline',
-    ],
-    bootstrap = [
-      'ui/accordion',
-      'ui/badge',
-      'ui/alert',
-      'ui/button',
-      'ui/modal',
-      'ui/button-group',
-      'ui/list-group',
-      'ui/media-object',
-      'ui/card',
-      'ui/carousel',
-      'ui/dropdown',
-      'ui/popover',
-      'ui/progressbar',
-      'ui/tab',
-      'ui/typography',
-      'ui/pagination',
-      'ui/grid',
-    ],
-    plugins = [
-      'plugins/select2',
-      'plugins/sweetalert',
-      'plugins/toastr',
-      'plugins/noui-slider',
-      'plugins/jqvmap',
-      'plugins/lightgallery',
-    ],
-    widget = ['widget-basic'],
-    forms = [
-      'form/element',
-      'form/wizard',
-      'form/editor',
-      'form/pickers',
-      'form/validation',
-    ],
-    table = ['table-bootstrap-basic', 'table-datatable-basic'],
-    pages = [
-      'page-register',
-      'page-login',
-      'page-lock-screen',
-      'page-error-400',
-      'page-error-403',
-      'page-error-404',
-      'page-error-500',
-      'page-error-503',
-      'empty-page',
-    ],
-    error = [
-      'page-error-400',
-      'page-error-403',
-      'page-error-404',
-      'page-error-500',
-      'page-error-503',
+  ],
+    profile = [
+      'profile',
     ];
+    // app = [
+    //   'apps/profile',
+    //   'apps/post-details',
+    //   'apps/email/compose',
+    //   'apps/email/inbox',
+    //   'apps/email/read',
+    //   'apps/ecom/product/grid',
+    //   'apps/ecom/product/list',
+    //   'apps/ecom/product/order',
+    //   'apps/ecom/checkout',
+    //   'apps/ecom/invoice',
+    //   'apps/ecom/customers',
+    //   'apps/ecom/product/detail',
+    // ],
+    // email = ['apps/email/compose', 'apps/email/inbox', 'apps/email/read'],
+    // shop = [
+    //   'apps/ecom/product/grid',
+    //   'apps/ecom/product/list',
+    //   'apps/ecom/product/list',
+    //   'apps/ecom/product/order',
+    //   'apps/ecom/checkout',
+    //   'apps/ecom/invoice',
+    //   'apps/ecom/customers',
+    //   'apps/ecom/product/detail',
+    // ],
+    // charts = [
+    //   'chart/rechart',
+    //   'chart/apex',
+    //   'chart/chartjs',
+    //   'chart/chartist',
+    //   'chart/sparkline',
+    // ],
+    // bootstrap = [
+    //   'ui/accordion',
+    //   'ui/badge',
+    //   'ui/alert',
+    //   'ui/button',
+    //   'ui/modal',
+    //   'ui/button-group',
+    //   'ui/list-group',
+    //   'ui/media-object',
+    //   'ui/card',
+    //   'ui/carousel',
+    //   'ui/dropdown',
+    //   'ui/popover',
+    //   'ui/progressbar',
+    //   'ui/tab',
+    //   'ui/typography',
+    //   'ui/pagination',
+    //   'ui/grid',
+    // ],
+    // plugins = [
+    //   'plugins/select2',
+    //   'plugins/sweetalert',
+    //   'plugins/toastr',
+    //   'plugins/noui-slider',
+    //   'plugins/jqvmap',
+    //   'plugins/lightgallery',
+    // ],
+    // widget = ['widget-basic'],
+    // forms = [
+    //   'form/element',
+    //   'form/wizard',
+    //   'form/editor',
+    //   'form/pickers',
+    //   'form/validation',
+    // ],
+    // table = ['table-bootstrap-basic', 'table-datatable-basic'],
+    // pages = [
+    //   'page-register',
+    //   'page-login',
+    //   'page-lock-screen',
+    //   'page-error-400',
+    //   'page-error-403',
+    //   'page-error-404',
+    //   'page-error-500',
+    //   'page-error-503',
+    //   'empty-page',
+    // ],
+    // error = [
+    //   'page-error-400',
+    //   'page-error-403',
+    //   'page-error-404',
+    //   'page-error-500',
+    //   'page-error-503',
+    // ];
   return (
     <div className="deznav">
       {doc && (
@@ -185,12 +188,17 @@ const Sidebar = () => {
                 </li>
               </ul> */}
             </li>
-            <li className={`${app.includes(path) ? 'mm-active' : ''}`}>
-              <a className="has-arrow ai-icon c-pointer" aria-expanded="false">
-                <i className="flaticon-050-info" />
-                <span className="nav-text">Apps</span>
-              </a>
-              <ul aria-expanded="false">
+            <li className={`${profile.includes(path) ? 'mm-active' : ''}`}>
+              <Link href={'/profile'}>
+                <a
+                  className="ai-icon c-pointer"
+                  aria-expanded="false"
+                >
+                  <i className="flaticon-050-info" />
+                  <span className="nav-text">Profile</span>
+                </a>
+              </Link>
+              {/* <ul aria-expanded="false">
                 <li>
                   <Link href="/apps/profile">
                     <a
@@ -253,9 +261,9 @@ const Sidebar = () => {
                     </li>
                   </ul>
                 </li>
-                {/* <li>
+                <li>
                 <Link href="/apps/calender">Calendar</Link>
-              </li> */}
+              </li>
                 <li className={`${shop.includes(path) ? 'mm-active' : ''}`}>
                   <a className="has-arrow c-pointer" aria-expanded="false">
                     Shop
@@ -344,9 +352,9 @@ const Sidebar = () => {
                     </li>
                   </ul>
                 </li>
-              </ul>
+              </ul> */}
             </li>
-            <li className={`${charts.includes(path) ? 'mm-active' : ''}`}>
+            {/* <li className={`${charts.includes(path) ? 'mm-active' : ''}`}>
               <a className="has-arrow ai-icon c-pointer" aria-expanded="false">
                 <i className="flaticon-041-graph" />
                 <span className="nav-text">Charts</span>
@@ -565,9 +573,9 @@ const Sidebar = () => {
                 <li>
                   <Link href="/plugins/select2">Select 2</Link>
                 </li>
-                {/* <li>
+                <li>
                 <Link href="/plugins/nestable">Nestedable</Link>
-              </li> */}
+              </li>
                 <li>
                   <Link href="/plugins/noui-slider">Noui Slider</Link>
                 </li>
@@ -739,7 +747,7 @@ const Sidebar = () => {
                   </Link>
                 </li>
               </ul>
-            </li>
+            </li> */}
           </MetisMenu>
           <div className="copyright">
             <p>

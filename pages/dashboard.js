@@ -391,9 +391,9 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
               <div className="card-header border-0 pb-0">
                 <div className="d-flex justify-content-between">
                   <h4 className="text-black fs-20">Deposit History</h4>
-                  <button className="fs-14 text-blue border-0 bg-white">
+                  {/* <button className="fs-14 text-blue border-0 bg-white">
                     See Details
-                  </button>
+                  </button> */}
                 </div>
               </div>
               <div className="card-body pt-0">
@@ -825,9 +825,9 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                 <div className="mb-3">
                   <div className="mr-auto d-flex align-items-center justify-content-between">
                     <h4 className="text-black fs-20">Voting Proposals</h4>
-                    <button className="fs-14 text-blue border-0 bg-white">
+                    {/* <button className="fs-14 text-blue border-0 bg-white">
                       See Details
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>

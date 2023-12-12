@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Dropdown, Modal } from 'react-bootstrap';
 import PerfectScrollbar from 'react-perfect-scrollbar';
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { Button } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import { ToastContainer } from 'react-toastify';
@@ -13,8 +13,11 @@ import { getHeaderData } from '../../redux/action/utils';
 import Notification from './Notification';
 
 import useWeb3 from '../../hooks/useWeb3';
+import { ADD_DEPOSIT } from '../../redux/action/type';
 
 const Header = ({ title, getHeaderData, searchData }) => {
+  const dispatch = useDispatch();
+
   const {
     _web3,
     connectMetaMask,
@@ -112,6 +115,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
         .send({
           from: walletAddress,
         });
+      // console.log(tx)
       toast.success('Deposit success!', {
         position: 'top-right',
         autoClose: 5000,
@@ -120,13 +124,19 @@ const Header = ({ title, getHeaderData, searchData }) => {
         pauseOnHover: true,
         draggable: true,
       });
-      axios.post('/blockum-vault/deposit', {
+      const response = await axios.post('/blockum-vault/deposit', {
         walletAddress: walletAddress,
         depositAmount: values.depositValue,
       });
       setValues({ depositValue: '' });
       setDepositModalShow(false);
-      // console.log(tx);
+      dispatch({
+        type: ADD_DEPOSIT,
+        payload: {
+          LPTokenAmount: response.data.LPTokenAmount,
+          createdAt: response.data.createdAt,
+        },
+      });
     } catch (error) {
       console.log(error);
       toast.error('Deposit failed!', {
@@ -270,7 +280,10 @@ const Header = ({ title, getHeaderData, searchData }) => {
                     className="form-control"
                     placeholder="Search here..."
                   />
-                  <div className="input-group-append">
+                  <div
+                    className="input-group-append"
+                    style={{ marginRight: '10px' }}
+                  >
                     <button className="input-group-text">
                       <i className="flaticon-381-search-2" />
                     </button>

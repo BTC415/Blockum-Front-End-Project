@@ -1,6 +1,6 @@
 import Router from 'next/router';
 import { Fragment, useEffect, useState } from 'react';
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { getUser } from '../redux/action/auth';
 import Demos from './Demos';
 import Footer from './Footer';
@@ -13,6 +13,8 @@ import Sidebar from './Sidebar';
 
 import dynamic from 'next/dynamic';
 
+import { demoAction } from '../redux/action/themeAction';
+
 const Header = dynamic(import('./header/Header'), { ssr: false });
 
 const Layout = ({ children, getUser, user }) => {
@@ -22,9 +24,6 @@ const Layout = ({ children, getUser, user }) => {
     setHeight(window.screen.height - 100);
     getUser();
     setActive(document.querySelectorAll('.metismenu a') ? true : false);
-    // if (!user) {
-    //   Router.replace('/pages/login1');
-    // }
   }, [user]);
 
   return (
