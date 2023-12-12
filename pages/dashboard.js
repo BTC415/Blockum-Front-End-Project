@@ -821,10 +821,12 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                   </div>
                 </Modal>
               </div>
-              <div className="card-header border-0 flex-wrap pb-0">
+              <div
+                className="card-header border-0 flex-wrap pb-0 pt-0"
+              >
                 <div className="mb-3">
                   <div className="mr-auto d-flex align-items-center justify-content-between">
-                    <h4 className="text-black fs-20">Voting Proposals</h4>
+                    <h4 className="text-black fs-24">Voting Proposals</h4>
                     {/* <button className="fs-14 text-blue border-0 bg-white">
                       See Details
                     </button> */}
@@ -850,14 +852,20 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                                   <div className="media align-items-center">
                                     <div className="media-body d-flex align-items-center justify-content-between">
                                       <div>
-                                        <h5 className="mt-0 mb-2">
+                                        <h5
+                                          className="mt-0 mb-2"
+                                          style={{ fontSize: '18px' }}
+                                        >
                                           {/* <Link href="/apps/ecom/product-detail">
                                           <a className="text-black"> */}
                                           {d.title}
                                           {/* </a>
                                         </Link> */}
                                         </h5>
-                                        <p className="mb-0 text-primary">
+                                        <p
+                                          className="mb-0 text-primary"
+                                          style={{ fontSize: '14px' }}
+                                        >
                                           {timestampToDateForVotingProposal(
                                             d.endTime
                                           )}
