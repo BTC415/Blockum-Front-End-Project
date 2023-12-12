@@ -132,4 +132,5 @@ export const DELETE_TABLE_STRIPPED = "DELETE_TABLE_STRIPPED";
 
 // history
 export const ADD_DEPOSIT = 'ADD_DEPOSIT';
-export const ADD_DISTRIBUTE = "ADD_DISTRIBUTE";
+export const ADD_DISTRIBUTE = "ADD_DISTRIBUTE"
+export const INIT_HISTORY = "INIT_HISTORY";

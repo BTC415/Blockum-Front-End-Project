@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import PerfectScrollbar from 'react-perfect-scrollbar';
-import { connect } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import { Button, Modal, ProgressBar } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import { ToastContainer } from 'react-toastify';
@@ -10,6 +10,8 @@ import axios from 'axios';
 
 import { getDashboardData } from '../src/redux/action/dashboard';
 import { moodChange, pageTitle } from '../src/redux/action/utils';
+
+import ProposalDetailsModal from '../src/components/Modals/ProposalDetailsModal';
 
 import useWeb3 from '../src/hooks/useWeb3';
 
@@ -26,9 +28,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
     _web3,
     lpTokenEth,
     fgolTokenEth,
-    BlockumVaultContract,
     walletAddress,
-    // depositHistory,
     proposals,
     FGOLDistributionContract,
     BlockumDAOContract,
@@ -54,14 +54,22 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
     hours: '',
     minutes: '',
   };
+
+  const dispatch = useDispatch();
   const [values, setValues] = useState(initialValues);
+  const { deposits, distributes } = useSelector((state) => state.history);
+  const [showProposalDetailsModal, setShowProposalDetailsModal] =
+    useState(false);
   const [payPerProposalModalShow, setpayPerProposalModalShow] = useState(false);
   const [addNewProposalModalShow, setAddNewProposalModalShow] = useState(false);
   const [addProposalPeriodModalShow, setAddProposalPeriodModalShow] =
     useState(false);
-  const [depositHistory, setDepositHistory] = useState([]);
-  const [distributionHistory, setDistributionHistory] = useState([]);
   const [createdProposalId, setCreatedProposalId] = useState();
+  const [selectedProposalData, setSelectedProposalData] = useState({
+    title: '',
+    description: '',
+    presentationLink: '',
+  });
 
   const timestampToDate = (createdAt) => {
     const timestamp = new Date(createdAt);
@@ -99,8 +107,15 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
       );
       // console.log(tempDistributionHistory.data);
       await convertData(tempDistributionHistory.data);
-      setDepositHistory(tempDepositHistory.data.reverse());
-      setDistributionHistory(tempDistributionHistory.data.reverse());
+      // setDepositHistory(tempDepositHistory.data.reverse());
+      dispatch({
+        type: 'INIT_HISTORY',
+        payload: {
+          deposits: tempDepositHistory.data.reverse(),
+          distributes: tempDistributionHistory.data.reverse(),
+        },
+      });
+      // setDistributionHistory(tempDistributionHistory.data.reverse());
     }
 
     init();
@@ -397,13 +412,13 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                 </div>
               </div>
               <div className="card-body pt-0">
-                {depositHistory && (
+                {deposits && (
                   <PerfectScrollbar
                     className="dz-scroll height100"
                     id="tredingMenus"
                   >
-                    {depositHistory &&
-                      depositHistory.map((depositHistory, i) => (
+                    {deposits &&
+                      deposits.map((depositHistory, i) => (
                         <div
                           key={i}
                           className={`mb-0 tr-row align-items-center ${
@@ -437,13 +452,13 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                 </div>
               </div>
               <div className="card-body pt-0">
-                {distributionHistory && (
+                {distributes && (
                   <PerfectScrollbar
                     className="dz-scroll height100"
                     id="tredingMenus"
                   >
-                    {distributionHistory &&
-                      distributionHistory.map((distributionHistory, i) => (
+                    {distributes &&
+                      distributes.map((distributionHistory, i) => (
                         <div
                           key={i}
                           className={`mb-0 tr-row align-items-center ${
@@ -821,9 +836,7 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                   </div>
                 </Modal>
               </div>
-              <div
-                className="card-header border-0 flex-wrap pb-0 pt-0"
-              >
+              <div className="card-header border-0 flex-wrap pb-0 pt-0">
                 <div className="mb-3">
                   <div className="mr-auto d-flex align-items-center justify-content-between">
                     <h4 className="text-black fs-24">Voting Proposals</h4>
@@ -835,6 +848,13 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
               </div>
               <div className="card-body p-0">
                 <div className="table-responsive">
+                  <ProposalDetailsModal
+                    visible={showProposalDetailsModal}
+                    setVisible={setShowProposalDetailsModal}
+                    handleVoteNoClick={handleVoteNoClick}
+                    handleVoteYesClick={handleVoteYesClick}
+                    data={selectedProposalData}
+                  />
                   <table className="table order-request">
                     <tbody
                       className="loadmore-content"
@@ -854,13 +874,18 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                                       <div>
                                         <h5
                                           className="mt-0 mb-2"
-                                          style={{ fontSize: '18px' }}
+                                          style={{
+                                            fontSize: '18px',
+                                            cursor: 'pointer',
+                                          }}
+                                          onClick={() => {
+                                            setShowProposalDetailsModal(true);
+                                            setSelectedProposalData(
+                                              proposals[i]
+                                            );
+                                          }}
                                         >
-                                          {/* <Link href="/apps/ecom/product-detail">
-                                          <a className="text-black"> */}
                                           {d.title}
-                                          {/* </a>
-                                        </Link> */}
                                         </h5>
                                         <p
                                           className="mb-0 text-primary"
@@ -924,16 +949,6 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                       )}
                     </tbody>
                   </table>
-                  {/* <div className="card-footer border-0 pt-0 text-center">
-                    <a
-                      className="btn btn-outline-primary dz-load-more"
-                      id="orderRequest"
-                      href="javascript:void(0);"
-                      onClick={() => onClick()}
-                    >
-                      View More {refresh && <i className="fa fa-refresh" />}
-                    </a>
-                  </div> */}
                 </div>
               </div>
             </div>

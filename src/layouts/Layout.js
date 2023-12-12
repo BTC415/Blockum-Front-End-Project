@@ -13,8 +13,6 @@ import Sidebar from './Sidebar';
 
 import dynamic from 'next/dynamic';
 
-import { demoAction } from '../redux/action/themeAction';
-
 const Header = dynamic(import('./header/Header'), { ssr: false });
 
 const Layout = ({ children, getUser, user }) => {

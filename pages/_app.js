@@ -22,17 +22,11 @@ import { Web3Provider } from '../src/contexts/web3Context';
 axios.defaults.baseURL = 'https://blockum.onrender.com/api';
 
 function MyApp({ Component, pageProps }) {
-  // const [doc, setDoc] = useState();
   const [pages, setPages] = useState();
   useEffect(() => {
     bodyArt();
-    // setDoc(document);
     setPages(window.location.pathname);
-    // resizeWindow();
     setPages(window.location.pathname);
-    // window.addEventListener('resize', resizeWindow);
-    // alert(window.location.pathname);
-    // return () => window.removeEventListener('resize', resizeWindow);
   }, [pages]);
 
   return (

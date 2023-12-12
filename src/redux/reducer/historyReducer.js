@@ -1,7 +1,7 @@
-import { ADD_DEPOSIT, ADD_DISTRIBUTE } from "../action/type";
+import { ADD_DEPOSIT, ADD_DISTRIBUTE, INIT_HISTORY } from '../action/type';
 
 const initialState = {
-  deposites: [],
+  deposits: [],
   distributes: [],
 };
 
@@ -11,13 +11,15 @@ const historyReducer = (state = initialState, action) => {
     case ADD_DEPOSIT:
       return {
         ...state,
-        deposites: [...state.deposites, payload],
+        deposits: [payload, ...state.deposits],
       };
     case ADD_DISTRIBUTE:
       return {
         ...state,
-        distributes: [...state.distributes, payload],
+        distributes: [payload, ...state.distributes],
       };
+    case INIT_HISTORY:
+      return { ...payload };
     default:
       return state;
   }

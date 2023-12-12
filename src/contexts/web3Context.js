@@ -21,7 +21,6 @@ export const Web3Provider = ({ children }) => {
   const [BlockumDAOContract, setBlockumDAOContract] = useState();
   const [lpTokenEth, setLPTokenEth] = useState();
   const [fgolTokenEth, setFGOLTokenEth] = useState();
-  // const [depositHistory, setDepositHistory] = useState([]);
   const [proposals, setProposals] = useState([]);
   const [isMember, setIsMember] = useState(false);
   const [currentProposalCreationFee, setCurrentProposalCreationFee] =
@@ -67,9 +66,6 @@ export const Web3Provider = ({ children }) => {
       const tempLpTokenWei = await tempLPTokenContract.methods
         .balanceOf(walletAccount[0])
         .call();
-      // const tempFGOLTokenWei = await tempFGOLTokenContract.methods
-      //   .balanceOf(walletAccount[0])
-      //   .call();
       const tempFGOLTokenWei =
         await tempFGOLDistributionContract.methods.pendingClaims(walletAccount[0]).call();
       const lpTokenEth = _web3.utils.fromWei(tempLpTokenWei, 'ether');
