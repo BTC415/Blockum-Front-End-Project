@@ -336,7 +336,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
               </Dropdown> */}
               <div className="nav-item">
                 <Button
-                  className="mr-2"
+                  className="mr-2 ml-3"
                   variant="info"
                   style={{ borderRadius: '10px' }}
                   onClick={() => setDepositModalShow(true)}
