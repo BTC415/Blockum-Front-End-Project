@@ -17,7 +17,7 @@ function ProposalDetailsModal(props) {
           marginTop: '-3.3vh',
           marginBottom: '-3.3vh',
           overflowY: 'auto',
-          overflowX: 'visible',
+          overflowX: 'hidden',
         }}
       >
         <Modal.Header style={{ border: 'none' }}>
@@ -62,10 +62,13 @@ function ProposalDetailsModal(props) {
             <label>Description:</label>
             <p>{props.data.description}</p>
             <label>Presentation link:</label>
-            <p>
+            <p style={{maxWidth: '100%', wordBreak: "break-all"}}>
               <a
                 href={`${props.data.presentationLink}`}
-                style={{ marginBottom: '16px', color: 'white' }}
+                style={{
+                  marginBottom: '16px',
+                  color: 'white',
+                }}
               >
                 {props.data.presentationLink}
               </a>
