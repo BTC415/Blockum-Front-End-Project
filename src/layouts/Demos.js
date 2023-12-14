@@ -9,13 +9,13 @@ function Demo({ demos, demoAction, activeDemo }) {
   return (
     <div className={`dz-demo-panel ${show ? "show" : ""}`}>
       <div className="bg-close" onClick={() => setShow(false)} />
-      <Link href="">
+      {/* <Link href="">
         <a className="dz-demo-trigger" onClick={() => setShow(true)}>
           <span>
             <i className="las la-tint" />
           </span>
         </a>
-      </Link>
+      </Link> */}
       <div className="dz-demo-inner">
         <Link href="">
           <a

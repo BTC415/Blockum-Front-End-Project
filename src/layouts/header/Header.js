@@ -264,7 +264,8 @@ const Header = ({ title, getHeaderData, searchData }) => {
               <div className="header-left flex flex-column pt-4">
                 {/* <div className="dashboard_bar">{title}</div> */}
                 <div className="dashboard_bar" style={{ fontSize: '25px' }}>
-                  Claudia Alves
+                  {/* Claudia Alves */}
+                  {walletAddress ? truncateText(walletAddress) : 'Blockum DAO'}
                 </div>
                 <span
                   style={{
@@ -280,7 +281,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
 
             <ul className="navbar-nav header-right">
               <Notification />
-              <Dropdown as="li" className="nav-item position-relative">
+              {/* <Dropdown as="li" className="nav-item position-relative">
                 <Dropdown.Toggle
                   variant=""
                   as="a"
@@ -332,7 +333,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
                     </ul>
                   </PerfectScrollbar>
                 </Dropdown.Menu>
-              </Dropdown>
+              </Dropdown> */}
               <div className="nav-item">
                 <Button
                   className="mr-2"

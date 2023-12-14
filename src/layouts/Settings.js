@@ -61,7 +61,7 @@ function Setting({
   return (
     <div className={`sidebar-right ${show ? "show" : ""}`}>
       <div className="bg-overlay" onClick={() => setShow(false)} />
-      <Link href="">
+      {/* <Link href="">
         <a
           className="sidebar-right-trigger wave-effect wave-effect-x"
           onClick={() => setShow(true)}
@@ -70,7 +70,7 @@ function Setting({
             <i className="fa fa-cog fa-spin" />
           </span>
         </a>
-      </Link>
+      </Link> */}
 
       <Link href="">
         <a className="sidebar-close-trigger" onClick={() => setShow(false)}>

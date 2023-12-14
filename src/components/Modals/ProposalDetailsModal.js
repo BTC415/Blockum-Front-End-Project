@@ -16,7 +16,8 @@ function ProposalDetailsModal(props) {
           height: '100vh',
           marginTop: '-3.3vh',
           marginBottom: '-3.3vh',
-          overflow: 'scroll'
+          overflowY: 'auto',
+          overflowX: 'visible',
         }}
       >
         <Modal.Header style={{ border: 'none' }}>
@@ -61,8 +62,15 @@ function ProposalDetailsModal(props) {
             <label>Description:</label>
             <p>{props.data.description}</p>
             <label>Presentation link:</label>
-            <p>{props.data.presentationLink}</p>
-            <br />
+            <p>
+              <a
+                href={`${props.data.presentationLink}`}
+                style={{ marginBottom: '16px', color: 'white' }}
+              >
+                {props.data.presentationLink}
+              </a>
+            </p>
+            {/* <br /> */}
             <h3 style={{ color: 'white' }}>Promote this proposal?</h3>
             <div className="d-flex justify-content-center">
               <Button
@@ -93,8 +101,8 @@ function ProposalDetailsModal(props) {
                   paddingBottom: '5px',
                   marginRight: '30px',
                   marginLeft: '30px',
-                  // backgroundColor: '#1C1C39',
-                  // borderColor: '#1C1C39',
+                  backgroundColor: '#2C4ACC',
+                  borderColor: '#2C4ACC',
                 }}
                 onClick={() => props.handleVoteNoClick(props.data.proposalId)}
                 disabled={props.isLoading}
@@ -102,9 +110,10 @@ function ProposalDetailsModal(props) {
                 {props.isLoading ? <Spinner animation="border" /> : 'No'}
               </Button>
             </div>
-            <p className="d-flex justify-content-end pt-3">
+            {/* <p className="d-flex justify-content-end pt-3">
               00 days remaining 00h:00m:00
-            </p>
+            </p> */}
+            <br />
             <div className="d-flex justify-content-between">
               <div>
                 <label style={{ fontSize: '14px' }}>Members Quorum</label>
@@ -124,11 +133,11 @@ function ProposalDetailsModal(props) {
               </div>
             </div>
             <br />
-            <div className="d-flex justify-content-between">
-              <div>
+            <div className="d-flex justify-content-end">
+              {/* <div>
                 <p className="mb-0">For Votes: 00</p>
                 <p className="mb-0">Against Votes: 00</p>
-              </div>
+              </div> */}
               <div>
                 <p className="mb-0">Approved by Community: YES/NO</p>
                 <p className="mb-0">Funded: YES/NO</p>

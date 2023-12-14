@@ -23,6 +23,7 @@ function index() {
         width: '100vw',
         height: '100vh',
         position: 'absolute',
+        overflow: 'hidden',
       }}
     >
       <header style={{ margin: '50px 100px' }}>
@@ -38,7 +39,7 @@ function index() {
                 background: 'none',
                 color: 'white',
                 border: 'none',
-                fontSize: '2rem',
+                fontSize: '1.5rem',
                 fontWeight: 'bold',
                 margin: '20px',
               }}
@@ -50,7 +51,7 @@ function index() {
                 background: 'none',
                 color: 'white',
                 border: 'none',
-                fontSize: '2rem',
+                fontSize: '1.5rem',
                 fontWeight: 'bold',
                 margin: '20px',
               }}
@@ -62,7 +63,7 @@ function index() {
                 background: 'none',
                 color: 'white',
                 border: 'none',
-                fontSize: '2rem',
+                fontSize: '1.5rem',
                 fontWeight: 'bold',
                 margin: '20px',
               }}
@@ -76,7 +77,7 @@ function index() {
                 color: '#2C4ACC',
                 border: '#2C4ACC solid 3px',
                 borderRadius: '50px',
-                fontSize: '2rem',
+                fontSize: '1.5rem',
                 fontWeight: 'bold',
                 margin: '20px',
                 marginLeft: '10px',
@@ -90,12 +91,12 @@ function index() {
       </header>
       <main style={{ display: 'flex', margin: '50px 100px' }}>
         <div style={{ width: '50%' }}>
-          <h1 style={{ fontSize: '70px', color: 'white' }}>
+          <h1 style={{ fontSize: '64px', color: 'white' }}>
             Community <br />
             <span style={{ color: '#2C4ACC' }}>for Fostering</span> <br />
             Global <i style={{ color: '#2C4ACC' }}>Innovation</i>
           </h1>
-          <p style={{ fontSize: '20px', color: 'white' }}>
+          <p style={{ fontSize: '20px', color: 'white', fontWeight: 'bold' }}>
             The largest community for Fostering Startups and <br /> promising
             business opportunities in the world!
           </p>
@@ -107,7 +108,7 @@ function index() {
               color: 'white',
               border: 'none',
               borderRadius: '50px',
-              fontSize: '2rem',
+              fontSize: '1.5rem',
               fontWeight: 'bold',
               margin: '20px',
               marginLeft: '10px',

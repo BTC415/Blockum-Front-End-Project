@@ -33,7 +33,7 @@ const Layout = ({ children, getUser, user }) => {
           <NavHeader />
           <ChatBox />
           <Header />
-          <Sidebar />
+          {/* <Sidebar /> */}
           <div className="content-body" style={{ minHeight: height }}>
             <div className="container-fluid">{children}</div>
           </div>

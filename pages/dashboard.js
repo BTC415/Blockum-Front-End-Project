@@ -984,7 +984,11 @@ const Index = ({ pageTitle, getDashboardData, orderRequest }) => {
                                         <Button
                                           className="mr-2"
                                           variant="danger btn-xs btn-rounded"
-                                          style={{ width: '70px' }}
+                                          style={{
+                                            width: '70px',
+                                            backgroundColor: '#1C1C39',
+                                            borderColor: '#1C1C39',
+                                          }}
                                           onClick={() =>
                                             handleVoteNoClick(d.proposalId)
                                           }
