@@ -280,7 +280,7 @@ const Header = ({ title, getHeaderData, searchData }) => {
             )}
 
             <ul className="navbar-nav header-right">
-              <Notification />
+              {/* <Notification /> */}
               {/* <Dropdown as="li" className="nav-item position-relative">
                 <Dropdown.Toggle
                   variant=""
